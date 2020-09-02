@@ -2,66 +2,64 @@
 %\markboth{\thechapter ~~~ Introdução}{}
 %\label{intro}
 
-Se preferir, você pode apresentar este Capítulo antes da primeira Seção, destacando os principais pontos que são abordados. %\cite{Raffo2008}
+%Se preferir, você pode apresentar este Capítulo antes da primeira Seção, destacando os principais pontos que são abordados. %\cite{Raffo2008}
 
 \section{Motivação e Justificativa}
-\markright{\thesection ~~~ Motivação}
+%\markright{\thesection ~~~ Motivação}
 %\label{motiva}
 
-Esta seção %\cite{Beda2012}
-é muito importante, pois é aqui que você argumenta sobre a importância do projeto desenvolvido. Se possível, confronte seu trabalho com outros para mostrar a sua contribuição. 
-Se você quiser citar algum livro ou artigo, por exemplo \cite{bel/00}, veja como fazê-lo no arquivo Introducao.tex.
-Trata-se, portanto, de uma breve revisão bibliográfica sobre o assunto.
+É incontestável a incessante busca do setor industrial pelo aumento do desempenho de suas unidades operacionais. Para que as empresas envolvidas nesse ramo possam se manter de forma significativa no mercado, é necessária a constante reavaliação de seus processos, bem como de seus custos com energia, perdas e reprocessamento de material. Independentemente do setor de atuação da indústria a ser avaliada, tais fatores possuem extrema importância, devendo ser sendo monitoradas, controladas e projetadas.
+
+Para elucidar, tomemos como exemplo um processo de beneficiamento minério de ferro. Pode-se dividi-lo em: Britagem, peneiramento, moagem, classificação, concentração, espessamento e filtragem. Cada uma dessas etapas do é composta por variáveis a serem controladas de forma individual, como níveis de tanque, temperatura e densidade de misturas, velocidades de motores, posições de válvulas, etc. Para estabelecer o comportamento desejado para tais processos, se faz necessária a aplicação de estratégias de controle regulatório, avançado ou de outras naturezas. O conjunto composto por variável a ser controlada e estratégia de controle utilizada é chamado de \textit{malha de controle}. 
+
+Implementado um sistema de controle, obtém-se então um processo minimamente adequado aos parâmetros configurados para o contexto operacional escolhido. Entretanto, não menos importante que essa adequação técnica individual estabelecida por esse sistema, são os resultados e efeitos colaterais gerados naquela linha do processo,  bem como a avaliação do conjunto em situações não previstas nas estratégias de controle. Dessa forma, o acompanhamento e metrificação do comportamento de sistemas de controle industriais ganha notabilidade dentro do setor industrial.
+
+
+Para este monitoramento são utilizados softwares do tipo CPM (\textit{Control Performance Monitoring}). Eles possuem ferramental para análise temporal das malhas envolvidas,  avaliação de parâmetros de controladores, modelagem de processos e medição de KPIs (\textit{Key Performance Indicators}). Buscando este espaço de mercado, a empresa parceira do projeto possui um software denominado LOOP, que se enquadra no tipo citado.
+
+Nos últimos meses o time de desenvolvimento da empresa iniciou, juntamente ao time de analistas de controle que utilizam o sistema, um processo de identificação de pontos de melhoria do software LOOP, envolvendo quesitos de interface, regras de negócio, distribuição de responsabilidades entre os módulos do sistema, arquitetura, integração de código e documentação. Dentre os pontos não satisfatórios listados pela equipe, o módulo responsável pelo cálculo de KPIs foi apontado como crítico, sendo o primeiro a passar por mudanças significativa. O projeto aborda o processo de reconstrução desse módulo.
+
 
 \section{Objetivos do Projeto}
-\markright{\thesection ~~~ Objetivos}
+%\markright{\thesection ~~~ Objetivos}
 %label{objetivos}
 
-Tendo em vista o exposto acima, este projeto tem por objetivos:
-
-\begin{itemize}
-\item[a.] Item 1;
-\item[b.] Item 2;
-\item Etc.
-\end{itemize}
+O objetivo do projeto é a construção de um módulo para cálculo de KPIs, utilizando-se de conhecimentos de Engenharia de software e desenvolvimento de sistemas. Como requisito, o módulo deve executar de forma cíclica a cada hora, se adequar à arquitetura existente do sistema LOOP e possuir um registro de falhas de cada etapa de cálculos realizada.
 
 
 
 
 \section{Local de Realização}
-\markright{\thesection ~~~ A Empresa}
+%\markright{\thesection ~~~ A Empresa}
 %\label{empresa}
+O projeto de fim de curso foi desenvolvido em parceria com a empresa IHM Stefanini, no setor de Discovery da mesma, responsável pelo desenvolvimento, evolução e manutenção da arquitetura e código fonte dos sistemas ali desenvolvidos. O posto de trabalho variou entre as dependências da empresa, e regime de \textit{home office}, conforme necessário.
 
-Vale à pena descrever a empresa onde o PFC foi desenvolvido. Veja o exemplo abaixo.
+A empresa realiza projetos e desenvolvimentos de Automação, Elétrica, Montagem, bem como serviços de otimização de malhas, projetos de controle avançado e gestão. Atua em diversas áreas da indústria, como Mineração, Siderurgia \& Metais, Papel \& Celulose, e Óleo \& Gás. 
 
-O projeto de fim de curso foi desenvolvido na empresa ..., no Departamento de ..., responsável por toda a implementação do sistema de ...
+A IHM Stefanini foi criada em 1994 inicialmente com o nome de IHM como uma integradora de sistemas, instrumentação, elétrica e TI Industrial. Com sua expansão, passa a fazer parte do grupo Stefanini em 2015. A partir daí funda o departamento de inovação e começa a atuar na busca por tecnologias disruptivas e elaboração de produtos digitais.
 
-A empresa realiza projetos de pesquisa e desenvolvimento, consultoria e treinamento nas áreas de ...
-
-A ... foi criada em ...  
-
-A empresa é divida em três departamentos: (o arquivo Introducao.tex mostra como criar a lista abaixo) 
-
+Atualmente a IHM Stefanini é dividida nos seguintes setores técnicos:
 \begin{itemize}
-\item Departamento de ... 
-\item Departamento de ...
-\item Departamento de ...
+	\item Departamento de TA;
+	\item Departamento de TI Industrial;
+	\item Departamento Inteligência Industrial;
+	\item Departamento de Discovery;
+	\item Departamento de Elétrica;
 \end{itemize}
 
-Este projeto foi desenvolvido no Departamento de ..., que é o responsável por ...
-
-Os demais Departamentos englobam as funções de ...
-
-Todos os departamentos trabalham em conjunto. O Departamento de ..., por exemplo, precisa manter um grande vínculo com o Departamento de ... Isso ocorre porque todas as especificações de hardware e sistemas influenciam a forma de implementação de serviços, organização de tabelas e recursos disponíveis.
-
+Este projeto foi desenvolvido no departamento de Discovery que tem como propósito a descoberta sistemática e estruturação de ofertas de alto valor agregado para a empresa. Subdividido em:
+\begin{itemize}
+	\item Produtos: Formação de produtos que resolvam problemas reais de clientes finais;
+	\item Coder: Time responsável pelos softwares do setor. Estrutura, desenvolve e mantém códigos-fonte e infraestruturas das demandas do setor.
+	
+\end{itemize}
 
 
 
 \section{Estrutura da Monografia}
-\markright{\thesection ~~~ Organização do Trabalho}
-%\label{organiza}
+%\markright{\thesection ~~~ Organização do Trabalho}
+\label{estruturaMono}
 
-O trabalho está dividido em quatro capítulos. Este capítulo apresentou uma introdução ao projeto a ser descrito nesta monografia e a empresa onde o trabalho foi realizado. O Capítulo 2 descreve os princípios básicos de um sistema ... (sistema onde se insere o trabalho) e abrange todos os conceitos necessários para um melhor entendimento do projeto. O Capítulo 3 aborda a metodologia de desenvolvimento, seguida pela implementação dos .... No Capítulo 4 tem-se a conclusão da  monografia e algumas sugestões e dificuldades encontradas na realização do projeto.
-
+O trabalho está estruturado em quatro capítulos, sendo o Capítulo 1 o conjunto contextualização, relevância e principais objetivos do projeto como um todo. O Capítulo 2 contempla apresentação e revisão de conceitos básicos importantes para melhor entendimento do projeto. Já o Capítulo 3 traz informações sobre os recursos necessários, metodologia de desenvolvimento e implementação do projeto. Por fim, no Capítulo 4, a apresentação e discussão de dados, bem como sugestões e dificuldades encontradas no projeto.
 
 \clearpage

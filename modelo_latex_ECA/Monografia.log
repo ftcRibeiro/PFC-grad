@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.4)  9 MAR 2020 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.4)  2 SEP 2020 20:47
 entering extended mode
 **./Monografia.tex
 (Monografia.tex
@@ -253,12 +253,7 @@ Writing index file Monografia.idx
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count193
 \l__pdf_internal_box=\box47
-) (Monografia.aux (Capa/capa.aux) (Resumo/Resumo.aux)
-(Agradecimentos/Agradecimentos.aux) (TabelaConteudo/TabelaConteudo.aux)
-(ListaFiguras/ListaFiguras.aux) (ListaTabelas/ListaTabelas.aux)
-(Introducao/Introducao.aux) (DescricaoProcesso/DescricaoProcesso.aux)
-(Metodologia/Metodologia.aux) (Resultados/Resultados.aux)
-(Conclusao/Conclusao.aux))
+) (Monografia.aux (Introducao/Introducao.aux))
 \openout1 = `Monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
@@ -331,264 +326,48 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\openout2 = `Capa/capa.aux'.
+\openout2 = `Introducao/Introducao.aux'.
 
-(Capa/capa.tex
-! Missing } inserted.
-<inserted text> 
-                }
-l.25 \end{center}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
+(Introducao/Introducao.tex
+Cap\'{\i }tulo 1.
 [1
 
 
 
 {C:/Users/felipe.ribeiro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2
-
-
-]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
-
-
-("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\
-umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
-
-
-("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\
-umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1] [2
-
-
-])
-\openout2 = `Resumo/Resumo.aux'.
-
- (Resumo/Resumo.tex [1
-
-
-] [2
-
-
-])
-\openout2 = `Agradecimentos/Agradecimentos.aux'.
-
-
-(Agradecimentos/Agradecimentos.tex [3
-
-
-] [4
-
-
-])
-\openout2 = `TabelaConteudo/TabelaConteudo.aux'.
-
- (TabelaConteudo/TabelaConteudo.tex
-(Monografia.toc)
-\tf@toc=\write4
-\openout4 = `Monografia.toc'.
-
- [5
-
-
-
-])
-\openout2 = `ListaFiguras/ListaFiguras.aux'.
-
- (ListaFiguras/ListaFiguras.tex [6
-
-
-
-
-] (Monografia.lof)
-\tf@lof=\write5
-\openout5 = `Monografia.lof'.
-
-
-[7])
-\openout2 = `ListaTabelas/ListaTabelas.aux'.
-
- (ListaTabelas/ListaTabelas.tex [8
-
-
-
-
-] (Monografia.lot)
-\tf@lot=\write6
-\openout6 = `Monografia.lot'.
-
- [9] [10
-
-
-])
-\openout2 = `Introducao/Introducao.aux'.
-
-
-(Introducao/Introducao.tex
-Cap\'{\i }tulo 1.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-5.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
+3.
 
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts
 1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [1
-
-
-
-] [2])
-\openout2 = `DescricaoProcesso/DescricaoProcesso.aux'.
-
- (DescricaoProcesso/DescricaoProcesso.tex
-Cap\'{\i }tulo 2.
-[3
-
-
-
-
-])
-\openout2 = `Metodologia/Metodologia.aux'.
-
- (Metodologia/Metodologia.tex [4
-
+) [2] [3]) (Monografia.bbl [4
 
 
 
 ]
-Cap\'{\i }tulo 3.
-Package pdftex.def Info: Option `bb' equivalent to `viewport' with pdftex drive
-r on input line 13.
-Package epstopdf Info: Source file: <Resultados/Figuras/ciclodesenvolvimento.ep
-s>
-(epstopdf)                    date: 2005-06-03 09:43:00
-(epstopdf)                    size: 1022324 bytes
-(epstopdf)             Output file: <Resultados/Figuras/ciclodesenvolvimento-ep
-s-converted-to.pdf>
-(epstopdf)                    date: 2020-03-09 16:08:13
-(epstopdf)                    size: 49981 bytes
-(epstopdf)             Command: <epstopdf --outfile=Resultados/Figuras/ciclodes
-envolvimento-eps-converted-to.pdf Resultados/Figuras/ciclodesenvolvimento.eps>
-(epstopdf)             \includegraphics on input line 13.
-Package epstopdf Info: Output file is already uptodate.
 
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-pdfTeX warning: pdflatex.exe (file ./Resultados/Figuras/ciclodesenvolvimento-ep
-s-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
-n <1.5> allowed
-<Resultados/Figuras/ciclodesenvolvimento-eps-converted-to.pdf, id=61, 302.12875
-pt x 259.97125pt>
-File: Resultados/Figuras/ciclodesenvolvimento-eps-converted-to.pdf Graphic file
- (type pdf)
-<use Resultados/Figuras/ciclodesenvolvimento-eps-converted-to.pdf>
-Package pdftex.def Info: Resultados/Figuras/ciclodesenvolvimento-eps-converted-
-to.pdf  used on input line 13.
-(pdftex.def)             Requested size: 264.98999pt x 221.82874pt.
-Package epstopdf Info: Source file: <Metodologia/Figuras/ciclodesenvolvimento.e
-ps>
-(epstopdf)                    date: 2005-06-03 09:43:00
-(epstopdf)                    size: 1022324 bytes
-(epstopdf)             Output file: <Metodologia/Figuras/ciclodesenvolvimento-e
-ps-converted-to.pdf>
-(epstopdf)                    date: 2020-03-09 16:08:14
-(epstopdf)                    size: 49981 bytes
-(epstopdf)             Command: <epstopdf --outfile=Metodologia/Figuras/ciclode
-senvolvimento-eps-converted-to.pdf Metodologia/Figuras/ciclodesenvolvimento.eps
->
-(epstopdf)             \includegraphics on input line 34.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex.exe (file ./Metodologia/Figuras/ciclodesenvolvimento-e
-ps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most versi
-on <1.5> allowed
-<Metodologia/Figuras/ciclodesenvolvimento-eps-converted-to.pdf, id=62, 302.1287
-5pt x 259.97125pt>
-File: Metodologia/Figuras/ciclodesenvolvimento-eps-converted-to.pdf Graphic fil
-e (type pdf)
-<use Metodologia/Figuras/ciclodesenvolvimento-eps-converted-to.pdf>
-Package pdftex.def Info: Metodologia/Figuras/ciclodesenvolvimento-eps-converted
--to.pdf  used on input line 34.
-(pdftex.def)             Requested size: 362.55267pt x 311.96393pt.
-[5 <./Resultados/Figuras/ciclodesenvolvimento-eps-converted-to.pdf>] [6 <./Meto
-dologia/Figuras/ciclodesenvolvimento-eps-converted-to.pdf>] [7])
-\openout2 = `Resultados/Resultados.aux'.
-
-
-(Resultados/Resultados.tex [8
-
-
-
-
-]
-Cap\'{\i }tulo 4.
-Package epstopdf Info: Source file: <Resultados/Figuras/ciclodesenvolvimento.ep
-s>
-(epstopdf)                    date: 2005-06-03 09:43:00
-(epstopdf)                    size: 1022324 bytes
-(epstopdf)             Output file: <Resultados/Figuras/ciclodesenvolvimento-ep
-s-converted-to.pdf>
-(epstopdf)                    date: 2020-03-09 16:08:13
-(epstopdf)                    size: 49981 bytes
-(epstopdf)             Command: <epstopdf --outfile=Resultados/Figuras/ciclodes
-envolvimento-eps-converted-to.pdf Resultados/Figuras/ciclodesenvolvimento.eps>
-(epstopdf)             \includegraphics on input line 20.
-Package epstopdf Info: Output file is already uptodate.
-File: Resultados/Figuras/ciclodesenvolvimento-eps-converted-to.pdf Graphic file
- (type pdf)
-<use Resultados/Figuras/ciclodesenvolvimento-eps-converted-to.pdf>
-Package pdftex.def Info: Resultados/Figuras/ciclodesenvolvimento-eps-converted-
-to.pdf  used on input line 20.
-(pdftex.def)             Requested size: 362.55267pt x 311.96393pt.
-[9] [10] [11] [12])
-\openout2 = `Conclusao/Conclusao.aux'.
-
- (Conclusao/Conclusao.tex
-Cap\'{\i }tulo 5.
-[13
-
-
-
-
-]) (Monografia.bbl [14
-
-
-
-]) [15] (Monografia.aux (Capa/capa.aux)
-(Resumo/Resumo.aux) (Agradecimentos/Agradecimentos.aux)
-(TabelaConteudo/TabelaConteudo.aux) (ListaFiguras/ListaFiguras.aux)
-(ListaTabelas/ListaTabelas.aux) (Introducao/Introducao.aux)
-(DescricaoProcesso/DescricaoProcesso.aux) (Metodologia/Metodologia.aux)
-(Resultados/Resultados.aux) (Conclusao/Conclusao.aux)) ) 
+) [5] (Monografia.aux (Introducao/Introducao.aux)) ) 
 Here is how much of TeX's memory you used:
- 3800 strings out of 481556
- 58842 string characters out of 2909658
- 314674 words of memory out of 3000000
- 18857 multiletter control sequences out of 15000+200000
- 568446 words of font info for 65 fonts, out of 3000000 for 9000
+ 3570 strings out of 481556
+ 50901 string characters out of 2909658
+ 304841 words of memory out of 3000000
+ 18754 multiletter control sequences out of 15000+200000
+ 551845 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,8n,27p,621b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/felipe.ribeir
-o/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/felip
-e.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/felipe.ribeiro/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/felipe.ribeiro/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/fe
-lipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on Monografia.pdf (29 pages, 197069 bytes).
+ 30i,5n,27p,753b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/felipe.ribeiro/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/felipe.ri
+beiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Us
+ers/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr
+8a.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
+rw/times/utmr8a.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/urw/times/utmri8a.pfb>
+Output written on Monografia.pdf (5 pages, 62909 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
+ 35 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
