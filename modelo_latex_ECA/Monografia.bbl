@@ -1,3 +1,79 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{16}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[ang()]{angularJSPage}
+P\'{a}gina {O}ficial {A}ngular{JS}.
+\newblock URL \url{https://angularjs.org/}.
+
+\bibitem[aws()]{awsHome}
+\'{a}gina {O}ficial aws.
+\newblock URL \url{https://aws.amazon.com/pt/}.
+
+\bibitem[nod()]{nodejsPage}
+P\'{a}gina {O}ficial {N}ode{JS}.
+\newblock URL \url{https://nodejs.org/en/}.
+
+\bibitem[piP()]{piPage}
+P\'{a}gina {O}ficial {PI} {S}ystem.
+\newblock URL \url{https://www.osisoft.pt/pi-system/}.
+
+\bibitem[spr()]{springBootPage}
+P\'{a}gina {O}ficial {S}pring {B}oot.
+\newblock URL \url{https://spring.io/projects/spring-boot}.
+
+\bibitem[con(2018)]{containerIntr}
+Introdu{\c{c}}\~{a}o aos containers e ao {D}ocker, 2018.
+\newblock URL
+  \url{https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/container-docker-introduction/}.
+
+\bibitem[doc(2019)]{dockerPage}
+P\'{a}gina {O}ficial {D}ocker, 2019.
+\newblock URL \url{https://www.docker.com/}.
+
+\bibitem[kub(2019)]{kubePage}
+P\'{a}gina {O}ficial {K}ubernetes, 2019.
+\newblock URL \url{https://kubernetes.io/pt/}.
+
+\bibitem[pyP(2019)]{pyPage}
+P\'{a}gina {O}ficial {P}ython, 2019.
+\newblock URL \url{https://docs.python.org}.
+
+\bibitem[vsc(2019)]{vscodePage}
+P\'{a}gina {O}ficial {V}isual {S}tudio {C}ode, 2019.
+\newblock URL \url{https://code.visualstudio.com/}.
+
+\bibitem[pos(2020)]{postgresPage}
+P\'{a}gina {O}ficial {P}ostgre{SQL}, 2020.
+\newblock URL \url{https://www.postgresql.org/}.
+
+\bibitem[wha(2020)]{whatKube}
+Kubernetes e a tecnologia de containers, 2020.
+\newblock URL
+  \url{https://www.redhat.com/pt-br/topics/containers/what-is-kubernetes}.
+
+\bibitem[BOOCH et~al.(2005)BOOCH, RUMBAUGH, and JACOBSON]{umlBooch}
+G.~BOOCH, J.~RUMBAUGH, and I.~JACOBSON.
+\newblock \emph{UML, Guia do Usuario}.
+\newblock $2^{\b{a}}$ edition, 2005.
+
+\bibitem[G.(2019)]{cloudComp}
+A.~G.
+\newblock Hospedagem {C}loud, 2019.
+\newblock URL
+  \url{https://www.hostinger.com.br/tutoriais/o-que-e-hospedagem-cloud/}.
+
+\bibitem[SOMMERVILLE(2011)]{engSw}
+I.~SOMMERVILLE.
+\newblock \emph{Engenharia de Software}.
+\newblock $9^{\b{a}}$ edition, 2011.
+
+\bibitem[TAKAI(2005)]{intrBD}
+O.~K. TAKAI.
+\newblock \emph{Introdu{\c{c}}\~{a}o a Banco de Dados}.
+\newblock 2005.
 
 \end{thebibliography}

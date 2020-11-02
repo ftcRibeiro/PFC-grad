@@ -1,0 +1,102 @@
+\chapter{Revisão Literária}
+\markright{\thechapter ~~~ Revisão Literária}
+
+Neste capítulo são apresentados os conceitos utilizados neste trabalho baseado na literatura. Na primeira seção são abordadas definições processuais de desenvolvimento de um software. Na segunda são revisados termos de direcionamento técnico para este processo. Na terceira, conceitos de controle e automação importantes, enquanto, na quarta, trabalhos relevantes que abordam assuntos comuns ao projeto aqui relatado.
+
+\section{Processo de Software}
+%\markright{\thesection ~~~ Histórico}
+%\label{hist}
+
+Um processo de software é composto por um conjunto de atividades relacionadas que levam à produção de um produto de software \cite{engSw}. A utilização deste conjunto de atividades auxilia no aumento da qualidade do produto desenvolvido, bem como sua manutenção. De forma geral, um processo de software é composto de quatro grandes etapas:
+\begin{itemize}
+	\item \textbf{Especificação de Software:} Devem ser definidas as funcionalidades e limitações de funcionamento do software a ser desenvolvido;
+	\item \textbf{Projeto e Implementação do Software:} O software deve ser produzido buscando o atendimento das especificações;
+	\item \textbf{Validação de software:} Deve ser validado para garantir o atendimento às demandas solicitadas;
+	\item \textbf{Evolução do Software:} Deve ser evoluído e alterado conforme novas necessidades 
+\end{itemize}
+
+\subsection{Modelo em Cascata}
+
+Existem diversos modelos de processo de software, dentre eles o modelo cascata, também conhecido como ciclo de vida de software. Este modelo consiste no encadeamento de suas etapas, tendo o início de uma associado necessariamente ao final de outra. São elas:
+\begin{itemize}
+	\item \textbf{Definição de requisitos:} São definidas restrições e metas do sistema por meio de entrevista com o usuário. Posteriormente são detalhadas a fim de se tornar especificação do sistema;
+	\item \textbf{Projeto de Sistema e Software:} Etapa de definição de arquitetura geral do sistema. Envolve identificação e descrição das abstrações, módulos ou componentes, bem como o relacionamento entre eles;
+	\item \textbf{Implementação:} O projeto de software é desenvolvido com seus conjuntos ou unidades de programas;
+	\item \textbf{Integração e Testes de sistema:} Os módulos individuais do sistema elaborado são integrados e testados em conjunto, buscando assegurar o funcionamento conforme especificado;
+	\item \textbf{Operação e manutenção:} O sistema é colocado em uso. São efetuadas possíveis correções de erros não descobertos em etapas anteriores. Expansões e melhorias de implementação das unidades também podem ser realizadas nesta etapa.
+\end{itemize}
+
+Este modelo dá grande importância à documentação gerada ao final de cada uma das etapas, geralmente amarrando o início da etapa seguinte à aprovação destes documentos. Ele também é consistente com outros modelos de processos de engenharia, tornando o processo mais visível para o nível gerencial.
+
+\subsection{Desenvolvimento Ágil}
+
+O desenvolvimento ágil se baseia na entrega de pequenos incrementos do produto de software, disponibilizando versões para o cliente, a cada período de tempo especificado (em geral, duas ou três semanas). Esse envolvimento do cliente durante o processo de construção possibilita o acompanhamento da evolução dos requisitos do sistema. Tem como outra forte característica a utilização de conversas informações, minimização da documentação, gerando mais responsividade do processo a possíveis mudanças nos requisitos do produto de software.
+
+
+\begin{figure}[!htbp]
+	\centering		
+	\includegraphics[width=0.5\textwidth]{RevisaoBibliografica/Images/MetodosAgeis.png}
+	\caption{Métodos Ágeis}
+	\label{fig:metAgeis}
+\end{figure}
+
+
+\section{Arquitetura de Software}
+%talvez seja mais interessante utilizar o título "Modelagem de sistemas"
+%\markright{\thesection ~~~ O Telefone}
+%\label{telefone}
+
+Arquitetura de Software é um conjunto de decisões significativas sobre a
+organização de um sistema de software, a seleção dos elementos estruturais e suas interfaces, a composição destes em subsistemas progressivamente maiores, bem como o estilo de arquitetura que orienta a organização e interação dos módulos envolvidos. A definição da arquitetura de um software passa por etapas e conhecimentos prévios necessários para uma estruturação correta do mesmo \cite{umlBooch}.
+
+\subsection{Modelagem orientada a Dados}
+\label{sec:modSeq}
+Modelos construídos sob o paradigma de orientação a dados trazem a sequência de ações envolvidas no processamento daqueles dados, desde sua entrada, até sua saída. Pode ser realizada através de um modelo de sequências\cite{umlBooch} destacando a movimentação dos dados daquele módulo ali representado. A figura \ref{fig:seqModel} traz um exemplo desse tipo de modelo.
+
+\begin{figure}[!htbp]
+	\centering		
+	\includegraphics[width=0.75\textwidth]{RevisaoBibliografica/Images/modelSeq.png}
+	\caption{Modelo de sequência}
+	\label{fig:seqModel}
+\end{figure}
+
+\subsection{Arquitetura em Camadas}
+
+Arquitetura que organiza o sistema em um grupo de camadas, onde cada uma delas oferece um conjunto de serviços. Essa noção de separação e independência é fundamental para que haja a possibilidade de alterações localizadas, facilitando as etapas de manutenção e sustentação do produto de software. A figura \ref{fig:arqCamadas} traz uma representação genérica deste tipo de arquitetura.
+
+\begin{figure}[!htbp]
+	\centering		
+	\includegraphics[width=0.4\textwidth]{RevisaoBibliografica/Images/ArqCamadas.png}
+	\caption{Arquitetura genérica em camadas}
+	\label{fig:arqCamadas}
+\end{figure}
+
+O relacionamento entre as camadas se dá de forma bem definida. Possui protocolos que indicam como a comunicação entre elas se dá. Uma camada só solicita serviços à inferior, e somente fornece à superior.	Esse tipo de divisão facilita e colabora para o processo de desenvolvimento incremental. Uma arquitetura deste tipo muito utilizada e conhecida é a \textit{MVC}, sigla do inglês para \textit{Model-View-Controller}.
+
+
+\subsection{Orientação a Objetos}
+
+O conceito de OO (Orientação a objetos) consiste na estruturação de um código ou programa utilizando de abstrações para conectar o espaço do problema ao da solução. Os vários objetos construídos nessas abstrações se relacionam através de comandos. Cada um desses objetos possui uma \textit{classificação} que o determina, chamada de \textit{classe}.
+
+Para ficar claro como os objetos se relacionam, os conceitos que seguem são importantes	:
+\begin{itemize}
+	\item \textbf{Encapsulamento:} Estratégia utilizada para garantir que detalhes internos do funcionamento de uma classe. Dessa forma, o conhecimento sobre a implementação interna de uma classe é desnecessária do ponto de vista da instância daquela classe.;
+	\item \textbf{Herança:} Quando uma classe pode ser um \textit{tipo} de uma outra classe, o conceito de herança pode ser aplicado. Se existe uma classe \textit{veículo} e se deseja construir uma representação \textit{motocicleta}, a segunda (classe filha) pode herdar características da primeira (classe pai), visto que \textit{bicicleta} é um tipo de \textit{veículo};
+	\item \textbf{Polimorfismo:} É o princípio pelo qual duas ou mais classes derivadas de uma mesma classe pai podem invocar métodos que têm a mesma identificação (assinatura) mas comportamentos distintos, especializados para cada classe derivada, usando para tanto uma referência a um objeto do tipo da superclasse.;
+\end{itemize}
+
+
+\subsection{Modelo Relacional de Banco de Dados}
+
+Banco de dados é uma mecanismo de armazenamento que permite persistência de dados de uma aplicação, programa ou produto de software. O modelo relacional busca o aumento da independência de dados nos sistemas. O Modelo relacional revelou-se ser o mais flexível e adequado ao solucionar os vários problemas que se colocam no nível da concepção e implementação da base de dados. A estrutura fundamental do modelo
+relacional é a relação. Ela é constituída por um ou mais atributos que traduzem o tipo de dados a armazenar \cite{intrBD}. 	
+
+%TODO: Adicionar subsections sobre container, orquestradores(kubernetes) e imagens (docker);
+
+%\section{Conceitos de Processos industriais}
+%TODODetalhar sobre a utilização de KPIs para análise de processos industriais. Falar aqui também sobre PIMS;
+%\section{Trabalhos Relacionados}
+%TODO Falar sobre o trabalho que está no zotero sobre criação de aplicação, depois falar sobre o artigo de kpis e partir pra ideia de ter um pouco de cada como referências;
+
+
+\clearpage

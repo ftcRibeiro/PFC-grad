@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.4)  2 SEP 2020 20:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.4)  2 NOV 2020 10:15
 entering extended mode
 **./Monografia.tex
 (Monografia.tex
@@ -210,11 +210,24 @@ cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/natbib\na
+tbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip55
+\bibsep=\skip56
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count190
 ) (abntex2abrev.sty
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifth
 en.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.s
+ty"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\
 geometry.sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -227,9 +240,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 ftex.sty"
 Package: iftex 2019/11/07 v1.0c TeX engine tests
 ))
-\Gm@cnth=\count190
-\Gm@cntv=\count191
-\c@Gm@tempcnt=\count192
+\Gm@cnth=\count191
+\Gm@cntv=\count192
+\c@Gm@tempcnt=\count193
 \Gm@bindingoffset=\dimen147
 \Gm@wd@mp=\dimen148
 \Gm@odd@mp=\dimen149
@@ -251,39 +264,41 @@ Writing index file Monografia.idx
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend
 \l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count193
+\l__kernel_color_stack_int=\count194
 \l__pdf_internal_box=\box47
-) (Monografia.aux (Introducao/Introducao.aux))
+) (Monografia.aux (Capa/capa.aux)
+(TabelaConteudo/TabelaConteudo.aux) (Introducao/Introducao.aux)
+(RevisaoBibliografica/RevisaoBibliografica.aux) (Metodologia/Metodologia.aux))
 \openout1 = `Monografia.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mk
 ii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count194
+\scratchcounter=\count195
 \scratchdimen=\dimen155
 \scratchbox=\box48
-\nofMPsegments=\count195
-\nofMParguments=\count196
+\nofMPsegments=\count196
+\nofMParguments=\count197
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count197
+\MPscratchCnt=\count198
 \MPscratchDim=\dimen156
-\MPnumerator=\count198
-\makeMPintoPDFobject=\count199
+\MPnumerator=\count199
+\makeMPintoPDFobject=\count266
 \everyMPtoPDFconversion=\toks30
 )
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-
@@ -326,7 +341,46 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+\openout2 = `Capa/capa.aux'.
+
+(Capa/capa.tex [1
+
+
+
+{C:/Users/felipe.ribeiro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
+
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
+
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\
+umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
+
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\
+umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1] [2
+
+
+])
+\openout2 = `TabelaConteudo/TabelaConteudo.aux'.
+
+ (TabelaConteudo/TabelaConteudo.tex (Monografia.toc)
+\tf@toc=\write4
+\openout4 = `Monografia.toc'.
+
+ [1
+
+
+
+])
 \openout2 = `Introducao/Introducao.aux'.
+
 
 (Introducao/Introducao.tex
 Cap\'{\i }tulo 1.
@@ -334,40 +388,104 @@ Cap\'{\i }tulo 1.
 
 
 
-{C:/Users/felipe.ribeiro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
 3.
 
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts
 1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [2] [3]) (Monografia.bbl [4
+)) [2] [3]
+\openout2 = `RevisaoBibliografica/RevisaoBibliografica.aux'.
+
+ (RevisaoBibliografica/RevisaoBibliografica.tex [4
 
 
 
 ]
+Cap\'{\i }tulo 2.
+[5]
+<RevisaoBibliografica/Images/MetodosAgeis.png, id=37, 352.31625pt x 133.49875pt
+>
+File: RevisaoBibliografica/Images/MetodosAgeis.png Graphic file (type png)
+<use RevisaoBibliografica/Images/MetodosAgeis.png>
+Package pdftex.def Info: RevisaoBibliografica/Images/MetodosAgeis.png  used on 
+input line 38.
+(pdftex.def)             Requested size: 220.50887pt x 83.55464pt.
+ [6 <./RevisaoBibliografica/Images/MetodosAgeis.png>]
+<RevisaoBibliografica/Images/modelSeq.png, id=43, 553.06625pt x 231.86626pt>
+File: RevisaoBibliografica/Images/modelSeq.png Graphic file (type png)
+<use RevisaoBibliografica/Images/modelSeq.png>
+Package pdftex.def Info: RevisaoBibliografica/Images/modelSeq.png  used on inpu
+t line 58.
+(pdftex.def)             Requested size: 330.76329pt x 138.66795pt.
+<RevisaoBibliografica/Images/ArqCamadas.png, id=44, 241.90375pt x 322.20375pt>
+File: RevisaoBibliografica/Images/ArqCamadas.png Graphic file (type png)
+<use RevisaoBibliografica/Images/ArqCamadas.png>
+Package pdftex.def Info: RevisaoBibliografica/Images/ArqCamadas.png  used on in
+put line 69.
+(pdftex.def)             Requested size: 176.40439pt x 234.97078pt.
+ [7 <./RevisaoBibliografica/Images/modelSeq.png> <./RevisaoBibliografica/Images
+/ArqCamadas.png>]
+[8])
+\openout2 = `Metodologia/Metodologia.aux'.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
+ (Metodologia/Metodologia.tex
+Cap\'{\i }tulo 3.
+[9
 
-) [5] (Monografia.aux (Introducao/Introducao.aux)) ) 
+
+
+
+]
+<Metodologia/Figuras/arquitetura-omo.png, id=59, 791.95876pt x 737.75626pt>
+File: Metodologia/Figuras/arquitetura-omo.png Graphic file (type png)
+<use Metodologia/Figuras/arquitetura-omo.png>
+Package pdftex.def Info: Metodologia/Figuras/arquitetura-omo.png  used on input
+ line 34.
+(pdftex.def)             Requested size: 284.52756pt x 265.0517pt.
+ [10 <./Metodologia/Figuras/arquitetura-omo.png>] [11] [12]) (Monografia.bbl
+
+LaTeX Warning: Command \b invalid in math mode on input line 61.
+
+
+Underfull \hbox (badness 6910) in paragraph at lines 64--68
+[]\T1/ptm/m/n/10.95 A. G.  Hos-pe-da-gem Cloud, 2019.  URL $https : / / www . h
+ostinger . com . br / tutoriais /
+ []
+
+
+LaTeX Warning: Command \b invalid in math mode on input line 72.
+
+) [13
+
+
+
+] (Monografia.aux (Capa/capa.aux) (TabelaConteudo/TabelaConteudo.aux)
+(Introducao/Introducao.aux) (RevisaoBibliografica/RevisaoBibliografica.aux)
+(Metodologia/Metodologia.aux)) ) 
 Here is how much of TeX's memory you used:
- 3570 strings out of 481556
- 50901 string characters out of 2909658
- 304841 words of memory out of 3000000
- 18754 multiletter control sequences out of 15000+200000
- 551845 words of font info for 39 fonts, out of 3000000 for 9000
+ 4171 strings out of 481556
+ 61261 string characters out of 2909658
+ 312876 words of memory out of 3000000
+ 19277 multiletter control sequences out of 15000+200000
+ 569994 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,5n,27p,753b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/felipe.ribeiro/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/felipe.ri
-beiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Us
-ers/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr
-8a.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
-rw/times/utmr8a.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on Monografia.pdf (5 pages, 62909 bytes).
+ 30i,9n,30p,808b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/felipe.ribeiro/AppData/Local/Programs
+/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/felipe.ribeiro/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/felipe.
+ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/felipe.ribeiro/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/felipe.ribeiro/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/felip
+e.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Monografia.pdf (18 pages, 219059 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,17 +1,54 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Monografia.aux
-A level-1 auxiliary file: Capa/capa.aux
-A level-1 auxiliary file: Resumo/Resumo.aux
-A level-1 auxiliary file: Agradecimentos/Agradecimentos.aux
+The style file: abbrvnat.bst
 A level-1 auxiliary file: TabelaConteudo/TabelaConteudo.aux
-A level-1 auxiliary file: ListaFiguras/ListaFiguras.aux
-A level-1 auxiliary file: ListaTabelas/ListaTabelas.aux
 A level-1 auxiliary file: Introducao/Introducao.aux
-A level-1 auxiliary file: DescricaoProcesso/DescricaoProcesso.aux
+A level-1 auxiliary file: RevisaoBibliografica/RevisaoBibliografica.aux
 A level-1 auxiliary file: Metodologia/Metodologia.aux
-A level-1 auxiliary file: Resultados/Resultados.aux
-A level-1 auxiliary file: Conclusao/Conclusao.aux
-The style file: plain.bst
 Database file #1: references.bib
-Warning--I didn't find a database entry for "and/74"
-Warning--I didn't find a database entry for "bel/00"
-(There were 2 warnings)
+Warning--entry type for "pyPage" isn't style-file defined
+--line 27 of file references.bib
+Warning--entry type for "vscodePage" isn't style-file defined
+--line 34 of file references.bib
+Warning--entry type for "containerIntr" isn't style-file defined
+--line 41 of file references.bib
+Warning--entry type for "dockerPage" isn't style-file defined
+--line 49 of file references.bib
+Warning--entry type for "cloudComp" isn't style-file defined
+--line 57 of file references.bib
+Warning--entry type for "kubePage" isn't style-file defined
+--line 64 of file references.bib
+Warning--entry type for "whatKube" isn't style-file defined
+--line 71 of file references.bib
+Warning--entry type for "postgresPage" isn't style-file defined
+--line 79 of file references.bib
+Warning--entry type for "springBootPage" isn't style-file defined
+--line 86 of file references.bib
+Warning--entry type for "angularJSPage" isn't style-file defined
+--line 93 of file references.bib
+Warning--entry type for "piPage" isn't style-file defined
+--line 100 of file references.bib
+Warning--entry type for "nodejsPage" isn't style-file defined
+--line 107 of file references.bib
+Warning--entry type for "awsHome" isn't style-file defined
+--line 119 of file references.bib
+Warning--to sort, need author or key in pyPage
+Warning--to sort, need author or key in vscodePage
+Warning--to sort, need author or key in postgresPage
+Warning--to sort, need author or key in containerIntr
+Warning--to sort, need author or key in dockerPage
+Warning--to sort, need author or key in kubePage
+Warning--to sort, need author or key in whatKube
+Warning--to sort, need author or key in springBootPage
+Warning--to sort, need author or key in angularJSPage
+Warning--to sort, need author or key in piPage
+Warning--to sort, need author or key in nodejsPage
+Warning--to sort, need author or key in awsHome
+Warning--empty year in angularJSPage
+Warning--empty year in awsHome
+Warning--empty year in nodejsPage
+Warning--empty year in piPage
+Warning--empty year in springBootPage
+Warning--empty publisher in umlBooch
+Warning--empty publisher in engSw
+Warning--empty publisher in intrBD
+(There were 33 warnings)

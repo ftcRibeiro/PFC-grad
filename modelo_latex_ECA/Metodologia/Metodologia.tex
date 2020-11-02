@@ -1,54 +1,77 @@
-\chapter{Metodologia}
+\chapter{Materiais e Métodos}
+\markright{\thechapter ~~~ Metodologia}
+Neste capítulo são descritos os recursos de hardware e software necessários para o desenvolvimento deste projeto. São listados IDE utilizada para desenvolvimento, arquitetura existente a consumir dados da aplicação e escolha de algoritmos de cálculo de KPIs. Também são apresentados os processos de desenvolvimento de software utilizados e funcionamento da equipe dentro da qual foi o projeto foi construído.
 
-Neste capítulo, você deve apresentar uma breve revisão bibliográfica sobre as técnicas utilizadas para solução do problema.
+\section{Descrição de Componentes}
+
+Esta seção apresenta a arquitetura existente que receberá a aplicação desenvolvida, o Kpi-Executor, bem como os recursos de hardware e software utilizados no seu desenvolvimento.
+
+\subsection{Software}
+
+\subsubsection{IDE, Linguagem e Banco de Dados}
+
+Para o desenvolvimento da aplicação foi escolhida a linguagem \textit{Python} \cite{pyPage}, em sua versão $3.8$, devido a seu caráter de alto nível e sua grande gama de bibliotecas disponíveis. Para a codificação foi escolhida a IDE \textit{Visual Studio Code} \cite{vscodePage}, devido à sua multiplicidade de extensões e também por já ser amplamente utilizada pela comunidade de desenvolvedores de software.
+
+Ambas, linguagem e IDE, tem característica \textit{opensource}, sendo ativamente utilizadas e exploradas dia a dia por sua ampla comunidade, além de terem seus módulos e extensões gratuitos.
+
+Quanto ao armazenamento dos dados, foi utilizada uma estrutura relacional de banco de dados, considerando sua praticidade, bem como a estrutura existente descrita nas próximas seções. Foi utilizada uma instância de um banco de dados \textit{PostgresSQL} \cite{postgresPage} , uma ferramenta gratuita para a persistência dos dados gerados pela aplicação.
+
+\subsubsection{Orquestradores e Containers}
+
+Como a aplicação desenvolvida foi acoplada a um sistema existente, foi necessário que ela respeitasse o conjunto anteriormente elaborado, bem como se adequasse à arquitetura em nuvem \cite{cloudComp} já em funcionamento. Para tal, essa aplicação deveria possuir certo encapsulamento.
+
+Uma forma amplamente utilizada para o encapsulamento e execução de aplicações de grande porte é o formato de \textit{containers}. É uma abordagem de desenvolvimento de software onde um serviço ou aplicativo é empacotado com suas dependências e configurações \cite{containerIntr}. Dessa forma, são facilitados os processos de Testes de unidade e integração \cite{engSw}, bem como etapas de evolução \cite{engSw} e versionamento daquele conjunto. Para o processo de construção de \textit{container} do módulo \textit{Kpi-Executor} foi utilizada a plataforma \textit{Docker} \cite{dockerPage}, gerando uma imagem de um SO (Sistema Operacional) Linux contendo as dependências e instalações necessárias para a execução do \textit{Kpi-Executor}.
+
+Uma vez empacotada a aplicação, é necessário utilizar uma ferramenta para operar esse pacote, o executando sempre que necessário. Esta utilidade é chamada de \textit{orquestrador}. A ferramenta deste tipo utilizada foi o \textit{Kubernetes} \cite{kubePage}. Este tipo de ferramenta possibilita a automação de operações \textit{containers}, como implantações ou atualizações das aplicações, o gerenciamento de serviços de forma declarativa garantindo a repetibilidade do sistema, a separação de \textit{containers} em diferentes \textit{hosts}, bem como a verificação de integridade e autorrecuperação das aplicações \cite{whatKube}.
 
 
-\section{Técnica 1}
-\markright{\thesection ~~~ Metodologia}
-\label{metodo}
+\subsection{Estrutura Existente}
 
-Aqui você encontra um exemplo de inserção de figura. Veja o arquivo DescricaoProjeto.tex para ver os comandos.
+A aplicação construída funcionará como um módulo de um sistema de CPM existente chamado LOOP. Ele é composto por um conjunto de módulos, cada um com sua responsabilidade bem definida. A figura \ref{fig:arqLoop} traz o esquema arquitetural do sistema, bem como o relacionamento entre os módulos.
+
 \begin{figure}[!htbp]
 	\centering		
-	\includegraphics[bb =0 0 264  221]{Resultados/Figuras/ciclodesenvolvimento.eps}
-	\caption{figuara teste}
-	\label{fig:ciclodesenvolvimento}
+	\includegraphics[width=10cm]{Metodologia/Figuras/arquitetura-omo.png}
+	\caption{Arquitetura Loop}
+	\label{fig:arqLoop}
 \end{figure}
 
-A figura \ref{fig:ciclodesenvolvimento} tal aparece.
+Neste esquema são identificadas as linguagens e tecnologias de cada módulo. São eles:
 
-\begin{table}
-	\centering
-		\begin{tabular}{c|c}
-			1 & 2 \\
-			1 & 2 \\
-			1 & 2 \\
-			1 & 2 \\
-			1 & 2 \\			
-		\end{tabular}
-\end{table}
+\begin{itemize}
+	\item \textbf{Dashboard:} Aplicação web acessível ao usuário do sistema CPM LOOP composta por um \textit{backend} em \textit{Spring Boot} \cite{springBootPage} e \textit{frontend} em \textit{AngularJS} \cite{angularJSPage};
+	\item \textbf{Bancos de Dados:} São três instâncias de banco de dados do sistema. A nomeada como \textit{omo-db} carrega as informações de cadastro e configuração das entidades do LOOP. A nomeada \textit{omokpi} armazena os dados calculados pelo Kpi-Executor, enquanto a \textit{logs} registra os logs de funcionamento da aplicação de cálculos. Todas as instâncias são do tipo PostgreSQL \cite{postgresPage};
+	\item \textbf{Data-Service:} Módulo do tipo API construído em \textit{Spring Boot} \cite{springBootPage} responsável por prover dados registrados no banco \textit{omokpi} à aplicação web \textit{Dashboard}. Formata pesquisa e retorna dados sob demanda;
+	\item \textbf{PIMS:} Um sistema PIMS da \textit{OsiSoft} chamado \textit{PI System} \cite{piPage}. Nele são armazenados os dados de processo dos clientes que utilizam o sistema LOOP. Estes dados são utilizados na realização dos cálculos (Kpi-Executor);
+	\item \textbf{Pi-Facade:} Módulo do tipo API construído em \textit{Spring Boot} \cite{springBootPage} responsável por prover dados registrados e cadastrar novas informações no PIMS sob demanda da aplicação web \textit{Dashboard};
+	\item \textbf{Pi-Connector:} Módulo do tipo API construído em \textit{NodeJS} \cite{nodejsPage} responsável pelo fornecimento de dados registrados no PIMS à aplicação de cálculos (Kpi-Executor);
+	\item \textbf{Kpi-Executor:} Módulo desenvolvido descrito por esta monografia. Construído em \textit{Python 3.8} \cite{pyPage} e responsável por calcular os índices de performance (KPIs) do sistema LOOP. Opera de forma cíclica, realizando seus cálculos a cada hora.
+	
+\end{itemize}
 
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[scale=1.2]{Metodologia/Figuras/ciclodesenvolvimento.eps}
-\caption{Ciclo de desenvolvimento de um projeto \cite{and/74}.}
-\label{CicloDesenvolvimento1}
-\end{figure}
+\newpage
+\subsection{Hardware}
+Para realização do desenvolvimento do Kpi-Executor, foi necessário um notebook com 16Gb de memória e processador intel i7. Também foi necessário um ambiente de Testes e validação semelhante ao de produção. São máquinas hospedadas na \textit{Amazon Web Services} \cite{awsHome}.
 
-Para referenciar a Figura \ref{CicloDesenvolvimento1}, veja arquivo .tex.
 
-\begin{equation}\label{eq:forca}
-	f=ma
-\end{equation}
 
-A equação \ref{eq:forca}
-\section{Técnica 2}
-\markright{\thesection ~~~ Metodologia}
-\label{metodo1a}
+\section{Metodologia}
+%\markright{\thesection ~~~ Metodologia}
 
-\section{Resumo do Capítulo}
-\markright{\thesection ~~~ Metodologia}
+Para a construção dessa aplicação foi utilizado o um processo de desenvolvimento de software composto por características de um cascata e um incremental \cite{engSw}. Como o projeto foi entendido como uma demanda associada ao fluxo de trabalho da equipe de Coder, descrita na seção \ref{seq:idCoder}, ele estava submetido a um fluxo de \textit{Kanban}, o que aponta para o quesito de entrega incremental quando associado ao sistema LOOP como um todo. Entretanto, como se tratava de uma tarefa não pequena, foram necessárias etapas que coincidem com o processo cascata.
+Neste capítulo serão listadas as etapas de projeto, desenvolvimento e testes do Kpi-Executor, bem como as escolhas relacionadas aos cálculos por ele realizados.
+
+\subsection{Projeto da Aplicação}
+
+O projeto da aplicação iniciou-se com um escopo relativamente simples. Ela deveria realizar de forma cíclica um conjunto de cálculos de índices de performance que são utilizados pelo sistema CPM LOOP, registrá-los em um banco de dados existente, com estrutura também definida, e possibilitar um rastreio de falhas no fluxo de cálculos, identificando o qual tipo de erro, e em que momento este acontecera. Tendo essas informações, ainda foi eram necessárias mais definições de casos específicos não mapeados pela descrição inicial. 
+
+\subsubsection{Levantamento do Requisitos}
+
+Considerando a necessidade de um mapeamento detalhado dos casos de cálculo, foi realizado um processo de entrevista com o PO (\textit{Product Owner} do sistema LOOP, a fim de elucidar o fluxo de cálculo em seu estado ideal, possíveis tratativas em casos não usuais e demais requisitos funcionais e não-funcionais. Deste levantamento, foi elaborado o diagrama de sequência (\ref{sec:modSeq}) tratando o fluxo a ser executado pelo Kpi-Executor, exibido na figura \ref()
+
+ 
+ 
 \label{metodo1b}
 
 
