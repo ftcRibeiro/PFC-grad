@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.4)  2 NOV 2020 10:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.4)  21 DEC 2020 20:47
 entering extended mode
 **./Monografia.tex
 (Monografia.tex
@@ -29,6 +29,19 @@ File: bk12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 mes.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\
+titlesec.sty"
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box45
+\beforetitleunit=\skip49
+\aftertitleunit=\skip50
+\ttl@plus=\dimen135
+\ttl@minus=\dimen136
+\ttl@toksa=\toks14
+\titlewidth=\dimen137
+\titlewidthlast=\dimen138
+\titlewidthfirst=\dimen139
+)
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\
 graphicx.sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
@@ -36,7 +49,7 @@ Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\
 keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks15
 )
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\
 graphics.sty"
@@ -56,14 +69,14 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 def\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen135
-\Gin@req@width=\dimen136
+\Gin@req@height=\dimen140
+\Gin@req@width=\dimen141
 )
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inpu
 tenc.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
 
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\lati
 n1.def"
@@ -94,7 +107,7 @@ Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 abel.def"
 File: babel.def 2020/02/14 3.40 Babel common definitions
 \babel@savecnt=\count176
-\U@D=\dimen137
+\U@D=\dimen142
 
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\t
 xtbabel.def")
@@ -118,7 +131,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\a
 msmath.sty"
 Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip49
+\@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 
@@ -129,13 +142,13 @@ Package: amstext 2000/06/29 v2.01 AMS text
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\a
 msgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
-\ex@=\dimen138
+\@emptytoks=\toks18
+\ex@=\dimen143
 ))
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\a
 msbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen139
+\pmbraise@=\dimen144
 )
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\a
 msopn.sty"
@@ -151,9 +164,9 @@ LaTeX Info: Redefining \overline on input line 389.
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box45
-\strutbox@=\box46
-\big@size=\dimen140
+\Mathstrutbox@=\box46
+\strutbox@=\box47
+\big@size=\dimen145
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \macc@depth=\count183
@@ -161,36 +174,36 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \dotsspace@=\muskip16
 \c@parentequation=\count185
 \dspbrk@lvl=\count186
-\tag@help=\toks18
+\tag@help=\toks19
 \row@=\count187
 \column@=\count188
 \maxfields@=\count189
-\andhelp@=\toks19
-\eqnshift@=\dimen141
-\alignsep@=\dimen142
-\tagshift@=\dimen143
-\tagwidth@=\dimen144
-\totwidth@=\dimen145
-\lineht@=\dimen146
-\@envbody=\toks20
-\multlinegap=\skip50
-\multlinetaggap=\skip51
-\mathdisplay@stack=\toks21
+\andhelp@=\toks20
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks21
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\am
 sthm.sty"
 Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks22
-\thm@bodyfont=\toks23
-\thm@headfont=\toks24
-\thm@notefont=\toks25
-\thm@headpunct=\toks26
-\thm@preskip=\skip52
-\thm@postskip=\skip53
-\thm@headsep=\skip54
-\dth@everypar=\toks27
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks28
 )
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\
 amsfonts.sty"
@@ -214,8 +227,8 @@ Package color Info: Driver file: pdftex.def on input line 147.
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/natbib\na
 tbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip55
-\bibsep=\skip56
+\bibhang=\skip57
+\bibsep=\skip58
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count190
 ) (abntex2abrev.sty
@@ -227,6 +240,391 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ty"
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/todonotes
+\todonotes.sty"
+Package: todonotes 2020/08/18 v1.1.3 Todonotes source and documentation.
+Package: todonotes 2018/11/22
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\x
+keyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval
+\xkeyval.tex"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval
+\xkvutils.tex"
+\XKV@toks=\toks29
+\XKV@tempa@toks=\toks30
+)
+\XKV@depth=\count191
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xc
+olor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-
+cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/front
+endlayer\tikz.sty"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basic
+layer\pgf.sty"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utili
+ties\pgfrcs.sty"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
+lities\pgfutil-common.tex"
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen152
+\pgfutil@tempdimb=\dimen153
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
+lities\pgfutil-common-lists.tex"))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
+lities\pgfutil-latex.def"
+\pgfutil@abb=\box48
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ms\everys
+hi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
+lities\pgfrcs.code.tex"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf
+.revision.tex")
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basic
+layer\pgfcore.sty"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/syste
+mlayer\pgfsys.sty"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
+temlayer\pgfsys.code.tex"
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
+lities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
+lities\pgfkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks34
+))
+\pgf@x=\dimen154
+\pgf@y=\dimen155
+\pgf@xa=\dimen156
+\pgf@ya=\dimen157
+\pgf@xb=\dimen158
+\pgf@yb=\dimen159
+\pgf@xc=\dimen160
+\pgf@yc=\dimen161
+\pgf@xd=\dimen162
+\pgf@yd=\dimen163
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count192
+\c@pgf@countb=\count193
+\c@pgf@countc=\count194
+\c@pgf@countd=\count195
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
+\pgf@sys@id@count=\count196
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
+temlayer\pgf.cfg"
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
+temlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
+temlayer\pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
+temlayer\pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count197
+\pgfsyssoftpath@bigbuffer@items=\count198
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
+temlayer\pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcore.code.tex"
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmath.code.tex"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathcalc.code.tex"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathutil.code.tex")
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen164
+\pgfmath@count=\count199
+\pgfmath@box=\box49
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathfunctions.code.tex"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathfunctions.basic.code.tex")
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathfunctions.trigonometric.code.tex")
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathfunctions.random.code.tex")
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathfunctions.comparison.code.tex")
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathfunctions.base.code.tex")
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathfunctions.round.code.tex")
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathfunctions.misc.code.tex")
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathfunctions.integerarithmetics.code.tex")))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count266
+))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfint.code.tex")
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen165
+\pgf@picmaxx=\dimen166
+\pgf@picminy=\dimen167
+\pgf@picmaxy=\dimen168
+\pgf@pathminx=\dimen169
+\pgf@pathmaxx=\dimen170
+\pgf@pathminy=\dimen171
+\pgf@pathmaxy=\dimen172
+\pgf@xx=\dimen173
+\pgf@xy=\dimen174
+\pgf@yx=\dimen175
+\pgf@yy=\dimen176
+\pgf@zx=\dimen177
+\pgf@zy=\dimen178
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen179
+\pgf@path@lasty=\dimen180
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen181
+\pgf@shorten@start@additional=\dimen182
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box50
+\pgf@hbox=\box51
+\pgf@layerbox@main=\box52
+\pgf@picture@serial@count=\count267
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen183
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen184
+\pgf@pt@y=\dimen185
+\pgf@pt@temp=\dimen186
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen187
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen188
+\pgf@sys@shading@range@num=\count268
+\pgf@shadingcount=\count269
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box53
+))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
+iclayer\pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mod
+ules\pgfmoduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box54
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mod
+ules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compa
+tibility\pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen189
+\pgf@nodesepend=\dimen190
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compa
+tibility\pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utili
+ties\pgffor.sty"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utili
+ties\pgfkeys.sty"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
+lities\pgfkeys.code.tex"))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/math\
+pgfmath.sty"
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmath.code.tex"))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
+lities\pgffor.code.tex"
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
+h\pgfmath.code.tex")
+\pgffor@iter=\dimen191
+\pgffor@skip=\dimen192
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
+))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fro
+ntendlayer/tikz\tikz.code.tex"
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/lib
+raries\pgflibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count270
+\pgfplotmarksize=\dimen193
+)
+\tikz@lastx=\dimen194
+\tikz@lasty=\dimen195
+\tikz@lastxsaved=\dimen196
+\tikz@lastysaved=\dimen197
+\tikz@lastmovetox=\dimen198
+\tikz@lastmovetoy=\dimen199
+\tikzleveldistance=\dimen256
+\tikzsiblingdistance=\dimen257
+\tikz@figbox=\box55
+\tikz@figbox@bg=\box56
+\tikz@tempbox=\box57
+\tikz@tempbox@bg=\box58
+\tikztreelevel=\count271
+\tikznumberofchildren=\count272
+\tikznumberofcurrentchild=\count273
+\tikz@fig@count=\count274
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mod
+ules\pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count275
+\pgfmatrixcurrentcolumn=\count276
+\pgf@matrix@numberofcolumns=\count277
+)
+\tikz@expandcount=\count278
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fro
+ntendlayer/tikz/libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fro
+ntendlayer/tikz/libraries\tikzlibrarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fro
+ntendlayer/tikz/libraries\tikzlibraryshadows.code.tex"
+File: tikzlibraryshadows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fro
+ntendlayer/tikz/libraries\tikzlibraryfadings.code.tex"
+File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/lib
+raries\pgflibraryfadings.code.tex"
+File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\cal
+c.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count279
+\calc@Bcount=\count280
+\calc@Adimen=\dimen258
+\calc@Bdimen=\dimen259
+\calc@Askip=\skip59
+\calc@Bskip=\skip60
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count281
+\calc@Cskip=\skip61
+)
+\c@@todonotes@numberoftodonotes=\count282
 )
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\
 geometry.sty"
@@ -240,23 +638,23 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 ftex.sty"
 Package: iftex 2019/11/07 v1.0c TeX engine tests
 ))
-\Gm@cnth=\count191
-\Gm@cntv=\count192
-\c@Gm@tempcnt=\count193
-\Gm@bindingoffset=\dimen147
-\Gm@wd@mp=\dimen148
-\Gm@odd@mp=\dimen149
-\Gm@even@mp=\dimen150
-\Gm@layoutwidth=\dimen151
-\Gm@layoutheight=\dimen152
-\Gm@layouthoffset=\dimen153
-\Gm@layoutvoffset=\dimen154
-\Gm@dimlist=\toks28
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen260
+\Gm@wd@mp=\dimen261
+\Gm@odd@mp=\dimen262
+\Gm@even@mp=\dimen263
+\Gm@layoutwidth=\dimen264
+\Gm@layoutheight=\dimen265
+\Gm@layouthoffset=\dimen266
+\Gm@layoutvoffset=\dimen267
+\Gm@dimlist=\toks43
 
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\
 geometry.cfg"))
-\@indexfile=\write3
-\openout3 = `Monografia.idx'.
+\@indexfile=\write4
+\openout4 = `Monografia.idx'.
 
 
 Writing index file Monografia.idx
@@ -264,49 +662,49 @@ Writing index file Monografia.idx
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend
 \l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count194
-\l__pdf_internal_box=\box47
+\l__kernel_color_stack_int=\count286
+\l__pdf_internal_box=\box59
 ) (Monografia.aux (Capa/capa.aux)
 (TabelaConteudo/TabelaConteudo.aux) (Introducao/Introducao.aux)
 (RevisaoBibliografica/RevisaoBibliografica.aux) (Metodologia/Metodologia.aux))
 \openout1 = `Monografia.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mk
 ii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count195
-\scratchdimen=\dimen155
-\scratchbox=\box48
-\nofMPsegments=\count196
-\nofMParguments=\count197
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count198
-\MPscratchDim=\dimen156
-\MPnumerator=\count199
-\makeMPintoPDFobject=\count266
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count287
+\scratchdimen=\dimen268
+\scratchbox=\box60
+\nofMPsegments=\count288
+\nofMParguments=\count289
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count290
+\MPscratchDim=\dimen269
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
+\everyMPtoPDFconversion=\toks45
 )
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-
 pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-)
+) ABD: EveryShipout initializing macros
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -371,8 +769,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout2 = `TabelaConteudo/TabelaConteudo.aux'.
 
  (TabelaConteudo/TabelaConteudo.tex (Monografia.toc)
-\tf@toc=\write4
-\openout4 = `Monografia.toc'.
+\tf@toc=\write5
+\openout5 = `Monografia.toc'.
 
  [1
 
@@ -391,7 +789,7 @@ Cap\'{\i }tulo 1.
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-3.
+4.
 
 ("C:\Users\felipe.ribeiro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts
 1ptm.fd"
@@ -406,7 +804,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ]
 Cap\'{\i }tulo 2.
 [5]
-<RevisaoBibliografica/Images/MetodosAgeis.png, id=37, 352.31625pt x 133.49875pt
+<RevisaoBibliografica/Images/MetodosAgeis.png, id=64, 352.31625pt x 133.49875pt
 >
 File: RevisaoBibliografica/Images/MetodosAgeis.png Graphic file (type png)
 <use RevisaoBibliografica/Images/MetodosAgeis.png>
@@ -414,13 +812,13 @@ Package pdftex.def Info: RevisaoBibliografica/Images/MetodosAgeis.png  used on
 input line 38.
 (pdftex.def)             Requested size: 220.50887pt x 83.55464pt.
  [6 <./RevisaoBibliografica/Images/MetodosAgeis.png>]
-<RevisaoBibliografica/Images/modelSeq.png, id=43, 553.06625pt x 231.86626pt>
+<RevisaoBibliografica/Images/modelSeq.png, id=70, 553.06625pt x 231.86626pt>
 File: RevisaoBibliografica/Images/modelSeq.png Graphic file (type png)
 <use RevisaoBibliografica/Images/modelSeq.png>
 Package pdftex.def Info: RevisaoBibliografica/Images/modelSeq.png  used on inpu
 t line 58.
 (pdftex.def)             Requested size: 330.76329pt x 138.66795pt.
-<RevisaoBibliografica/Images/ArqCamadas.png, id=44, 241.90375pt x 322.20375pt>
+<RevisaoBibliografica/Images/ArqCamadas.png, id=71, 241.90375pt x 322.20375pt>
 File: RevisaoBibliografica/Images/ArqCamadas.png Graphic file (type png)
 <use RevisaoBibliografica/Images/ArqCamadas.png>
 Package pdftex.def Info: RevisaoBibliografica/Images/ArqCamadas.png  used on in
@@ -428,64 +826,89 @@ put line 69.
 (pdftex.def)             Requested size: 176.40439pt x 234.97078pt.
  [7 <./RevisaoBibliografica/Images/modelSeq.png> <./RevisaoBibliografica/Images
 /ArqCamadas.png>]
-[8])
+[8] [9])
 \openout2 = `Metodologia/Metodologia.aux'.
 
- (Metodologia/Metodologia.tex
-Cap\'{\i }tulo 3.
-[9
+ (Metodologia/Metodologia.tex [10
 
 
 
 
 ]
-<Metodologia/Figuras/arquitetura-omo.png, id=59, 791.95876pt x 737.75626pt>
+Cap\'{\i }tulo 3.
+[11]
+<Metodologia/Figuras/arquitetura-omo.png, id=92, 791.95876pt x 737.75626pt>
 File: Metodologia/Figuras/arquitetura-omo.png Graphic file (type png)
 <use Metodologia/Figuras/arquitetura-omo.png>
 Package pdftex.def Info: Metodologia/Figuras/arquitetura-omo.png  used on input
  line 34.
 (pdftex.def)             Requested size: 284.52756pt x 265.0517pt.
- [10 <./Metodologia/Figuras/arquitetura-omo.png>] [11] [12]) (Monografia.bbl
+ [12 <./Metodologia/Figuras/arquitetura-omo.png>] [13]
+<Metodologia/Figuras/fluxoKpiExecutor.png, id=100, 896.148pt x 311.36325pt>
+File: Metodologia/Figuras/fluxoKpiExecutor.png Graphic file (type png)
+<use Metodologia/Figuras/fluxoKpiExecutor.png>
+Package pdftex.def Info: Metodologia/Figuras/fluxoKpiExecutor.png  used on inpu
+t line 75.
+(pdftex.def)             Requested size: 398.33858pt x 138.4018pt.
+ [14 <./Metodologia/Figuras/fluxoKpiExecutor.png>]
+<Metodologia/Figuras/kpiComponents.png, id=106, 1446.40375pt x 828.09375pt>
+File: Metodologia/Figuras/kpiComponents.png Graphic file (type png)
+<use Metodologia/Figuras/kpiComponents.png>
+Package pdftex.def Info: Metodologia/Figuras/kpiComponents.png  used on input l
+ine 100.
+(pdftex.def)             Requested size: 398.33858pt x 228.04869pt.
+ [15 <./Metodologia/Figuras/kpiComponents.png>]
 
-LaTeX Warning: Command \b invalid in math mode on input line 61.
+LaTeX Warning: Reference `sec:objDb' on page 16 undefined on input line 112.
 
 
-Underfull \hbox (badness 6910) in paragraph at lines 64--68
+LaTeX Warning: Reference `sec:objDb' on page 16 undefined on input line 116.
+
+[16]) (Monografia.bbl
+
+LaTeX Warning: Command \b invalid in math mode on input line 73.
+
+
+Underfull \hbox (badness 6910) in paragraph at lines 76--80
 []\T1/ptm/m/n/10.95 A. G.  Hos-pe-da-gem Cloud, 2019.  URL $https : / / www . h
 ostinger . com . br / tutoriais /
  []
 
 
-LaTeX Warning: Command \b invalid in math mode on input line 72.
+LaTeX Warning: Command \b invalid in math mode on input line 84.
 
-) [13
+) [17
 
 
 
 ] (Monografia.aux (Capa/capa.aux) (TabelaConteudo/TabelaConteudo.aux)
 (Introducao/Introducao.aux) (RevisaoBibliografica/RevisaoBibliografica.aux)
-(Metodologia/Metodologia.aux)) ) 
+(Metodologia/Metodologia.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4171 strings out of 481556
- 61261 string characters out of 2909658
- 312876 words of memory out of 3000000
- 19277 multiletter control sequences out of 15000+200000
- 569994 words of font info for 71 fonts, out of 3000000 for 9000
+ 15413 strings out of 481556
+ 304831 string characters out of 2909658
+ 532117 words of memory out of 3000000
+ 30265 multiletter control sequences out of 15000+200000
+ 572716 words of font info for 73 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,9n,30p,808b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/felipe.ribeiro/AppData/Local/Programs
-/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/felipe.ribeiro/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/felipe.
-ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/felipe.ribeiro/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/felipe.ribeiro/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/felip
-e.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Monografia.pdf (18 pages, 219059 bytes).
+ 68i,9n,84p,808b,856s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/ba
+se/8r.enc}<C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi12.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/felipe.ribeiro/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/U
+sers/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utm
+b8a.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+urw/times/utmr8a.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/urw/times/utmr8a.pfb><C:/Users/felipe.ribeiro/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Monografia.pdf (22 pages, 288453 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 142 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

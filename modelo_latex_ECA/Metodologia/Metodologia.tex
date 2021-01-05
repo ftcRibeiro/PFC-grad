@@ -59,22 +59,76 @@ Para realização do desenvolvimento do Kpi-Executor, foi necessário um notebook c
 \section{Metodologia}
 %\markright{\thesection ~~~ Metodologia}
 
-Para a construção dessa aplicação foi utilizado o um processo de desenvolvimento de software composto por características de um cascata e um incremental \cite{engSw}. Como o projeto foi entendido como uma demanda associada ao fluxo de trabalho da equipe de Coder, descrita na seção \ref{seq:idCoder}, ele estava submetido a um fluxo de \textit{Kanban}, o que aponta para o quesito de entrega incremental quando associado ao sistema LOOP como um todo. Entretanto, como se tratava de uma tarefa não pequena, foram necessárias etapas que coincidem com o processo cascata.
+Para a construção dessa aplicação foi utilizado o um processo de desenvolvimento de software composto por características de um cascata e um incremental \cite{engSw}. Como o projeto foi entendido como uma demanda associada ao fluxo de trabalho da equipe de Coder, descrita na seção \ref{sec:ihm}, ele estava submetido a um fluxo de \textit{Kanban}, o que aponta para o quesito de entrega incremental quando associado ao sistema LOOP como um todo. Entretanto, como se tratava de uma tarefa não pequena, foram necessárias etapas que coincidem com o processo cascata.
 Neste capítulo serão listadas as etapas de projeto, desenvolvimento e testes do Kpi-Executor, bem como as escolhas relacionadas aos cálculos por ele realizados.
 
-\subsection{Projeto da Aplicação}
+\subsection{Processo de Desenvolvimento}
 
-O projeto da aplicação iniciou-se com um escopo relativamente simples. Ela deveria realizar de forma cíclica um conjunto de cálculos de índices de performance que são utilizados pelo sistema CPM LOOP, registrá-los em um banco de dados existente, com estrutura também definida, e possibilitar um rastreio de falhas no fluxo de cálculos, identificando o qual tipo de erro, e em que momento este acontecera. Tendo essas informações, ainda foi eram necessárias mais definições de casos específicos não mapeados pela descrição inicial. 
+O processo de desenvolvimento da aplicação iniciou-se com um escopo relativamente simples. Ela deveria realizar de forma cíclica um conjunto de cálculos de índices de performance que são utilizados pelo sistema CPM LOOP, registrá-los em um banco de dados existente, com estrutura também definida, e possibilitar um rastreio de falhas no fluxo de cálculos, identificando o qual tipo de erro, e em que momento este acontecera. Tendo essas informações, ainda foi eram necessárias mais definições de casos específicos não mapeados pela descrição inicial. 
 
 \subsubsection{Levantamento do Requisitos}
 
-Considerando a necessidade de um mapeamento detalhado dos casos de cálculo, foi realizado um processo de entrevista com o PO (\textit{Product Owner} do sistema LOOP, a fim de elucidar o fluxo de cálculo em seu estado ideal, possíveis tratativas em casos não usuais e demais requisitos funcionais e não-funcionais. Deste levantamento, foi elaborado o diagrama de sequência (\ref{sec:modSeq}) tratando o fluxo a ser executado pelo Kpi-Executor, exibido na figura \ref()
+Considerando a necessidade de um mapeamento detalhado dos casos de cálculo, foi realizado um processo de entrevista com o PO (\textit{Product Owner}) do sistema LOOP, a fim de elucidar o fluxo de cálculo em seu estado ideal, possíveis tratativas em casos não usuais e demais requisitos funcionais e não-funcionais. Deste levantamento, foi elaborado o diagrama de sequência (\ref{sec:modSeq}) tratando o fluxo a ser executado pelo Kpi-Executor, exibido na figura (\ref{fig:fluxoKpi}).
 
+ \begin{figure}[!htbp]
+ 	\centering		
+ 	\includegraphics[width=14cm]{Metodologia/Figuras/fluxoKpiExecutor.png}
+ 	\caption{Diagrama de Sequência - Kpi-Executor}
+ 	\label{fig:fluxoKpi}
+ \end{figure}
  
- 
-\label{metodo1b}
+Após construção deste diagrama de alto nível, foi realizada o nova reunião o validando como fluxo correto de cálculos, incluindo as tratativas de casos específicos. Assim pôde-se caminhar para a próxima etapa do processo.
 
+\subsubsection{Projeto da Aplicação}
 
+Tendo requisitos funcionais e não-funcionais especificados, foi possível então o início do projeto da aplicação. Inicia-se pela definição arquitetural do módulo Kpi-Executor. Foi escolhida uma arquitetura em camadas (seção \ref{sec:arqCamadas}) devido à familiaridade da equipe com o tipo de construção e a seu caráter de atuação sob demanda e persistência em banco de dados. 
 
+Para persistência dos dados em banco, foi escolhida a tecnologia SQLAlchemy \cite{alchemyPage}, amplamente utilizada para acesso via Python a bancos de dados relacionais. Ela possibilita uma abordagem de orientação a objetos (seção \ref{sec:seqOO}) em sua utilização.
 
+\subsubsection{Desenvolvimento da Aplicação}
+
+%\paragraph {Objeto de Banco de Dados}
+%\label{sec:objDb}
+%\todo[inline]{Aqui adicionarei a descrição da construção do objeto de banco de Dados criado como um ferramental escalável e substituível do sistema.}
+
+\paragraph{Divisão de Responsabilidades}
+
+Considerando uma arquitetura de camadas, o Kpi-Executor foi modularizado dividindo as responsabilidades entre estes módulos. Foram separadas entre os componentes as tarefas de se consumir e escrever em diferentes bases de dados, operar o fluxo de cálculos, registrar exceções e falhas de cálculo, etc. A figura \ref{fig:componentsKpi} traz o diagrama de componentes que descreve tal modularização.
+
+\begin{figure}[!htbp]
+	\centering		
+	\includegraphics[width=14cm]{Metodologia/Figuras/kpiComponents.png}
+	\caption{Diagrama de Componentes - Kpi-Executor}
+	\label{fig:componentsKpi}
+\end{figure}
+
+Cada componente descrito no diagrama é composto por um arquivo independente em Python \cite{pyPage}, cada um com suas responsabilidades. 
+
+\begin{itemize}
+	\item \textbf{app:} Arquivo principal. Ele é o módulo invocado pelo orquestrador Kubernetes \cite{kubePage}. Responsável pela configuração de logs de manutenção e carregamento de variáveis de ambiente do sistema, configurando a aplicação para sua forma de execução local, em ambiente de validação ou produção;
+	\item \textbf{execute:} Responsável por instanciar os objetos de banco de dados utilizados pelos próximos componentes. Também invoca DashboardService para montar o objeto com os dados de cadastro para as etapas de cálculos de KPIs;
+	\item \textbf{makeCalc:} Opera o fluxo principal ta aplicação. Percorre o objeto de dados de cadastro fornecido pelo componente \textit{execute} e solicitando, a cada iteração, ao \textit{PiServerService} dados de processo cadastrados no PIMS, malha a malha;
+	\item \textbf{DashboardService:} Possui regras de negócio relacionadas ao banco \textit{omo-db}. Formata os dados lidos e para inserção neste banco. Também possui os métodos para instanciar os objetos de banco de dados e para solicitar escrita no banco de dados;
+	\item \textbf{DashboardRepository:} Possui os métodos correspondentes às queries de inserção e consulta de dados em banco. Tem relação de herança \cite{engSw} com a classe \textit{Repository} (seção \ref{sec:objDb});
+	\item \textbf{PiServerService:} Contempla regras de negócio relacionadas à consulta de dados no PIMS. Formata e realiza requisições \textit{Http} para o módulo externo \textit{Pi-Connector} (figura \ref{fig:arqLoop}). Também possui rotinas para tratamento das respostas com os dados do PIMS;
+	\item \textbf{KpiService:} Contempla as regras para formatação de dados calculados para inserção no banco \textit{omokpi};
+	\item \textbf{LogsService:} Possui métodos para conexão com o banco de dados de logs de controle;
+	\item \textbf{LogsRepository:} Possui métodos relacionados a inserção e leitura em dos logs em banco de dados. Tem relação de herança com a classe \textit{Repository} (seção \ref{sec:objDb});
+	\item \textbf{CalculateController:} Componente chave para o funcionamento da aplicação. Contempla o fluxo descrito pelo levantamento de requisitos na figura \ref{fig:fluxoKpi}. Também invoca os módulos \textit{KpiService} e \textit{DashboardService} para registro de dados calculados e \textit{LogsService} para persistência dos logs de controle;
+	\item \textbf{CalculateService:} Possui os métodos para a realização dos cálculos dos índices de performance. É invocado pelo \textit{calculateController};
+	\item \textbf{CalculateValidation:} Possui métodos auxiliares para a validação do fluxo de cálculos. É invocado pelo \textit{CalulateController};
+	
+\end{itemize}
+
+% \paragraph{Índices de Performance - KPIs}
+%
+%\todo[inline]{Explicar os cálculos realizados e citar a seção (ainda não construída) da revisão bibliográfica sobre os índices de performance.}
+%
+%\paragraph{Registro de Logs de Cálculo}
+%
+%\todo[inline]{Adicionar aqui o processo de estruturação dos logs de cálculo em banco de dados. Associar esse processo ao fluxo da seção de levantamento de requisitos.}
+%
+%
+%\subsubsection{Testes e Implantação}
+%\todo[inline]{Explicar etapas de teste com dados de cliente e validação de fluxo e resultados de cálculos dos índices de performance}
 \clearpage

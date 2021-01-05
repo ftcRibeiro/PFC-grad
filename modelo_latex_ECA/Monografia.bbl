@@ -1,16 +1,20 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[alc()]{alchemyPage}
+P\'{a}gina {O}ficial {SQLA}lchemy.
+\newblock URL \url{https://www.sqlalchemy.org/}.
+
 \bibitem[ang()]{angularJSPage}
 P\'{a}gina {O}ficial {A}ngular{JS}.
 \newblock URL \url{https://angularjs.org/}.
 
 \bibitem[aws()]{awsHome}
-\'{a}gina {O}ficial aws.
+P\'{a}gina {O}ficial {AWS}.
 \newblock URL \url{https://aws.amazon.com/pt/}.
 
 \bibitem[nod()]{nodejsPage}
@@ -24,6 +28,14 @@ P\'{a}gina {O}ficial {PI} {S}ystem.
 \bibitem[spr()]{springBootPage}
 P\'{a}gina {O}ficial {S}pring {B}oot.
 \newblock URL \url{https://spring.io/projects/spring-boot}.
+
+\bibitem[wha({\natexlab{a}})]{what-container}
+What is a container?, {\natexlab{a}}.
+\newblock URL \url{https://www.docker.com/resources/what-container}.
+
+\bibitem[wha({\natexlab{b}})]{whatKernel}
+O que \'{e} kernel?, {\natexlab{b}}.
+\newblock URL \url{https://www.tecmundo.com.br/macos/1636-o-que-e-kernel-.htm}.
 
 \bibitem[con(2018)]{containerIntr}
 Introdu{\c{c}}\~{a}o aos containers e ao {D}ocker, 2018.

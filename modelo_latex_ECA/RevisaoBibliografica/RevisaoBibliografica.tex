@@ -61,7 +61,7 @@ Modelos construídos sob o paradigma de orientação a dados trazem a sequência de 
 \end{figure}
 
 \subsection{Arquitetura em Camadas}
-
+\label{sec:arqCamadas}
 Arquitetura que organiza o sistema em um grupo de camadas, onde cada uma delas oferece um conjunto de serviços. Essa noção de separação e independência é fundamental para que haja a possibilidade de alterações localizadas, facilitando as etapas de manutenção e sustentação do produto de software. A figura \ref{fig:arqCamadas} traz uma representação genérica deste tipo de arquitetura.
 
 \begin{figure}[!htbp]
@@ -75,7 +75,7 @@ O relacionamento entre as camadas se dá de forma bem definida. Possui protocolos
 
 
 \subsection{Orientação a Objetos}
-
+\label{sec:seqOO}
 O conceito de OO (Orientação a objetos) consiste na estruturação de um código ou programa utilizando de abstrações para conectar o espaço do problema ao da solução. Os vários objetos construídos nessas abstrações se relacionam através de comandos. Cada um desses objetos possui uma \textit{classificação} que o determina, chamada de \textit{classe}.
 
 Para ficar claro como os objetos se relacionam, os conceitos que seguem são importantes	:
@@ -91,12 +91,29 @@ Para ficar claro como os objetos se relacionam, os conceitos que seguem são impo
 Banco de dados é uma mecanismo de armazenamento que permite persistência de dados de uma aplicação, programa ou produto de software. O modelo relacional busca o aumento da independência de dados nos sistemas. O Modelo relacional revelou-se ser o mais flexível e adequado ao solucionar os vários problemas que se colocam no nível da concepção e implementação da base de dados. A estrutura fundamental do modelo
 relacional é a relação. Ela é constituída por um ou mais atributos que traduzem o tipo de dados a armazenar \cite{intrBD}. 	
 
-%TODO: Adicionar subsections sobre container, orquestradores(kubernetes) e imagens (docker);
+\subsection{Containers}
 
-%\section{Conceitos de Processos industriais}
-%TODODetalhar sobre a utilização de KPIs para análise de processos industriais. Falar aqui também sobre PIMS;
-%\section{Trabalhos Relacionados}
-%TODO Falar sobre o trabalho que está no zotero sobre criação de aplicação, depois falar sobre o artigo de kpis e partir pra ideia de ter um pouco de cada como referências;
+\textit{Container} é uma unidade de software para desenvolvimento e implantação que empacota código e suas dependências para a execução de um aplicativo de forma rápida, escalável e confiável, independentemente de do ambiente de computação que o hospede. No projeto descrito por essa monografia foram utilizados \textit{containers docker} \cite{what-container}.
+
+\subsubsection{Containter e Máquinas Virtuais}
+
+Containers e máquinas virtuais possuem benefícios de isolamento e alocação de recursos, porém contemplam um funcionamento distinto. O primeiro utiliza-se da virtualização do sistema operacional, enquanto o segundo virtualiza o hardware. 
+
+Os containers são uma abstração na camada do aplicativo que busca o agrupamento de código e suas dependências. Podem haver múltiplos containers em execução , compartilhando \textit{kernel} \cite{whatKernel} do sistema operacional com outros containers, todos isolados em processos diferentes. 
+
+Em contrapartida, as máquinas virtuais abstraem o hardware, transformando um servidor em vários servidores. Cada máquina virtual inclui uma cópia de completa do sistema operacional, do aplicativo e suas dependências.
+
+
+
+\subsection{Kubernetes}
+
+
+\todo[inline]{Adicionar subsections orquestradores(kubernetes) e imagens (docker);}
+
+\section{Conceitos de Processos industriais}
+\todo[inline]{Detalhar sobre a utilização de KPIs para análise de processos industriais. Falar aqui também sobre PIMS;}
+\section{Trabalhos Relacionados}
+\todo[inline]{Falar sobre o trabalho que está no zotero sobre criação de aplicação, depois falar sobre o artigo de kpis e partir pra ideia de ter um pouco de cada como referências;}
 
 
 \clearpage
