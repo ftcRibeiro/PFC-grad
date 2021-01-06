@@ -38,8 +38,14 @@ Warning--entry type for "what-container" isn't style-file defined
 --line 129 of file references.bib
 Warning--entry type for "whatKernel" isn't style-file defined
 --line 134 of file references.bib
+Warning--entry type for "ci_cd" isn't style-file defined
+--line 139 of file references.bib
+Warning--entry type for "devops" isn't style-file defined
+--line 144 of file references.bib
 Warning--to sort, need author or key in what-container
 Warning--to sort, need author or key in whatKernel
+Warning--to sort, need author or key in devops
+Warning--to sort, need author or key in ci_cd
 Warning--to sort, need author or key in pyPage
 Warning--to sort, need author or key in vscodePage
 Warning--to sort, need author or key in postgresPage
@@ -56,6 +62,8 @@ Warning--to sort, need author or key in alchemyPage
 Warning--empty year in alchemyPage
 Warning--empty year in angularJSPage
 Warning--empty year in awsHome
+Warning--empty year in ci_cd
+Warning--empty year in devops
 Warning--empty year in nodejsPage
 Warning--empty year in piPage
 Warning--empty year in springBootPage
@@ -64,4 +72,7 @@ Warning--empty year in whatKernel
 Warning--empty publisher in umlBooch
 Warning--empty publisher in engSw
 Warning--empty publisher in intrBD
-(There were 42 warnings)
+Warning--empty journal in automation_kpis
+Warning--empty year in automation_kpis
+Warning--empty year in automation_kpis
+(There were 51 warnings)

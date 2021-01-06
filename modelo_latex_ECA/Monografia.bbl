@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,14 @@ P\'{a}gina {O}ficial {A}ngular{JS}.
 \bibitem[aws()]{awsHome}
 P\'{a}gina {O}ficial {AWS}.
 \newblock URL \url{https://aws.amazon.com/pt/}.
+
+\bibitem[ci_()]{ci_cd}
+Integra{\c{c}}\~{a}o e entrega cont\'{i}nuas: pipeline ci/cd.
+\newblock URL \url{https://www.redhat.com/pt-br/topics/devops/what-is-ci-cd}.
+
+\bibitem[dev()]{devops}
+O que \'{e} devops?
+\newblock URL \url{https://www.redhat.com/pt-br/topics/devops}.
 
 \bibitem[nod()]{nodejsPage}
 P\'{a}gina {O}ficial {N}ode{JS}.
@@ -78,6 +86,25 @@ A.~G.
 \newblock URL
   \url{https://www.hostinger.com.br/tutoriais/o-que-e-hospedagem-cloud/}.
 
+\bibitem[Luo et~al.(2013)Luo, Ding, Haghani, Hao, Yin, and
+  Jeinsch]{kpi_tolerance}
+H.~Luo, S.~X. Ding, A.~Haghani, H.~Hao, S.~Yin, and T.~Jeinsch.
+\newblock Data-driven design of kpi-related fault-tolerant control system for
+  wind turbines.
+\newblock In \emph{2013 American Control Conference}, pages 4465--4470, 2013.
+\newblock \doi{10.1109/ACC.2013.6580528}.
+
+\bibitem[Mourtzis et~al.(2017)Mourtzis, Fotia, and Vlachou]{kpi1_ref1}
+D.~Mourtzis, S.~Fotia, and E.~Vlachou.
+\newblock Lean rules extraction methodology for lean pss design via key
+  performance indicators monitoring.
+\newblock \emph{Journal of Manufacturing Systems}, 42:\penalty0 233 -- 243,
+  2017.
+\newblock ISSN 0278-6125.
+\newblock \doi{https://doi.org/10.1016/j.jmsy.2016.12.014}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0278612516301017}.
+
 \bibitem[SOMMERVILLE(2011)]{engSw}
 I.~SOMMERVILLE.
 \newblock \emph{Engenharia de Software}.
@@ -87,5 +114,10 @@ I.~SOMMERVILLE.
 O.~K. TAKAI.
 \newblock \emph{Introdu{\c{c}}\~{a}o a Banco de Dados}.
 \newblock 2005.
+
+\bibitem[Zevenbergen et~al.()Zevenbergen, Gerry, and Buckbee]{automation_kpis}
+J.~Zevenbergen, J.~Gerry, and G.~Buckbee.
+\newblock {AUTOMATION KPIs CRITICAL FOR IMPROVEMENT OF ENTERPRISE KPIs}.
+\newblock page~4.
 
 \end{thebibliography}
