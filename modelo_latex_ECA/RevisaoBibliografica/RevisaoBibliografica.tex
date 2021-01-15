@@ -116,9 +116,25 @@ A orquestração consiste na manipulação de containers buscando sua organização, e
 
 \subsection{Controller Performance Monitoring - CPM}
 
-\textit{CPM}, sigla do inglês para \textit{Controller Performance Monitoring} é a técnica mais usada para a medição de \textit{KPIs} direcionados a sistemas de automação.
+\textit{CPM}, sigla do inglês para \textit{Controller Performance Monitoring} é uma técnica das mais usadas para a medição de \textit{KPIs} direcionados a sistemas de automação, tendo T. J Harris \cite{TJHarris,TJHarris2} como um dos pioneiros no assunto. Sua utilização, nos últimos anos, tem se tornado mais comum como ferramenta para a programas de melhoria de operações promovidas por indústrias e universidades. \textit{CPM} tem como principal objetivo o aumento da confiabilidade de uma planta industrial, sendo um auxiliar para o descobrimento de modos de falhas ocultos, que normalmente não são ligados à sintonia de controle, e sim a outras causas, como defeitos em atuadores (bombas, válvulas) ou formas de operação \cite{automation_kpis}.
 
-São softwares que monitoram, identificam, e geram diagnósticos e sugestões para problemas em controle de ativos industriais, \cite{automation_kpis}
+
+\subsection{KPIs Universais para Plantas Industriais}
+
+Como dito, os \textit{KPIs} visam, ao final de seu uso, melhorias nos resultados da empresa que os utilizar, podendo esses estar diretamente (de Negócio) ou indiretamente (de Controle e Processo) ligados aos objetivos da empresa \cite{automation_kpis}. Os de negócio costumam fornecer medidas valiosas quanto às evoluções ligadas à empresa, tendo caráter de longo prazo. Entretanto, nem sempre estão ligados a ações diretas em uma planta. Lucros, Qualidade e Custos totais estão nessa classificação.
+
+Para que seja possível alcançar sucesso nos \textit{KPIs} de Negócio (longo prazo), é necessária anteriormente a análise de \textit{KPIs} com caráter de curto prazo. Exemplos deste tipo de \textit{KPIs} são: Eficiência, confiabilidade, tempo de acomodação e tempo saída saturada. Esses, por sua vez, podem mais facilmente gerar ações diretas na planta \cite{automation_kpis}.
+
+Desses \textit{KPIs} citados no último parágrafo (e outros presentes em \cite{automation_kpis}), alguns possuem característica universal, sendo entendidos pelos níveis de negócio e técnicos. Dentre eles, alguns apresentados em \cite{automation_kpis} se destacam para este tipo de análise:
+
+\begin{itemize}
+	\item \textbf{Tempo em modo anormal:} Medição de tempo em que o sistema de controle não está funcionando;
+	\item \textbf{Tempo em saturação:} Medição do tempo em que um atuador fica em seu máximo de atuação. Geralmente associado a mal-dimensionamento do atuador;
+\end{itemize}
+
+
+
+
 \todo[inline]{Detalhar sobre a utilização de KPIs para análise de processos industriais. Falar aqui também sobre PIMS;}
 \section{Trabalhos Relacionados}
 \todo[inline]{Falar sobre o trabalho que está no zotero sobre criação de aplicação, depois falar sobre o artigo de kpis e partir pra ideia de ter um pouco de cada como referências;}

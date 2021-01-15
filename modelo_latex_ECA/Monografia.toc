@@ -18,7 +18,8 @@
 \contentsline {subsubsection}{\numberline {2.2.5.2}Orquestra\c c\~ao de containers - Kubernetes}{9}%
 \contentsline {section}{\numberline {2.3}Key Performance Indicators - KPIs}{9}%
 \contentsline {subsection}{\numberline {2.3.1}Controller Performance Monitoring - CPM}{9}%
-\contentsline {section}{\numberline {2.4}Trabalhos Relacionados}{9}%
+\contentsline {subsection}{\numberline {2.3.2}KPIs Universais para Plantas Industriais}{9}%
+\contentsline {section}{\numberline {2.4}Trabalhos Relacionados}{10}%
 \contentsline {chapter}{\numberline {3}Materiais e M\'etodos}{11}%
 \contentsline {section}{\numberline {3.1}Descri\c c\~ao de Componentes}{11}%
 \contentsline {subsection}{\numberline {3.1.1}Software}{11}%
