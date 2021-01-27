@@ -1,9 +1,18 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{31}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[ORM()]{ORM}
+{ORM}: Object relational mapper.
+\newblock URL
+  \url{https://www.devmedia.com.br/orm-object-relational-mapper/19056}.
+
+\bibitem[SQL()]{SQLInjection}
+{SQL} injection.
+\newblock URL \url{https://www.devmedia.com.br/sql-injection/6102}.
 
 \bibitem[TJH()]{TJHarris2}
 Assesment of {C}ontrol {L}oop {P}erformance, language =.
@@ -39,6 +48,11 @@ P\'{a}gina {O}ficial {PI} {S}ystem.
 \bibitem[spr()]{springBootPage}
 P\'{a}gina {O}ficial {S}pring {B}oot.
 \newblock URL \url{https://spring.io/projects/spring-boot}.
+
+\bibitem[sql()]{sqlServerHome}
+{M}icrosoft {SQL} {S}erver.
+\newblock URL
+  \url{https://www.microsoft.com/pt-br/sql-server/sql-server-downloads}.
 
 \bibitem[wha({\natexlab{a}})]{what-container}
 What is a container?, {\natexlab{a}}.
@@ -83,6 +97,11 @@ G.~BOOCH, J.~RUMBAUGH, and I.~JACOBSON.
 \newblock \emph{UML, Guia do Usuario}.
 \newblock $2^{\b{a}}$ edition, 2005.
 
+\bibitem[e~Dilson Jos\'{e} L. R.~J\'{u}nior()]{apl_ORM}
+L.~H. C.~M. e~Dilson Jos\'{e} L. R.~J\'{u}nior.
+\newblock {Aplica{\c{c}}\~{a}o do ORM Doctrine para abstra{\c{c}}\~{a}o de
+  banco de dados no desenvolvimento de software em PHP na UNASUS/UFMA}.
+
 \bibitem[G.(2019)]{cloudComp}
 A.~G.
 \newblock Hospedagem {C}loud, 2019.
@@ -122,6 +141,17 @@ I.~SOMMERVILLE.
 O.~K. TAKAI.
 \newblock \emph{Introdu{\c{c}}\~{a}o a Banco de Dados}.
 \newblock 2005.
+
+\bibitem[Wang and Zhou(2021)]{kpi_control}
+C.~Wang and S.~Zhou.
+\newblock Control of key performance indicators of manufacturing production
+  systems through pair-copula modeling and stochastic optimization.
+\newblock \emph{Journal of Manufacturing Systems}, 58:\penalty0 120 -- 130,
+  2021.
+\newblock ISSN 0278-6125.
+\newblock \doi{https://doi.org/10.1016/j.jmsy.2020.11.003}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0278612520301904}.
 
 \bibitem[Zevenbergen et~al.()Zevenbergen, Gerry, and Buckbee]{automation_kpis}
 J.~Zevenbergen, J.~Gerry, and G.~Buckbee.

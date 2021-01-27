@@ -87,9 +87,18 @@ Para persistência dos dados em banco, foi escolhida a tecnologia SQLAlchemy \cit
 
 \subsubsection{Desenvolvimento da Aplicação}
 
-%\paragraph {Objeto de Banco de Dados}
-%\label{sec:objDb}
-%\todo[inline]{Aqui adicionarei a descrição da construção do objeto de banco de Dados criado como um ferramental escalável e substituível do sistema.}
+\paragraph {Classes auxiliares}
+\label{sec:objDb}
+Considerando a estrutura do sistema da empresa parceira (Loop) no momento do desenvolvimento do módulo tratado por essa monografia, era tido como de suma importância a possibilidade de utilização de diferentes bancos de dados relacionais, como Microfost SQL Server \cite{sqlServerHome} e PostgresSQL \cite{postgresPage}. Assim, foi necessária a utilização da uma \textit{ORM} (Object Relacional Mapper) \cite{ORM} \textit{SQLAlchemy} \cite{alchemyPage}, possibilitando que o módulo em questão apresentasse características agnósticas a banco de dados. Além da facilitação no processo de substituição de bancos de dados, devido à objetificação das \textit{queries} adiciona segurança ao conjunto do sistema, impedindo tentativas de invasão do tipo \textit{SQL Injection} \cite{SQLInjection}.
+
+Uma vez levantados os pontos citados, foram utilizados os conceitos de orientação a objetos para o desenvolvimento (\ref{sec:seqOO}) para a elaboração de duas classes que juntas tornariam o processo de construção das consultas e inserções a banco de dados mais práticas e robustas:
+
+\begin{itemize}
+	\item \textbf{Database:} Classe que contempla métodos para conexão e desconexão com o banco de dados, bem como as informações de conexão, como \textit{host}, nome do banco, usuário, senha e \textit{driver}. Seu uso consiste na representação de um banco de dados como um objeto. O \textit{SQLAlchemy} \cite{alchemyPage} faz gerenciamento automático de múltiplas conexões, possibilitando o instanciamento de diversos objetos dessa classe;
+	\item \textbf{Repository:} Classe que contempla os métodos básicos relacionados a consultas, inserções, atualizações e deleções. Seu uso consiste em tê-la como pai para cada nova classe com funções de acesso a dados. Possui um atributo do tipo \textit{Database} que aponta para o banco de dados a ser utilizado.
+\end{itemize}
+
+Uma vez elaboradas tais classes auxiliares, tem-se a etapa seguinte que contempla o conceito de divisão de camadas (\ref{sec:arqCamadas}), novamente orientação a objetos (\ref{sec:seqOO}) e modelagem orientada a dados (\ref{sec:modSeq}).
 
 \paragraph{Divisão de Responsabilidades}
 
@@ -120,15 +129,15 @@ Cada componente descrito no diagrama é composto por um arquivo independente em P
 	
 \end{itemize}
 
-% \paragraph{Índices de Performance - KPIs}
-%
-%\todo[inline]{Explicar os cálculos realizados e citar a seção (ainda não construída) da revisão bibliográfica sobre os índices de performance.}
-%
-%\paragraph{Registro de Logs de Cálculo}
-%
-%\todo[inline]{Adicionar aqui o processo de estruturação dos logs de cálculo em banco de dados. Associar esse processo ao fluxo da seção de levantamento de requisitos.}
-%
-%
-%\subsubsection{Testes e Implantação}
-%\todo[inline]{Explicar etapas de teste com dados de cliente e validação de fluxo e resultados de cálculos dos índices de performance}
+\paragraph{Índices de Performance - KPIs}
+
+\todo[inline]{Explicar os cálculos realizados e citar a seção (ainda não construída) da revisão bibliográfica sobre os índices de performance.}
+
+\paragraph{Registro de Logs de Cálculo}
+
+\todo[inline]{Adicionar aqui o processo de estruturação dos logs de cálculo em banco de dados. Associar esse processo ao fluxo da seção de levantamento de requisitos.}
+
+
+\subsubsection{Testes e Implantação}
+\todo[inline]{Explicar etapas de teste com dados de cliente e validação de fluxo e resultados de cálculos dos índices de performance}
 \clearpage

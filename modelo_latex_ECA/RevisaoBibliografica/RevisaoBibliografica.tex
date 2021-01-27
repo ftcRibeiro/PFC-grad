@@ -78,9 +78,9 @@ O relacionamento entre as camadas se dá de forma bem definida. Possui protocolos
 \label{sec:seqOO}
 O conceito de OO (Orientação a objetos) consiste na estruturação de um código ou programa utilizando de abstrações para conectar o espaço do problema ao da solução. Os vários objetos construídos nessas abstrações se relacionam através de comandos. Cada um desses objetos possui uma \textit{classificação} que o determina, chamada de \textit{classe}.
 
-Para ficar claro como os objetos se relacionam, os conceitos que seguem são importantes	:
+Para ficar claro como os objetos se relacionam, os conceitos que seguem são importantes:
 \begin{itemize}
-	\item \textbf{Encapsulamento:} Estratégia utilizada para garantir que detalhes internos do funcionamento de uma classe. Dessa forma, o conhecimento sobre a implementação interna de uma classe é desnecessária do ponto de vista da instância daquela classe.;
+	\item \textbf{Encapsulamento:} Estratégia utilizada para garantir que detalhes internos do funcionamento de uma classe. Dessa forma, o conhecimento sobre a implementação interna de uma classe é desnecessária do ponto de vista da instância daquela classe;
 	\item \textbf{Herança:} Quando uma classe pode ser um \textit{tipo} de uma outra classe, o conceito de herança pode ser aplicado. Se existe uma classe \textit{veículo} e se deseja construir uma representação \textit{motocicleta}, a segunda (classe filha) pode herdar características da primeira (classe pai), visto que \textit{bicicleta} é um tipo de \textit{veículo};
 	\item \textbf{Polimorfismo:} É o princípio pelo qual duas ou mais classes derivadas de uma mesma classe pai podem invocar métodos que têm a mesma identificação (assinatura) mas comportamentos distintos, especializados para cada classe derivada, usando para tanto uma referência a um objeto do tipo da superclasse.;
 \end{itemize}
@@ -111,7 +111,7 @@ A orquestração consiste na manipulação de containers buscando sua organização, e
 
 \section{Key Performance Indicators - KPIs}
 
-\textit{KPIs}, sigla do inglês para \textit{Key Performance Indicators}, são indicadores projetados para medir objetivos críticos de um sistema geralmente complexo, indo de uma simples malha de controle regulatório, a uma inteira linha de montagem automotiva. O monitoramento desse tipo de indicadores promove o aumento no entendimento do sistema a ser analisado, auxiliando em possíveis tomadas de decisões estratégicas, e aumento de produtividade \cite{kpi1_ref1}. O controle desses índices busca geralmente melhorar qualidade e produtividade, alcançando pontos ótimos de operação, bem como aumento da lucratividade da cadeia produtiva em questão. Um exemplo de aplicação de controle de KPIs pode ser visto em \cite{kpi_tolerance}. 
+\textit{KPIs}, sigla do inglês para \textit{Key Performance Indicators}, são indicadores projetados para medir objetivos críticos de um sistema, indo de uma simples malha de controle regulatório, a uma inteira linha de montagem automotiva. O monitoramento desse tipo de indicadores promove o aumento no entendimento do sistema a ser analisado, auxiliando em possíveis tomadas de decisões estratégicas, e aumento de produtividade \cite{kpi1_ref1}. O controle desses índices busca geralmente melhorar qualidade e produtividade, alcançando pontos ótimos de operação, bem como aumento da lucratividade da cadeia produtiva em questão. Um exemplo de aplicação de controle de KPIs pode ser visto em \cite{kpi_tolerance}. 
 
 
 \subsection{Controller Performance Monitoring - CPM}
@@ -127,17 +127,19 @@ Para que seja possível alcançar sucesso nos \textit{KPIs} de Negócio (longo praz
 
 Desses \textit{KPIs} citados no último parágrafo (e outros presentes em \cite{automation_kpis}), alguns possuem característica universal, sendo entendidos pelos níveis de negócio e técnicos. Dentre eles, alguns apresentados em \cite{automation_kpis} se destacam para este tipo de análise:
 
+\label{sec:automation_kpis}
 \begin{itemize}
 	\item \textbf{Tempo em modo anormal:} Medição de tempo em que o sistema de controle não está funcionando;
 	\item \textbf{Tempo em saturação:} Medição do tempo em que um atuador fica em seu máximo de atuação. Geralmente associado a mal-dimensionamento do atuador;
 \end{itemize}
 
 
-
-
-\todo[inline]{Detalhar sobre a utilização de KPIs para análise de processos industriais. Falar aqui também sobre PIMS;}
 \section{Trabalhos Relacionados}
-\todo[inline]{Falar sobre o trabalho que está no zotero sobre criação de aplicação, depois falar sobre o artigo de kpis e partir pra ideia de ter um pouco de cada como referências;}
+
+Foram encontrados diferentes trabalhos envolvendo \textit{KPIs}: modelagem e controle desses indicadores \cite{kpi_control}, seu relacionamento com \textit{PSS}, sigla do inglês para \textit{Product-service system} \cite{kpi1_ref1}, bem como seu uso direcionado a performance de sistemas de controle \cite{automation_kpis}. Dentre eles, destacou-se o último, devido a relação direta com os índices de performance utilizados para a elaboração do módulo descrito por essa monografia. Os índices citados na seção \ref{sec:automation_kpis} são utilizados como base para a construção dos \textit{KPIs} deste trabalho. Na seção \ref{} serão descritas suas escolhas e elaborações.
+
+Quanto às referências relacionadas aos conceitos de software utilizados para a construção deste trabalho, Lázaro Marques e Dilson Júnior aplicaram o uso de \textit{ORM} \cite{ORM} para abstração de um banco de dados relacional no trabalho na UNA-SUS/UFMA (Universidade Aberta do SUS/Universidade Federal do Maranhão) \cite{apl_ORM}. Além disso, José Rocha aponta o uso de arquitetura e desenvolvimento de software orientado a objetos como fator importante para a garantia de qualidade e escalabilidade do um software.
+
 
 
 \clearpage

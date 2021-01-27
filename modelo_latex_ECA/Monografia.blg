@@ -42,7 +42,13 @@ Warning--entry type for "ci_cd" isn't style-file defined
 --line 139 of file references.bib
 Warning--entry type for "devops" isn't style-file defined
 --line 144 of file references.bib
-I was expecting a `,' or a `}'---line 220 of file references.bib
+Warning--entry type for "sqlServerHome" isn't style-file defined
+--line 149 of file references.bib
+Warning--entry type for "ORM" isn't style-file defined
+--line 155 of file references.bib
+Warning--entry type for "SQLInjection" isn't style-file defined
+--line 160 of file references.bib
+I was expecting a `,' or a `}'---line 236 of file references.bib
  :  language = "
  :              en",
 I'm skipping whatever remains of this entry
@@ -51,6 +57,7 @@ Warning--to sort, need author or key in whatKernel
 Warning--to sort, need author or key in devops
 Warning--to sort, need author or key in ci_cd
 Warning--to sort, need author or key in TJHarris2
+Warning--to sort, need author or key in ORM
 Warning--to sort, need author or key in pyPage
 Warning--to sort, need author or key in vscodePage
 Warning--to sort, need author or key in postgresPage
@@ -64,6 +71,10 @@ Warning--to sort, need author or key in piPage
 Warning--to sort, need author or key in nodejsPage
 Warning--to sort, need author or key in awsHome
 Warning--to sort, need author or key in alchemyPage
+Warning--to sort, need author or key in sqlServerHome
+Warning--to sort, need author or key in SQLInjection
+Warning--empty year in ORM
+Warning--empty year in SQLInjection
 Warning--empty author in TJHarris2
 Warning--empty journal in TJHarris2
 Warning--empty year in TJHarris2
@@ -76,9 +87,13 @@ Warning--empty year in devops
 Warning--empty year in nodejsPage
 Warning--empty year in piPage
 Warning--empty year in springBootPage
+Warning--empty year in sqlServerHome
 Warning--empty year in what-container
 Warning--empty year in whatKernel
 Warning--empty publisher in umlBooch
+Warning--empty journal in apl_ORM
+Warning--empty year in apl_ORM
+Warning--empty year in apl_ORM
 Warning--empty journal in TJHarris
 Warning--empty year in TJHarris
 Warning--empty year in TJHarris
