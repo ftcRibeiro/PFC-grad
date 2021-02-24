@@ -26,7 +26,7 @@ Uma vez empacotada a aplicação, é necessário utilizar uma ferramenta para operar
 
 
 \subsection{Estrutura Existente}
-
+\label{sec:estruturaExistente}
 A aplicação construída funcionará como um módulo de um sistema de CPM existente chamado LOOP. Ele é composto por um conjunto de módulos, cada um com sua responsabilidade bem definida. A figura \ref{fig:arqLoop} traz o esquema arquitetural do sistema, bem como o relacionamento entre os módulos.
 
 \begin{figure}[!htbp]
@@ -45,8 +45,7 @@ Neste esquema são identificadas as linguagens e tecnologias de cada módulo. São 
 	\item \textbf{PIMS:} Um sistema PIMS da \textit{OsiSoft} chamado \textit{PI System} \cite{piPage}. Nele são armazenados os dados de processo dos clientes que utilizam o sistema LOOP. Estes dados são utilizados na realização dos cálculos (Kpi-Executor);
 	\item \textbf{Pi-Facade:} Módulo do tipo API construído em \textit{Spring Boot} \cite{springBootPage} responsável por prover dados registrados e cadastrar novas informações no PIMS sob demanda da aplicação web \textit{Dashboard};
 	\item \textbf{Pi-Connector:} Módulo do tipo API construído em \textit{NodeJS} \cite{nodejsPage} responsável pelo fornecimento de dados registrados no PIMS à aplicação de cálculos (Kpi-Executor);
-	\item \textbf{Kpi-Executor:} Módulo desenvolvido descrito por esta monografia. Construído em \textit{Python 3.8} \cite{pyPage} e responsável por calcular os índices de performance (KPIs) do sistema LOOP. Opera de forma cíclica, realizando seus cálculos a cada hora.
-	
+	\item \textbf{Kpi-Executor:} Módulo desenvolvido descrito por esta monografia. Construído em \textit{Python 3.8} \cite{pyPage} e responsável por calcular os índices de performance (KPIs) do sistema LOOP. Opera de forma cíclica, realizando seus cálculos a cada hora.	
 \end{itemize}
 
 
@@ -68,6 +67,19 @@ O processo de desenvolvimento da aplicação iniciou-se com um escopo relativament
 
 \subsubsection{Levantamento do Requisitos}
 
+\paragraph{Variáveis do Sistema}
+\label{sec:varsistema}
+%\todo[inline]{Explicar os conceitos de MV, PV e Modo utilizados no Kpi-Executor. Avaliar se deve entrar no levantamento de requisitos}
+Conceitos importantes para a descrição e detalhamento do módulo construído são os seguintes:
+\begin{itemize}
+	\item \textbf{\textit{Setpoint} (SP):} Valor-alvo de um sistema de controle regulatório;
+	\item \textbf{\textit{Process Value} (PV):} Variável de processo a ser controlada por uma malha de controle. O objetivo de uma malha é fazer com que a \textit{PV} atinja o valor escolhido como \textit{Setpoint};
+	\item \textbf{\textbf{\textit{Manipulated Value}} (MV):} Em contextos de processo, MV é a variável que uma malha de controle utiliza para atuar no valor final da PV. Exemplos são aberturas de válvulas e velocidades de bomba;
+	\item \textbf{Modo:} Malhas de controle costumam possuir modos de operação que habilitam ou não um tipo de controle específico. Exemplos de modo são automático, manual e cascata.
+\end{itemize}
+
+\paragraph{Fluxo desejado}
+\label{sec:levantRequisitos}
 Considerando a necessidade de um mapeamento detalhado dos casos de cálculo, foi realizado um processo de entrevista com o PO (\textit{Product Owner}) do sistema LOOP, a fim de elucidar o fluxo de cálculo em seu estado ideal, possíveis tratativas em casos não usuais e demais requisitos funcionais e não-funcionais. Deste levantamento, foi elaborado o diagrama de sequência (\ref{sec:modSeq}) tratando o fluxo a ser executado pelo Kpi-Executor, exibido na figura (\ref{fig:fluxoKpi}).
 
  \begin{figure}[!htbp]
@@ -80,7 +92,7 @@ Considerando a necessidade de um mapeamento detalhado dos casos de cálculo, foi 
 Após construção deste diagrama de alto nível, foi realizada o nova reunião o validando como fluxo correto de cálculos, incluindo as tratativas de casos específicos. Assim pôde-se caminhar para a próxima etapa do processo.
 
 \subsubsection{Projeto da Aplicação}
-
+\label{sec:projAplicacao}
 Tendo requisitos funcionais e não-funcionais especificados, foi possível então o início do projeto da aplicação. Inicia-se pela definição arquitetural do módulo Kpi-Executor. Foi escolhida uma arquitetura em camadas (seção \ref{sec:arqCamadas}) devido à familiaridade da equipe com o tipo de construção e a seu caráter de atuação sob demanda e persistência em banco de dados. 
 
 Para persistência dos dados em banco, foi escolhida a tecnologia SQLAlchemy \cite{alchemyPage}, amplamente utilizada para acesso via Python a bancos de dados relacionais. Ela possibilita uma abordagem de orientação a objetos (seção \ref{sec:seqOO}) em sua utilização.
@@ -99,6 +111,126 @@ Uma vez levantados os pontos citados, foram utilizados os conceitos de orientaçã
 \end{itemize}
 
 Uma vez elaboradas tais classes auxiliares, tem-se a etapa seguinte que contempla o conceito de divisão de camadas (\ref{sec:arqCamadas}), novamente orientação a objetos (\ref{sec:seqOO}) e modelagem orientada a dados (\ref{sec:modSeq}).
+
+
+
+Conceitos importantes para retomar são os 
+
+\paragraph{Índices de Performance - KPIs}
+\label{sec:indicesPerformance}
+
+Como relatado na seção \ref{sec:automation_kpis}, os índices de performance calculados pelo módulo construído, se baseiam em índices frequentemente utilizados para a medição de qualidade de malhas de controle regulatório. Tais cálculos são realizados periodicamente, utilizando os dados de processo que foram armazenados no PIMS na hora anterior à sua execução. Dessa forma, todos os cálculos aqui descritos são relacionados a um período de uma hora. Nessa seção são descritos cada um deles.
+
+\begin{itemize}
+	\item \textbf{Tempo em modo normal:} Para cada malha cadastrada no sistema LOOP (seção \ref{sec:estruturaExistente} ) é cadastrado um modo como estado normal. Este \textit{KPI} consiste na avaliação da porcentagem do tempo em que tal malha esteve neste estado.
+	
+	\begin{equation}
+	T_{normal} [\%] = \frac{n_{modoNormal}}{n_{totalAmostras}} \times 100
+	\end{equation}
+	
+	É utilizado pelo analista para inferências sobre possíveis problemas relacionados a uma má parametrização de um sistema de controle regulatório. Gera perguntas como "Porque esta malha não tem se mantido no modo de operação que deveria ser o normal?";
+	\item \textbf{Tempo sem saturação:} Consiste na avaliação da porcentagem de tempo em que a MV se manteve dentro dos limites normais de operação previamente cadastrados
+	
+	\begin{equation}
+	T_{semSaturacao} [\%] = \frac{n_{dentroLimite}}{n_{totalAmostras}} \times 100
+	\end{equation}
+	
+	Tem índice também diz sobre um sistema de controle mal parametrizado. Uma malha que possui um tempo sem saturação baixo pode apresentar defeitos em seus atuadores com uma frequência alta.
+	\item \textbf{Erro médio aceitável:} O cálculo deste \textit{KPI} passa por algumas etapas:
+	\subitem \textit{Cálculo de erro:} O erro é dado pela diferença absoluta entre o SP e a PV. Tal cálculo é realizado para cada amostra dos vetores de dados.
+	
+	\begin{equation}
+	erro = |SP - PV|
+	\end{equation}
+	
+	Assim é gerado um vetor com os erros de cada amostra.
+	\subitem \textit{Boxplot:} Também conhecido como \textit{gráfico de caixa} é utilizado para a avaliação da distribuição empírica dos dados \cite{capela_boxplot}. Nele são utilizados primeiro ($Q_1$), segundo ($Q_2$) e terceiro ($Q_3$) quartis para sua construção. Esta etapa é realizada com o vetor de dados gerado o item anterior.
+	
+	\begin{figure}[!htbp]
+		\centering		
+		\includegraphics[width=14cm]{Metodologia/Figuras/boxplot.png}
+		\caption{Formação de Boxplot}
+		\label{fig:boxlot}
+	\end{figure}
+	
+	Para o cálculo de cada um dos quartis é utilizado o conceito de \textit{percentil}. Ele divide o conjunto de dados em 100 partes iguais e indica a porcentagem de dados que estão abaixo daquela parte. Para a avaliação do percentil é necessário que os dados estejam ordenados de forma crescente. As relações matemáticas que o definem são dadas pelas equações \ref{eq:posicaoPercentil} e \ref{eq:percentil}.
+	
+	\begin{equation}
+	\label{eq:posicaoPercentil}
+	L = \frac{k}{100}\times n
+	\end{equation}
+	
+	Sendo $L$ a posição do percentil desejado no conjunto de dados, $k$ o percentil desejado e $n$ o tamanho do vetor de dados analisado. 
+	
+	\begin{equation}
+	\label{eq:percentil}
+	P_k = \begin{cases}
+	\frac{v_L + v_{L+1}}{100}  & \text{caso \textit{L} seja inteiro}\\
+	v_{round(L)} & \text{caso \textit{L} não seja inteiro}
+	
+	\end{cases} 
+	\end{equation}
+	
+
+	Sendo $v$ o vetor de dados a ser analisado, $L$ o valor obtido na equação \ref{eq:posicaoPercentil} e $P_k$ o \textit{k}-ésimo percentil a ser obtido. Existe um ligação direta entre percentis e os quartis utilizados para o \textit{Boxplot}. As equações \ref{eq:q1} a \ref{eq:q3} trazem tais relações.
+	
+	
+	Sendo $n$ o número de amostras, $i$ o percentil desejado
+	\begin{equation}
+	\label{eq:q1}
+	Q_1 = P_{25}
+	\end{equation}
+	
+	\begin{equation}
+	\label{eq:q2}
+	Q_2 = P_{50}
+	\end{equation}
+	
+	\begin{equation}
+	\label{eq:q3}
+	Q_3 = P_{75}
+	\end{equation}
+	
+	\subsubitem \textit{Normalização:} Uma vez obtidos os quartis $Q_1$ a $Q_3$, é obtido o valor de $iqr$, dado pela diferença entre $Q_3$ e $Q_1$.
+	
+	\begin{equation}
+	iqr = Q_3 - Q_1
+	\end{equation}
+	
+	Em seguida são inseridos os conceitos de \textit{meta} e \textit{limiar}. Ambos se apoiam nos quatis calculados até este ponto. Podem ser vistos como os limites inferior e superior, respectivamente, destacados na figura \ref{fig:boxlot}.
+	
+	\begin{equation}
+	meta = Q_1 - Gap \times iqr
+	\end{equation}
+	
+	\begin{equation}
+	limiar = Q_3 + Gap \times iqr
+	\end{equation}
+	
+	Tendo $Gap = 0,1$ como padrão para o sistema. Em seguida é definido o \textit{divisor}, dado pela diferença entre \textit{limiar} e \textit{meta}.
+	
+	\begin{equation}
+	divisor = limiar - meta
+	\end{equation}
+	
+	Também é realizado o cálculo do chamado \textit{Erro Médio Absoluto}, identificado como $EMA$. Consiste, como o nome explicita, na média dos valores absolutos de erro nos dados analisados.
+	
+	\begin{equation}
+	EMA = \frac{\sum_{1}^{n_{amostras}} erro_i}{n_{amostras}}
+	\end{equation}
+	
+	Finalmente, após as etapas descritas é possível obter o \textit{KPI} de \textit{Erro Médio Aceitável}, identificado como $EMA_{norm}$.
+	
+	\begin{equation}
+	EMA_{norm} [\%] = \frac{EMA - meta}{divisor} 
+	\end{equation}
+	
+	\item \textbf{Nota Global:} É dada pela média dos \textit{KPIs} calculados naquele ciclo. Caso o cálculo de um índice seja aplicável ao ciclo avaliado, ele entra para o cálculo deste.
+	
+	\begin{equation}
+	NotaGlobal = \frac{\sum_{i}^{n} KPI_i}{n_{KPI}}
+	\end{equation}
+\end{itemize}
 
 \paragraph{Divisão de Responsabilidades}
 
@@ -129,14 +261,38 @@ Cada componente descrito no diagrama é composto por um arquivo independente em P
 	
 \end{itemize}
 
-\paragraph{Índices de Performance - KPIs}
 
-\todo[inline]{Explicar os cálculos realizados e citar a seção (ainda não construída) da revisão bibliográfica sobre os índices de performance.}
+\paragraph{Registro de Falhas de Cálculo}
 
-\paragraph{Registro de Logs de Cálculo}
+O fluxo de cálculo do módulo apresentado na seção \ref{sec:levantRequisitos} contempla o registro das falhas no processo de cálculo. Um dos requisitos levantados foi a necessidade do armazenamento desses casos, de forma organizada e escalável, viabilizando o consumo futuro dessas informações.
 
-\todo[inline]{Adicionar aqui o processo de estruturação dos logs de cálculo em banco de dados. Associar esse processo ao fluxo da seção de levantamento de requisitos.}
+Uma boa prática para tratamento e organização de falhas, erros e casos inesperados é o tratamento de exceções. Ele é o mecanismo responsável pelo tratamento de condições que não respeitam o fluxo normal de funcionamento de um programa de computador. Considerando esses conceitos, foram criados diferentes tipos de exceção para diferenciar as falhas em cada etapa descrita pelo diagrama \ref{fig:fluxoKpi}:
 
+\begin{itemize}
+	\item \textbf{Exceções do Fluxo}: São lançadas em caso de problemas relacionados a ausência de dados necessários para os cálculos. Identificam qual dado está ausente, e correspondem às avaliações de condicionais do fluxo. No diagrama de sequência (\ref{fig:fluxoKpi}) são representadas pelos losangos.
+	\subitem \textit{NoLoopDataException:} Exceção lançada caso os dados do PIMS não estejam disponíveis por algum motivo;
+	\subitem \textit{OfflineLoopException:} Lançada caso a malha analisada naquela iteração esteja em estado \textit{offline}, ou seja, sem o monitoramento do sistema;
+	\subitem \textit{MVException:} Semelhante à primeira, porém relativa somente aos dados de MV (seção \ref{sec:varsistema}). Caso não haja dados, a exceção é lançada;
+	\subitem \textit{ModoException:} Relativa à ausência de dados de Modo (seção \ref{sec:varsistema}). Caso não existam dados, é lançada uma exceção desse tipo;
+	\subitem \textit{PVSPException:} Relativa à ausência de dados de PV e/ou SP (seção \ref{sec:varsistema}). Caso não existam dados, é lançada uma exceção desse tipo;
+	\item \textbf{Exceções nos cálculos:} São lançadas caso ocorra alguma falha durante as operações de cálculos. No diagrama de sequência (\ref{fig:fluxoKpi}) são representadas pelos retângulos.
+	\subitem \textit{NoSatCalculateException:} Falha no processo de cálculo do KPI \textit{Tempo sem saturação}. É lançada uma exceção desse tipo com as informações da falha capturada;
+	\subitem \textit{TimeNormalCalculateException:} Falha no processo de cálculo do KPI \textit{Tempo em modo normal}.
+	\subitem \textit{EMACalculateException:} Falha no processo de cálculo do KPI \textit{Erro Médio Aceitável};
+	\subitem \textit{GlobalPerformanceCalculateException:} Falha do processo de cálculo do KPI \textit{Performance Global}.
+\end{itemize}
+
+Uma vez criados os tipos de exceções, para a possibilidade de consumo futuro destes dados, bem como para análise de possíveis gargalos no sistema, tais falhas foram registradas em uma tabela no banco de dados relacional PostgresSQL \cite{postgresPage}, conforme indicado na figura \ref{fig:arqLoop}. A tabela responsável por esse armazenamento possui as seguintes informações:
+
+\begin{itemize}
+	\item \textbf{message:} Mensagem que pode ser personalizada em cada caso;
+	\item \textbf{file\_name:} Arquivo do projeto que apresentou a exceção em questão;
+	\item \textbf{line\_number:} Linha do arquivo que apresentou a exceção;
+	\item \textbf{exception:} Classe da exceção ocorrida;
+	\item \textbf{documentation:} Informação nativa da exceção, caso não seja de uma das classes criadas;
+	\item \textbf{web\_id:} Identificador único da malha que operava o cálculo de KPI;
+	\item \textbf{timestamp:} \textit{Timestamp} com informação de quando ocorreu o problema;
+\end{itemize}
 
 \subsubsection{Testes e Implantação}
 \todo[inline]{Explicar etapas de teste com dados de cliente e validação de fluxo e resultados de cálculos dos índices de performance}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{32}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -13,9 +13,6 @@
 \bibitem[SQL()]{SQLInjection}
 {SQL} injection.
 \newblock URL \url{https://www.devmedia.com.br/sql-injection/6102}.
-
-\bibitem[TJH()]{TJHarris2}
-Assesment of {C}ontrol {L}oop {P}erformance, language =.
 
 \bibitem[alc()]{alchemyPage}
 P\'{a}gina {O}ficial {SQLA}lchemy.
@@ -97,6 +94,12 @@ G.~BOOCH, J.~RUMBAUGH, and I.~JACOBSON.
 \newblock \emph{UML, Guia do Usuario}.
 \newblock $2^{\b{a}}$ edition, 2005.
 
+\bibitem[{Capela, Marisa Veiga and Capela, Jorge M V}()]{capela_boxplot}
+{Capela, Marisa Veiga and Capela, Jorge M V}.
+\newblock {Elabora{\c{c}}\~{a}o de {Gr\'{a}ficos} {Box}-{Plot} em {Planilhas}
+  de {C\'{a}lculo}}.
+\newblock page~5.
+
 \bibitem[e~Dilson Jos\'{e} L. R.~J\'{u}nior()]{apl_ORM}
 L.~H. C.~M. e~Dilson Jos\'{e} L. R.~J\'{u}nior.
 \newblock {Aplica{\c{c}}\~{a}o do ORM Doctrine para abstra{\c{c}}\~{a}o de
@@ -108,10 +111,16 @@ A.~G.
 \newblock URL
   \url{https://www.hostinger.com.br/tutoriais/o-que-e-hospedagem-cloud/}.
 
-\bibitem[Harris()]{TJHarris}
+\bibitem[Harris({\natexlab{a}})]{TJHarris}
 T.~J. Harris.
 \newblock Recent {D}evelopments in {C}ontroller {P}erformance {M}onitoring and
   {A}ssessment {T}echniques.
+\newblock {\natexlab{a}}.
+
+\bibitem[Harris({\natexlab{b}})]{TJHarris2}
+T.~J. Harris.
+\newblock Assesment of {C}ontrol {L}oop {P}erformance.
+\newblock {\natexlab{b}}.
 
 \bibitem[Luo et~al.(2013)Luo, Ding, Haghani, Hao, Yin, and
   Jeinsch]{kpi_tolerance}

@@ -2,9 +2,11 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: Monografia.aux
 The style file: abbrvnat.bst
 A level-1 auxiliary file: Capa/capa.aux
 A level-1 auxiliary file: TabelaConteudo/TabelaConteudo.aux
+A level-1 auxiliary file: ListaFiguras/ListaFiguras.aux
 A level-1 auxiliary file: Introducao/Introducao.aux
 A level-1 auxiliary file: RevisaoBibliografica/RevisaoBibliografica.aux
 A level-1 auxiliary file: Metodologia/Metodologia.aux
+A level-1 auxiliary file: Resultados/Resultados.aux
 Database file #1: references.bib
 Warning--entry type for "pyPage" isn't style-file defined
 --line 27 of file references.bib
@@ -48,15 +50,12 @@ Warning--entry type for "ORM" isn't style-file defined
 --line 155 of file references.bib
 Warning--entry type for "SQLInjection" isn't style-file defined
 --line 160 of file references.bib
-I was expecting a `,' or a `}'---line 236 of file references.bib
- :  language = "
- :              en",
-I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "refQuartil"
+Warning--I didn't find a database entry for "bel/00"
 Warning--to sort, need author or key in what-container
 Warning--to sort, need author or key in whatKernel
 Warning--to sort, need author or key in devops
 Warning--to sort, need author or key in ci_cd
-Warning--to sort, need author or key in TJHarris2
 Warning--to sort, need author or key in ORM
 Warning--to sort, need author or key in pyPage
 Warning--to sort, need author or key in vscodePage
@@ -75,10 +74,6 @@ Warning--to sort, need author or key in sqlServerHome
 Warning--to sort, need author or key in SQLInjection
 Warning--empty year in ORM
 Warning--empty year in SQLInjection
-Warning--empty author in TJHarris2
-Warning--empty journal in TJHarris2
-Warning--empty year in TJHarris2
-Warning--empty year in TJHarris2
 Warning--empty year in alchemyPage
 Warning--empty year in angularJSPage
 Warning--empty year in awsHome
@@ -91,15 +86,19 @@ Warning--empty year in sqlServerHome
 Warning--empty year in what-container
 Warning--empty year in whatKernel
 Warning--empty publisher in umlBooch
+Warning--empty journal in capela_boxplot
+Warning--empty year in capela_boxplot
+Warning--empty year in capela_boxplot
 Warning--empty journal in apl_ORM
 Warning--empty year in apl_ORM
 Warning--empty year in apl_ORM
 Warning--empty journal in TJHarris
 Warning--empty year in TJHarris
-Warning--empty year in TJHarris
+Warning--empty journal in TJHarris2
+Warning--empty year in TJHarris2
 Warning--empty publisher in engSw
 Warning--empty publisher in intrBD
 Warning--empty journal in automation_kpis
 Warning--empty year in automation_kpis
 Warning--empty year in automation_kpis
-(There was 1 error message)
+(There were 72 warnings)

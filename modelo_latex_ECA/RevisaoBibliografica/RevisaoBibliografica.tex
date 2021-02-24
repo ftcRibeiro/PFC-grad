@@ -93,7 +93,7 @@ relacional é a relação. Ela é constituída por um ou mais atributos que traduzem 
 
 \subsection{Containers}
 
-\textit{Container} é uma unidade de software para desenvolvimento e implantação que empacota código e suas dependências para a execução de um aplicativo de forma rápida, escalável e confiável, independentemente de do ambiente de computação que o hospede. No projeto descrito por essa monografia foram utilizados \textit{containers docker} \cite{what-container}.
+\textit{Container} é uma unidade de software para desenvolvimento e implantação que empacota código e suas dependências para a execução de um aplicativo de forma rápida, escalável e confiável, independentemente do ambiente de computação que o hospede. No projeto descrito por essa monografia foram utilizados \textit{containers docker} \cite{what-container}.
 
 \subsubsection{Containter e Máquinas Virtuais}
 
@@ -101,7 +101,7 @@ Containers e máquinas virtuais possuem benefícios de isolamento e alocação de re
 
 Os containers são uma abstração na camada do aplicativo que busca o agrupamento de código e suas dependências. Podem haver múltiplos containers em execução , compartilhando \textit{kernel} \cite{whatKernel} do sistema operacional com outros containers, todos isolados em processos diferentes. 
 
-Em contrapartida, as máquinas virtuais abstraem o hardware, transformando um servidor em vários servidores. Cada máquina virtual inclui uma cópia de completa do sistema operacional, do aplicativo e suas dependências.
+Em contrapartida, as máquinas virtuais abstraem o hardware, transformando um servidor em vários servidores. Cada máquina virtual inclui uma cópia completa do sistema operacional, do aplicativo e suas dependências.
 
 
 \subsubsection{Orquestração de containers - Kubernetes}
@@ -116,12 +116,12 @@ A orquestração consiste na manipulação de containers buscando sua organização, e
 
 \subsection{Controller Performance Monitoring - CPM}
 
-\textit{CPM}, sigla do inglês para \textit{Controller Performance Monitoring} é uma técnica das mais usadas para a medição de \textit{KPIs} direcionados a sistemas de automação, tendo T. J Harris \cite{TJHarris,TJHarris2} como um dos pioneiros no assunto. Sua utilização, nos últimos anos, tem se tornado mais comum como ferramenta para a programas de melhoria de operações promovidas por indústrias e universidades. \textit{CPM} tem como principal objetivo o aumento da confiabilidade de uma planta industrial, sendo um auxiliar para o descobrimento de modos de falhas ocultos, que normalmente não são ligados à sintonia de controle, e sim a outras causas, como defeitos em atuadores (bombas, válvulas) ou formas de operação \cite{automation_kpis}.
+\textit{CPM}, sigla do inglês para \textit{Controller Performance Monitoring} é uma técnica das mais usadas para a medição de \textit{KPIs} direcionados a sistemas de automação, tendo T. J Harris \cite{TJHarris,TJHarris2} como um dos pioneiros no assunto. Sua utilização, nos últimos anos, tem se tornado mais comum como ferramenta para programas de melhoria de operações promovidas por indústrias e universidades. \textit{CPM} tem como principal objetivo o aumento da confiabilidade de uma planta industrial, sendo um auxiliar para o descobrimento de modos de falhas ocultos, que normalmente não são ligados à sintonia de controle, e sim a outras causas, como defeitos em atuadores (bombas, válvulas) ou formas de operação \cite{automation_kpis}.
 
 
 \subsection{KPIs Universais para Plantas Industriais}
 
-Como dito, os \textit{KPIs} visam, ao final de seu uso, melhorias nos resultados da empresa que os utilizar, podendo esses estar diretamente (de Negócio) ou indiretamente (de Controle e Processo) ligados aos objetivos da empresa \cite{automation_kpis}. Os de negócio costumam fornecer medidas valiosas quanto às evoluções ligadas à empresa, tendo caráter de longo prazo. Entretanto, nem sempre estão ligados a ações diretas em uma planta. Lucros, Qualidade e Custos totais estão nessa classificação.
+Como dito, os \textit{KPIs} visam, ao final de seu uso, melhorias nos resultados da empresa que os utilizar, podendo estar diretamente (de Negócio) ou indiretamente (de Controle e Processo) ligados aos objetivos da empresa \cite{automation_kpis}. Os \textit{KPIs} de negócio costumam fornecer medidas valiosas quanto às evoluções ligadas à empresa, tendo caráter de longo prazo. Entretanto, nem sempre estão ligados a ações diretas em uma planta. Lucros, Qualidade e Custos totais estão nessa classificação.
 
 Para que seja possível alcançar sucesso nos \textit{KPIs} de Negócio (longo prazo), é necessária anteriormente a análise de \textit{KPIs} com caráter de curto prazo. Exemplos deste tipo de \textit{KPIs} são: Eficiência, confiabilidade, tempo de acomodação e tempo saída saturada. Esses, por sua vez, podem mais facilmente gerar ações diretas na planta \cite{automation_kpis}.
 
