@@ -222,7 +222,7 @@ Como relatado na seção \ref{sec:automation_kpis}, os índices de performance calc
 	Finalmente, após as etapas descritas é possível obter o \textit{KPI} de \textit{Erro Médio Aceitável}, identificado como $EMA_{norm}$.
 	
 	\begin{equation}
-	EMA_{norm} [\%] = \frac{EMA - meta}{divisor} 
+	EMA_{norm} [\%] = 1 - \frac{EMA - meta}{divisor} 
 	\end{equation}
 	
 	\item \textbf{Nota Global:} É dada pela média dos \textit{KPIs} calculados naquele ciclo. Caso o cálculo de um índice seja aplicável ao ciclo avaliado, ele entra para o cálculo deste.
@@ -263,6 +263,7 @@ Cada componente descrito no diagrama é composto por um arquivo independente em P
 
 
 \paragraph{Registro de Falhas de Cálculo}
+\label{sec:regFalhasCalculo}
 
 O fluxo de cálculo do módulo apresentado na seção \ref{sec:levantRequisitos} contempla o registro das falhas no processo de cálculo. Um dos requisitos levantados foi a necessidade do armazenamento desses casos, de forma organizada e escalável, viabilizando o consumo futuro dessas informações.
 
@@ -296,4 +297,26 @@ Uma vez criados os tipos de exceções, para a possibilidade de consumo futuro des
 
 \subsubsection{Testes e Implantação}
 \todo[inline]{Explicar etapas de teste com dados de cliente e validação de fluxo e resultados de cálculos dos índices de performance}
+
+Para implantar um sistema que será utilizado por um cliente, é necessário garantir seu pleno funcionamento. Dessa forma, a etapa de testes, automatizados ou não, de um software é indispensável \cite{engSw}. Nessa seção são relatadas as etapas de testes, bem como o processo de implantação do módulo junto à estrutura existente do sistema Loop.
+
+\paragraph{Validação dos Cálculos}
+
+A primeira etapa de validações consistiu na execução manual de um único ciclo do sistema. Após o término, foram coletados os resultados dos cálculos para as malhas escolhidas. Para apoio e referência, foi utilizada uma planilha de \textit{excel} para realização dos cálculos das mesmas malhas. A tabela \ref{} traz os valores obtidos em cada uma das operações. 
+
+\begin{table}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Malha}   & \multicolumn{2}{l|}{\textbf{Tempo S/ Saturação}} & \multicolumn{2}{l|}{\textbf{Tempo Normal}} & \multicolumn{2}{l|}{\textbf{Erro Médio Aceitável}} & \multicolumn{2}{l|}{\textbf{Nota Global}} \\ \hline
+		-       & \textit{Excel}               & \textit{Kpi-Executor} & \textit{Excel}                & \textit{Kpi-Executor} & \textit{Excel}                & \textit{Kpi-Executor} & \textit{Excel}       & \textit{Kpi-Executor} \\ \hline
+		Malha 1 & ~                   & ~            & ~                    & ~            & ~                    & ~            & ~           & ~            \\ \hline
+		Malha 2 & ~                   & ~            & ~                    & ~            & ~                    & ~            & ~           & ~            \\ \hline
+	\end{tabular}
+\end{table}
+
+\paragraph{Validação em Ambiente de QA}
+\todo[inline]{adicionar a descrição do processo de testes no ambiente de QA: validação de kpi a kpi exibido no loop. Aqui podemos adicionar prints do loop}
+\paragraph{Disponibilização em Ambiente de Produção}
+\todo[inline]{Descrever as etapas de dispoibilização no ambiente do cliente. Substituição in live do módulo anterior}
+
 \clearpage
