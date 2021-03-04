@@ -314,8 +314,42 @@ A primeira etapa de validações consistiu na execução manual de um único ciclo do
 	\end{tabular}
 \end{table}
 
-\paragraph{Validação em Ambiente de QA}
+\paragraph{Validação em Ambiente de Testes}
 \todo[inline]{adicionar a descrição do processo de testes no ambiente de QA: validação de kpi a kpi exibido no loop. Aqui podemos adicionar prints do loop}
+
+Posteriormente à validação dos cálculos descrita na seção anterior, iniciou-se a etapa de implantação do \textit{Kpi-Executor} em ambiente de testes. Esse ambiente é composto por uma estrutura semelhante à do sistema final, porém não está diretamente ligada à dados de clientes. Dessa forma, é possível realizar testes em escalas e quantidades reais, porém não possibilitando o acesso do cliente final antes que todas as validações sejam realizadas.
+
+Das etapas da validação em ambiente de testes foram realizadas as seguintes: 
+\begin{itemize}
+	\item \textbf{Implantação no ambiente de teste:} Construção de \textit{Dockerfile} e configuração de orquestrador de containers (Kubernetes);
+	\item \textbf{Validação ciclicidade:} Foi avaliado o funcionamento cíclico do sistema, sendo observadas, através de consultas ao banco de dados no qual são registrados os cálculos dos \textit{KPIs}, novas execuções do \textit{Kpi-Executor} a cada hora;
+	\item \textbf{Testes de Integração:} Como dito, o \textit{Kpi-Executor} foi criado como uma reconstrução de um módulo anteriormente existente, que não atendia mais às especificações necessárias. Sendo assim, foi necessária a avaliação das telas do Loop que consomem dados referentes aos índices de performance, e de consultas de módulos adjacentes que pudessem possuir acoplamento  garantindo assim que a integração entre os módulos ocorreu com sucesso.
+	\subitem \textit{Tela de Dashboard:} Tela principal do sistema Loop. Ela apresenta um overview baseado dos estados das malhas do cliente correspondente ao usuário logado, baseado nos índices de performance calculados para o período de acesso. A figura \ref{fig:telaDashboard} traz os detalhes das validações descritas a seguir.
+	\subsubitem 1. O número de malhas \textit{offline} deveria se manter no valor de 2, para o período de tempo exibido na figura \ref{fig:telaDashboard};
+	\subsubitem 2. O número de malhas em automático deveria mostrar coerente ao registrado no banco para aquele período em questão;
+	\subsubitem 3. O número de malhas em modo manual deveria se mostrar coerente ao registrado em banco para aquele período em questão;
+	\subsubitem 4. Os valores de \textit{KPIs} exibidos na tabela indicada deveriam estar coerentes com os registros inseridos pelo \textit{Kpi-Executor} no banco de cálculos. Para essa validação, foram escolhidas malhas arbitrariamente, seus\textit{KPIs} foram calculados de forma manual para o período de tempo em questão, e esses valores foram comparados aos exibidos nesse ponto da tela.
+	
+	Os testes deste item foram realizados pelo \textit{Product Owner} do Loop, validando o funcionamento dos pontos descritos acima.
+	
+	\begin{figure}[!htbp]
+		\centering		
+		\includegraphics[width=14cm]{Metodologia/Figuras/telaDashboard.png}
+		\caption{Tela de Dashboard - Loop}
+		\label{fig:telaDashboard}
+	\end{figure}
+	
+	\subitem \textit{Tela de Diagnóstico:} Nessa tela são exibidos os dados de processo e índices de performance da malha selecionada em um determinado período de tempo. Foi escolhida, de forma aleatória, uma malha para o período de tempo de $03/02/2020 15:00$ a $03/02/2020 16:00$ 
+	
+	\begin{figure}[!htbp]
+		\centering		
+		\includegraphics[width=14cm]{Metodologia/Figuras/telaDiagnostico.png}
+		\caption{Tela de Diagnóstico - Loop}
+		\label{fig:telaDiagnostico}
+	\end{figure}
+	
+\end{itemize}
+\newpage
 \paragraph{Disponibilização em Ambiente de Produção}
 \todo[inline]{Descrever as etapas de dispoibilização no ambiente do cliente. Substituição in live do módulo anterior}
 
