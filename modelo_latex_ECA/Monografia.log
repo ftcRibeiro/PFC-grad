@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.4)  3 MAR 2021 22:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.4)  7 MAR 2021 22:01
 entering extended mode
 **./Monografia.tex
 (Monografia.tex
@@ -664,7 +664,7 @@ Writing index file Monografia.idx
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count286
 \l__pdf_internal_box=\box59
-) (Monografia.aux (Capa/capa.aux)
+) (Monografia.aux (Capa/capa.aux) (Resumo/Resumo.aux)
 (TabelaConteudo/TabelaConteudo.aux) (ListaFiguras/ListaFiguras.aux)
 (Introducao/Introducao.aux) (RevisaoBibliografica/RevisaoBibliografica.aux)
 (Metodologia/Metodologia.aux) (Resultados/Resultados.aux))
@@ -767,9 +767,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ])
+\openout2 = `Resumo/Resumo.aux'.
+
+ (Resumo/Resumo.tex [1
+
+
+] [2
+
+
+])
 \openout2 = `TabelaConteudo/TabelaConteudo.aux'.
 
- (TabelaConteudo/TabelaConteudo.tex (Monografia.toc [1
+
+(TabelaConteudo/TabelaConteudo.tex (Monografia.toc [3
 
 
 
@@ -777,15 +787,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `Monografia.toc'.
 
-
-[2])
+ [4])
 \openout2 = `ListaFiguras/ListaFiguras.aux'.
 
- (ListaFiguras/ListaFiguras.tex (Monografia.lof)
+
+(ListaFiguras/ListaFiguras.tex (Monografia.lof)
 \tf@lof=\write6
 \openout6 = `Monografia.lof'.
 
- [3
+ [5
 
 
 
@@ -793,8 +803,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ])
 \openout2 = `Introducao/Introducao.aux'.
 
-
-(Introducao/Introducao.tex
+ (Introducao/Introducao.tex
 Cap\'{\i }tulo 1.
 [1
 
@@ -818,7 +827,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ]
 Cap\'{\i }tulo 2.
 [5]
-<RevisaoBibliografica/Images/MetodosAgeis.png, id=70, 352.31625pt x 133.49875pt
+<RevisaoBibliografica/Images/MetodosAgeis.png, id=77, 352.31625pt x 133.49875pt
 >
 File: RevisaoBibliografica/Images/MetodosAgeis.png Graphic file (type png)
 <use RevisaoBibliografica/Images/MetodosAgeis.png>
@@ -826,13 +835,13 @@ Package pdftex.def Info: RevisaoBibliografica/Images/MetodosAgeis.png  used on
 input line 38.
 (pdftex.def)             Requested size: 220.50887pt x 83.55464pt.
  [6 <./RevisaoBibliografica/Images/MetodosAgeis.png>]
-<RevisaoBibliografica/Images/modelSeq.png, id=77, 553.06625pt x 231.86626pt>
+<RevisaoBibliografica/Images/modelSeq.png, id=83, 553.06625pt x 231.86626pt>
 File: RevisaoBibliografica/Images/modelSeq.png Graphic file (type png)
 <use RevisaoBibliografica/Images/modelSeq.png>
 Package pdftex.def Info: RevisaoBibliografica/Images/modelSeq.png  used on inpu
 t line 58.
 (pdftex.def)             Requested size: 330.76329pt x 138.66795pt.
-<RevisaoBibliografica/Images/ArqCamadas.png, id=78, 241.90375pt x 322.20375pt>
+<RevisaoBibliografica/Images/ArqCamadas.png, id=84, 241.90375pt x 322.20375pt>
 File: RevisaoBibliografica/Images/ArqCamadas.png Graphic file (type png)
 <use RevisaoBibliografica/Images/ArqCamadas.png>
 Package pdftex.def Info: RevisaoBibliografica/Images/ArqCamadas.png  used on in
@@ -855,105 +864,136 @@ Cap\'{\i }tulo 3.
 
 
 ]
-<Metodologia/Figuras/arquitetura-omo.png, id=98, 791.95876pt x 737.75626pt>
+<Metodologia/Figuras/arquitetura-omo.png, id=105, 791.95876pt x 737.75626pt>
 File: Metodologia/Figuras/arquitetura-omo.png Graphic file (type png)
 <use Metodologia/Figuras/arquitetura-omo.png>
 Package pdftex.def Info: Metodologia/Figuras/arquitetura-omo.png  used on input
  line 34.
 (pdftex.def)             Requested size: 284.52756pt x 265.0517pt.
  [12 <./Metodologia/Figuras/arquitetura-omo.png>] [13] [14]
-<Metodologia/Figuras/fluxoKpiExecutor.png, id=111, 896.148pt x 311.36325pt>
+<Metodologia/Figuras/fluxoKpiExecutor.png, id=117, 896.148pt x 311.36325pt>
 File: Metodologia/Figuras/fluxoKpiExecutor.png Graphic file (type png)
 <use Metodologia/Figuras/fluxoKpiExecutor.png>
 Package pdftex.def Info: Metodologia/Figuras/fluxoKpiExecutor.png  used on inpu
 t line 87.
 (pdftex.def)             Requested size: 398.33858pt x 138.4018pt.
  [15 <./Metodologia/Figuras/fluxoKpiExecutor.png>] [16]
-<Metodologia/Figuras/boxplot.png, id=121, 526.96875pt x 266.49562pt>
+<Metodologia/Figuras/boxplot.png, id=128, 526.96875pt x 266.49562pt>
 File: Metodologia/Figuras/boxplot.png Graphic file (type png)
 <use Metodologia/Figuras/boxplot.png>
 Package pdftex.def Info: Metodologia/Figuras/boxplot.png  used on input line 15
 1.
 (pdftex.def)             Requested size: 398.33858pt x 201.45305pt.
  [17 <./Metodologia/Figuras/boxplot.png>] [18]
-<Metodologia/Figuras/kpiComponents.png, id=134, 1446.40375pt x 828.09375pt>
+<Metodologia/Figuras/kpiComponents.png, id=140, 1446.40375pt x 828.09375pt>
 File: Metodologia/Figuras/kpiComponents.png Graphic file (type png)
 <use Metodologia/Figuras/kpiComponents.png>
 Package pdftex.def Info: Metodologia/Figuras/kpiComponents.png  used on input l
 ine 241.
 (pdftex.def)             Requested size: 398.33858pt x 228.04869pt.
- [19 <./Metodologia/Figuras/kpiComponents.png>] [20]
-
-LaTeX Warning: Reference `' on page 21 undefined on input line 305.
-
-
-Overfull \hbox (79.72913pt too wide) in paragraph at lines 308--315
-[][] 
+ [19 <./Metodologia/Figuras/kpiComponents.png>] [20] [21]
+Overfull \hbox (70.14331pt too wide) in paragraph at lines 327--334
+ [][] 
  []
 
-[21]
-<Metodologia/Figuras/telaDashboard.png, id=145, 1156.32pt x 660.66824pt>
+[22]
+<Metodologia/Figuras/telaDashboard.png, id=155, 1156.32pt x 563.706pt>
 File: Metodologia/Figuras/telaDashboard.png Graphic file (type png)
 <use Metodologia/Figuras/telaDashboard.png>
 Package pdftex.def Info: Metodologia/Figuras/telaDashboard.png  used on input l
-ine 337.
-(pdftex.def)             Requested size: 398.33858pt x 227.58803pt.
- [22]
-<Metodologia/Figuras/telaDiagnostico.png, id=149, 1151.502pt x 563.10374pt>
+ine 357.
+(pdftex.def)             Requested size: 398.33858pt x 194.18633pt.
+ [23 <./Metodologia/Figuras/telaDashboard.png>]
+<Metodologia/Figuras/telaDiagnostico.png, id=160, 1152.7065pt x 650.43pt>
 File: Metodologia/Figuras/telaDiagnostico.png Graphic file (type png)
 <use Metodologia/Figuras/telaDiagnostico.png>
 Package pdftex.def Info: Metodologia/Figuras/telaDiagnostico.png  used on input
- line 346.
-(pdftex.def)             Requested size: 398.33858pt x 194.79512pt.
- [23 <./Metodologia/Figuras/telaDashboard.png> <./Metodologia/Figuras/telaDiagn
-ostico.png>] [24])
+ line 366.
+(pdftex.def)             Requested size: 369.88582pt x 208.70755pt.
+<Metodologia/Figuras/telaKpiDesempenho.png, id=161, 1156.32pt x 650.43pt>
+File: Metodologia/Figuras/telaKpiDesempenho.png Graphic file (type png)
+<use Metodologia/Figuras/telaKpiDesempenho.png>
+Package pdftex.def Info: Metodologia/Figuras/telaKpiDesempenho.png  used on inp
+ut line 379.
+(pdftex.def)             Requested size: 369.88582pt x 208.05252pt.
+ [24 <./Metodologia/Figuras/telaDiagnostico.png> <./Metodologia/Figuras/telaKpi
+Desempenho.png>] [25])
 \openout2 = `Resultados/Resultados.aux'.
 
- (Resultados/Resultados.tex
+
+(Resultados/Resultados.tex [26
+
+
+
+
+]
 Cap\'{\i }tulo 4.
-[25
+[27]
+<Metodologia/Figuras/registroFalhas.png, id=176, 784.73175pt x 130.086pt>
+File: Metodologia/Figuras/registroFalhas.png Graphic file (type png)
+<use Metodologia/Figuras/registroFalhas.png>
+Package pdftex.def Info: Metodologia/Figuras/registroFalhas.png  used on input 
+line 34.
+(pdftex.def)             Requested size: 398.33858pt x 66.03331pt.
+ [28 <./Metodologia/Figuras/registroFalhas.png>]
+<Metodologia/Figuras/telaStatusKpis.png, id=181, 1156.32pt x 650.43pt>
+File: Metodologia/Figuras/telaStatusKpis.png Graphic file (type png)
+<use Metodologia/Figuras/telaStatusKpis.png>
+Package pdftex.def Info: Metodologia/Figuras/telaStatusKpis.png  used on input 
+line 58.
+(pdftex.def)             Requested size: 398.33858pt x 224.06114pt.
+<Metodologia/Figuras/grafana.png, id=182, 1120.78725pt x 481.8pt>
+File: Metodologia/Figuras/grafana.png Graphic file (type png)
+<use Metodologia/Figuras/grafana.png>
+Package pdftex.def Info: Metodologia/Figuras/grafana.png  used on input line 65
+.
+(pdftex.def)             Requested size: 398.33858pt x 171.235pt.
+ [29 <./Metodologia/Figuras/telaStatusKpis.png> <./Metodologia/Figuras/grafana.
+png>]) (Monografia.bbl
+[30
 
 
 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
+[]\T1/ptm/m/n/10.95 ORM: Ob-ject re-la-ti-o-nal map-per, 2020.  URL $https : / 
+/ www . devmedia . com . br /
+ []
 
-] [26]) (Monografia.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
-[]\T1/ptm/m/n/10.95 ORM: Ob-ject re-la-ti-o-nal map-per.  URL $https : / / www 
-. devmedia . com . br /
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+[]\T1/ptm/m/n/10.95 Microsoft SQL Ser-ver, 2020.  URL $https : / / www . micros
+oft . com / pt-[]br / sql-[]server /
  []
 
 
 LaTeX Warning: Command \b invalid in math mode on input line 95.
 
-[27
-
-
-
-]
+[31]
 Underfull \hbox (badness 6910) in paragraph at lines 109--113
-[]\T1/ptm/m/n/10.95 A. G.  Hos-pe-da-gem Cloud, 2019.  URL $https : / / www . h
+[]\T1/ptm/m/n/10.95 A. G.  Hos-pe-da-gem Cloud, 2020.  URL $https : / / www . h
 ostinger . com . br / tutoriais /
  []
 
 
 LaTeX Warning: Command \b invalid in math mode on input line 147.
 
-) [28] (Monografia.aux (Capa/capa.aux) (TabelaConteudo/TabelaConteudo.aux)
-(ListaFiguras/ListaFiguras.aux) (Introducao/Introducao.aux)
-(RevisaoBibliografica/RevisaoBibliografica.aux) (Metodologia/Metodologia.aux)
-(Resultados/Resultados.aux))
+) [32] (Monografia.aux (Capa/capa.aux) (Resumo/Resumo.aux)
+(TabelaConteudo/TabelaConteudo.aux) (ListaFiguras/ListaFiguras.aux)
+(Introducao/Introducao.aux) (RevisaoBibliografica/RevisaoBibliografica.aux)
+(Metodologia/Metodologia.aux) (Resultados/Resultados.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15538 strings out of 481556
- 308025 string characters out of 2909658
- 535642 words of memory out of 3000000
- 30364 multiletter control sequences out of 15000+200000
+ 15571 strings out of 481556
+ 309274 string characters out of 2909658
+ 535854 words of memory out of 3000000
+ 30384 multiletter control sequences out of 15000+200000
  580552 words of font info for 78 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,9n,84p,858b,856s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,9n,84p,1666b,856s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/ba
 se/8r.enc}<C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmex10.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs
@@ -973,9 +1013,9 @@ felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.p
 fb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/t
 imes/utmr8a.pfb><C:/Users/felipe.ribeiro/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on Monografia.pdf (35 pages, 679034 bytes).
+Output written on Monografia.pdf (41 pages, 891037 bytes).
 PDF statistics:
- 216 PDF objects out of 1000 (max. 8388607)
+ 244 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 154 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

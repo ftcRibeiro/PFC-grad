@@ -1,27 +1,70 @@
 \chapter{Resultados}
  
-Ao longo do projeto algumas etapas se destacaram como de suma importância: análise de sistema existente, levantamento e registro de requisitos, elaboração da arquitetura do módulo, entendimento negocial dos índices a serem calculados
+%Ao longo do projeto algumas etapas se destacaram como de suma importância: análise de sistema existente, levantamento e registro de requisitos, elaboração da arquitetura do módulo, entendimento negocial dos índices a serem calculados
+
+Anteriormente havia um módulo construído com propósito semelhante ao atual, entretanto, este começou a apresentar fragilidades à medida em que cresceram o número de clientes e malhas. Seu planejamento esperava um perfeito cadastro das entidades do sistema LOOP, assim apresentando problemas com frequência, comprometendo sua estabilidade.
+
+O módulo citado não contemplava conceitos importantes para um software robusto, escalável e de boas condições para manutenção e evolução, como tratamento de exceções devidamente escolhido, \textit{logs} informativos e objetivos em relação a seu funcionamento, nem mesmo registro dos possíveis problemas ocorridos. Não menos importante, o módulo também não possuía documentação mínima de suas regras de negócio, dificultando sua manutenção ou evolução, além de manter o conhecimento do sistema somente na cabeça de seus criadores.
+
+Tendo em vista o impacto dos pontos citados, além de um sistema funcionando plenamente de acordo com as regras de negócio desenhadas na etapa de levantamento de requisitos (\ref{sec:levantRequisitos}), apresentado a seguir na sub-seção Sistema em Produção, foram avaliados como resultados importantes outros itens também apresentados nessa seção: Documentação das regras de negócio e Condições de Manutenção do Software.
+
+
 \section{Documentação de regras de negócio}
-\todo[inline]{Adicionar o contexto sobre o porquê de a documentação ser uma saída}
 
-A documentação das regras de negócio de um sistema é de grande importância para sua manutenção e evolução. No início do projeto, ainda na etapa de levantamento de requisitos (\ref{sec:levantRequisitos}), foram elaborados os diagramas correspondentes à estrutura existente  \ref{fig:arqLoop} e ao fluxo de cálculos \ref{fig:fluxoKpi}. Tais documentos são tradicionalmente utilizados para embasamento do desenvolvimento de um software. Entretanto, apesar de serem um ferramental para a elaboração de um software, no contexto do sistema existente, a elaboração deste documento foi considerada um resultado entregue.
+A documentação das regras de negócio de um sistema é de grande importância para sua manutenção e evolução. No início do projeto, ainda na etapa de levantamento de requisitos (\ref{sec:levantRequisitos}), foram elaborados os diagramas correspondentes à estrutura existente  \ref{fig:arqLoop} e ao fluxo de cálculos \ref{fig:fluxoKpi}. Tais documentos são tradicionalmente utilizados para embasamento do desenvolvimento de um software. Entretanto, apesar de serem um ferramental para a elaboração de um software, no contexto do sistema existente, a elaboração deste documento foi considerada um resultado entregue. O documento elaborado contempla as seguintes informações:
+\begin{itemize}
+	\item \textbf{\textit{Overview} do sistema:} Descrição do \textit{Kpi-Executor}, seu fluxo de funcionamento, conforme descrito pela figura \ref{fig:fluxoKpi}, e os \textit{links} para os demais repositórios que compõem o sistema LOOP;
+	\item \textbf{Arquitetura:} Possui uma breve descrição e diagrama que relaciona o \textit{Kpi-Executor} com os demais módulos, conforme figura \ref{fig:arqLoop}. Também possui informações sobre as bases de dados utilizadas pelo sistema LOOP, e suas relações com cada módulo;
+	\item \textbf{\textit{Development:}} Possui informações para facilitação de integração de novos desenvolvedores ao time. Contempla passo a passo de instalação de dependências necessárias, etapas de configuração do sistema e diferentes formas de execução disponíveis;
+	 
+\end{itemize}
 
-\section{Facilitação da Manutenção}
-\todo[inline]{Apresentar aqui exemplos dos benefícios obtidos pela organização em camadas e divisão de responsabilidades}
+O documento citado foi adicionado junto ao repositório de códigos \textit{Gitlab} utilizado pelo time de \textit{Discovery} da \textit{IHM Stefanini}.
 
-A etapa de manutenção e sustentação de um software é considerada a etapa mais cara de um processo de software \cite{engSw}. Dessa forma, a facilitação dessa etapa tem grande valia para um time de software. Ela consiste na resolução de possíveis \textit{bugs} que o sistema apresente.
+\section{Condições de Manutenção do Software}
 
-A resolução de um \textit{bug} de um software se inicia pela constatação e réplica do problema relatado, seguidos da identificação da causa do problema e posteriormente o entendimento e implementação e sua solução. Das etapas relatadas, a de identificação da causa se mostra das mais trabalhosas, quando tratamos de um sistema complexo. Para auxílio e facilitação desta etapa foram gerados os processos de registros de exceções do módulo (seção \ref{sec:regFalhasCalculo}) descrito por esta monografia.
+A etapa de manutenção e evolução de um software é considerada a etapa mais cara de um processo de software \cite{engSw}. Dessa forma, a facilitação dessa etapa tem grande valia para um time de software. Ela consiste na resolução de possíveis \textit{bugs} que ocorram, além do atendimento de melhorias e evoluções do sistema.
 
-\todo[inline]{adicionar imagem dos registros de banco}
+A resolução de um \textit{bug} de um software se inicia pela constatação e réplica do problema relatado, seguidos da identificação da causa do problema e posteriormente o entendimento e a implementação da solução. Das etapas relatadas, a de identificação da causa se mostra das mais trabalhosas, quando tratamos de um sistema complexo. Para auxílio e facilitação desta etapa foram gerados os processos de registros de exceções do \textit{Kpi-Executor} (seção \ref{sec:regFalhasCalculo}).
 
-Além da etapa de sustentação e manutenção, a etapa de evolução de um software também possui
+Tais registros de falhas possibilitam ao desenvolvedor, através de baixo esforço, a identificação de um problema ocorrido no cálculo dos índices de performance de uma malha específica. Todas as falhas são registradas em banco de dados, com informações detalhadas da origem do problema. A figura \ref{fig:registroFalhas} traz um exemplo dessa identificação.
 
-Essa etapa passa pela resolução de \textit{bugs} que o sistema apresente, e juntamente com a etapa de evolução, que por sua vez busca o desenvolvimento de novas funcionalidades, 
+\begin{figure}[!htbp]
+	\centering		
+	\includegraphics[width=14cm]{Metodologia/Figuras/registroFalhas.png}
+	\caption{Registro de Falhas - Logs}
+	\label{fig:registroFalhas}
+\end{figure}
+
+Em destaque:
+\begin{itemize}
+	\item 1. Identificação do nome da malha que apresentou falhas no cálculo de seus índices de performance;
+	\item 2. Identificação de cliente a quem a malha pertence;
+	\item 3. Detalhamento do problema quando este não é uma exceção prevista no conjunto de \textit{Exceções de Fluxo} ou \textit{Exceções de Cálculo}  (seção \ref{sec:regFalhasCalculo});
+	\item 4. Identificação de tipo de exceção. Nessa coluna são registradas as previstas no fluxo do sistema, mas também as geradas por outros motivos.
+	\item 5. Registro de quando a falha ocorreu.
+\end{itemize}
+
+Com esses registros em banco de dados, a investigação de possíveis problemas relacionados ao \textit{Kpi-executor} pode ser feita de forma orientada à falha, sendo possível a busca pelo nome da malha (presente na coluna \textit{message}), tipo de falha (coluna \textit{exception}) ou até mesmo por ciclo de execução (coluna \textit{timestamp}).
+
 
 \section{Estabilização do Sistema}
 \todo[inline]{Aqui a ideia é apresentar os dados relacionados aos jobs de execução do kpi-executor. Extrair os dados de status de execução do kubernetes. Nota: Ele só armazena das últimas 48h}
 
+A entrega de um módulo (\textit{Kpi-Executor}) com caráter estável foi dos resultados mais importantes para o sistema LOOP como um todo. 
 
+\begin{figure}[!htbp]
+	\centering		
+	\includegraphics[width=14cm]{Metodologia/Figuras/telaStatusKpis.png}
+	\caption{Tela de Desempenho - Loop}
+	\label{fig:telaStatusKpis}
+\end{figure}	
+
+\begin{figure}[!htbp]
+	\centering		
+	\includegraphics[width=14cm]{Metodologia/Figuras/grafana.png}
+	\caption{Métricas LOOP - Grafana}
+	\label{fig:grafana}
+\end{figure}	
 
 \clearpage

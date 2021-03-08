@@ -5,89 +5,89 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[ORM()]{ORM}
-{ORM}: Object relational mapper.
-\newblock URL
-  \url{https://www.devmedia.com.br/orm-object-relational-mapper/19056}.
-
-\bibitem[SQL()]{SQLInjection}
-{SQL} injection.
-\newblock URL \url{https://www.devmedia.com.br/sql-injection/6102}.
-
-\bibitem[alc()]{alchemyPage}
-P\'{a}gina {O}ficial {SQLA}lchemy.
-\newblock URL \url{https://www.sqlalchemy.org/}.
-
-\bibitem[ang()]{angularJSPage}
-P\'{a}gina {O}ficial {A}ngular{JS}.
-\newblock URL \url{https://angularjs.org/}.
-
-\bibitem[aws()]{awsHome}
-P\'{a}gina {O}ficial {AWS}.
-\newblock URL \url{https://aws.amazon.com/pt/}.
-
-\bibitem[ci_()]{ci_cd}
-Integra{\c{c}}\~{a}o e entrega cont\'{i}nuas: pipeline ci/cd.
-\newblock URL \url{https://www.redhat.com/pt-br/topics/devops/what-is-ci-cd}.
-
-\bibitem[dev()]{devops}
-O que \'{e} devops?
-\newblock URL \url{https://www.redhat.com/pt-br/topics/devops}.
-
-\bibitem[nod()]{nodejsPage}
-P\'{a}gina {O}ficial {N}ode{JS}.
-\newblock URL \url{https://nodejs.org/en/}.
-
-\bibitem[piP()]{piPage}
-P\'{a}gina {O}ficial {PI} {S}ystem.
-\newblock URL \url{https://www.osisoft.pt/pi-system/}.
-
-\bibitem[spr()]{springBootPage}
-P\'{a}gina {O}ficial {S}pring {B}oot.
-\newblock URL \url{https://spring.io/projects/spring-boot}.
-
-\bibitem[sql()]{sqlServerHome}
-{M}icrosoft {SQL} {S}erver.
-\newblock URL
-  \url{https://www.microsoft.com/pt-br/sql-server/sql-server-downloads}.
-
-\bibitem[wha({\natexlab{a}})]{what-container}
-What is a container?, {\natexlab{a}}.
-\newblock URL \url{https://www.docker.com/resources/what-container}.
-
-\bibitem[wha({\natexlab{b}})]{whatKernel}
-O que \'{e} kernel?, {\natexlab{b}}.
-\newblock URL \url{https://www.tecmundo.com.br/macos/1636-o-que-e-kernel-.htm}.
-
 \bibitem[con(2018)]{containerIntr}
 Introdu{\c{c}}\~{a}o aos containers e ao {D}ocker, 2018.
 \newblock URL
   \url{https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/container-docker-introduction/}.
 
-\bibitem[doc(2019)]{dockerPage}
-P\'{a}gina {O}ficial {D}ocker, 2019.
-\newblock URL \url{https://www.docker.com/}.
-
-\bibitem[kub(2019)]{kubePage}
-P\'{a}gina {O}ficial {K}ubernetes, 2019.
-\newblock URL \url{https://kubernetes.io/pt/}.
-
-\bibitem[pyP(2019)]{pyPage}
-P\'{a}gina {O}ficial {P}ython, 2019.
-\newblock URL \url{https://docs.python.org}.
-
 \bibitem[vsc(2019)]{vscodePage}
 P\'{a}gina {O}ficial {V}isual {S}tudio {C}ode, 2019.
 \newblock URL \url{https://code.visualstudio.com/}.
+
+\bibitem[ORM(2020)]{ORM}
+{ORM}: Object relational mapper, 2020.
+\newblock URL
+  \url{https://www.devmedia.com.br/orm-object-relational-mapper/19056}.
+
+\bibitem[alc(2020)]{alchemyPage}
+P\'{a}gina {O}ficial {SQLA}lchemy, 2020.
+\newblock URL \url{https://www.sqlalchemy.org/}.
+
+\bibitem[ang(2020)]{angularJSPage}
+P\'{a}gina {O}ficial {A}ngular{JS}, 2020.
+\newblock URL \url{https://angularjs.org/}.
+
+\bibitem[aws(2020)]{awsHome}
+P\'{a}gina {O}ficial {AWS}, 2020.
+\newblock URL \url{https://aws.amazon.com/pt/}.
+
+\bibitem[ci_(2020)]{ci_cd}
+Integra{\c{c}}\~{a}o e entrega cont\'{i}nuas: pipeline ci/cd, 2020.
+\newblock URL \url{https://www.redhat.com/pt-br/topics/devops/what-is-ci-cd}.
+
+\bibitem[dev(2020)]{devops}
+O que \'{e} devops?, 2020.
+\newblock URL \url{https://www.redhat.com/pt-br/topics/devops}.
+
+\bibitem[doc(2020)]{dockerPage}
+P\'{a}gina {O}ficial {D}ocker, 2020.
+\newblock URL \url{https://www.docker.com/}.
+
+\bibitem[kub(2020)]{kubePage}
+P\'{a}gina {O}ficial {K}ubernetes, 2020.
+\newblock URL \url{https://kubernetes.io/pt/}.
+
+\bibitem[nod(2020)]{nodejsPage}
+P\'{a}gina {O}ficial {N}ode{JS}, 2020.
+\newblock URL \url{https://nodejs.org/en/}.
+
+\bibitem[piP(2020)]{piPage}
+P\'{a}gina {O}ficial {PI} {S}ystem, 2020.
+\newblock URL \url{https://www.osisoft.pt/pi-system/}.
 
 \bibitem[pos(2020)]{postgresPage}
 P\'{a}gina {O}ficial {P}ostgre{SQL}, 2020.
 \newblock URL \url{https://www.postgresql.org/}.
 
-\bibitem[wha(2020)]{whatKube}
-Kubernetes e a tecnologia de containers, 2020.
+\bibitem[pyP(2020)]{pyPage}
+P\'{a}gina {O}ficial {P}ython, 2020.
+\newblock URL \url{https://docs.python.org}.
+
+\bibitem[spr(2020)]{springBootPage}
+P\'{a}gina {O}ficial {S}pring {B}oot, 2020.
+\newblock URL \url{https://spring.io/projects/spring-boot}.
+
+\bibitem[sql(2020)]{sqlServerHome}
+{M}icrosoft {SQL} {S}erver, 2020.
+\newblock URL
+  \url{https://www.microsoft.com/pt-br/sql-server/sql-server-downloads}.
+
+\bibitem[wha(2020{\natexlab{a}})]{what-container}
+What is a container?, 2020{\natexlab{a}}.
+\newblock URL \url{https://www.docker.com/resources/what-container}.
+
+\bibitem[wha(2020{\natexlab{b}})]{whatKernel}
+O que \'{e} kernel?, 2020{\natexlab{b}}.
+\newblock URL \url{https://www.tecmundo.com.br/macos/1636-o-que-e-kernel-.htm}.
+
+\bibitem[wha(2020{\natexlab{c}})]{whatKube}
+Kubernetes e a tecnologia de containers, 2020{\natexlab{c}}.
 \newblock URL
   \url{https://www.redhat.com/pt-br/topics/containers/what-is-kubernetes}.
+
+\bibitem[SQL(2021)]{SQLInjection}
+{SQL} injection, 2021.
+\newblock URL \url{https://www.devmedia.com.br/sql-injection/6102}.
 
 \bibitem[BOOCH et~al.(2005)BOOCH, RUMBAUGH, and JACOBSON]{umlBooch}
 G.~BOOCH, J.~RUMBAUGH, and I.~JACOBSON.
@@ -105,9 +105,9 @@ L.~H. C.~M. e~Dilson Jos\'{e} L. R.~J\'{u}nior.
 \newblock {Aplica{\c{c}}\~{a}o do ORM Doctrine para abstra{\c{c}}\~{a}o de
   banco de dados no desenvolvimento de software em PHP na UNASUS/UFMA}.
 
-\bibitem[G.(2019)]{cloudComp}
+\bibitem[G.(2020)]{cloudComp}
 A.~G.
-\newblock Hospedagem {C}loud, 2019.
+\newblock Hospedagem {C}loud, 2020.
 \newblock URL
   \url{https://www.hostinger.com.br/tutoriais/o-que-e-hospedagem-cloud/}.
 

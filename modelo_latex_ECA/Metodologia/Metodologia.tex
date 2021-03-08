@@ -69,7 +69,7 @@ O processo de desenvolvimento da aplicação iniciou-se com um escopo relativament
 
 \paragraph{Variáveis do Sistema}
 \label{sec:varsistema}
-%\todo[inline]{Explicar os conceitos de MV, PV e Modo utilizados no Kpi-Executor. Avaliar se deve entrar no levantamento de requisitos}
+
 Conceitos importantes para a descrição e detalhamento do módulo construído são os seguintes:
 \begin{itemize}
 	\item \textbf{\textit{Setpoint} (SP):} Valor-alvo de um sistema de controle regulatório;
@@ -296,26 +296,44 @@ Uma vez criados os tipos de exceções, para a possibilidade de consumo futuro des
 \end{itemize}
 
 \subsubsection{Testes e Implantação}
-\todo[inline]{Explicar etapas de teste com dados de cliente e validação de fluxo e resultados de cálculos dos índices de performance}
 
 Para implantar um sistema que será utilizado por um cliente, é necessário garantir seu pleno funcionamento. Dessa forma, a etapa de testes, automatizados ou não, de um software é indispensável \cite{engSw}. Nessa seção são relatadas as etapas de testes, bem como o processo de implantação do módulo junto à estrutura existente do sistema Loop.
 
 \paragraph{Validação dos Cálculos}
 
-A primeira etapa de validações consistiu na execução manual de um único ciclo do sistema. Após o término, foram coletados os resultados dos cálculos para as malhas escolhidas. Para apoio e referência, foi utilizada uma planilha de \textit{excel} para realização dos cálculos das mesmas malhas. A tabela \ref{} traz os valores obtidos em cada uma das operações. 
+A primeira etapa de validações consistiu na execução manual de um único ciclo do sistema. Após o término, foram coletados os resultados dos cálculos para as malhas escolhidas. Para apoio e referência, foi utilizada uma planilha de \textit{excel} para realização dos cálculos das mesmas malhas, no período de tempo de 06/03/2020 15:00 a 06/03/2020 16:00. 
 
-\begin{table}
+Inicialmente foram avaliados os valores obtidos para os cálculos intermediários que são realizados para o \textit{KPI} de \textit{Erro médio aceitável}. Assim foram avaliadas as etapas desse \textit{KPI}, ponto a ponto. A tabela \ref{tab:validacaoEMA} traz o comparativo dos valores obtidos pelo \textit{Kpi-Executor}  e pela planilha auxiliar. Para essa etapa foi escolhida a malha indicada na mesma tabela.
+
+
+\begin{table}[h]
+	\centering
+	\label{tab:validacaoEMA}
+	\caption{Validação de cálculos intermediários}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		\textit{PID\_16\_} &\textbf{Q1}& \textbf{Q3} & \textbf{IQR} & \textbf{Limiar} & \textbf{Meta} & \textbf{Divisor} & \textbf{EMA} \\ \hline
+		\textbf{Excel}& 8,9786 & 9,0175 & 0,0389 & 9,0214 & 8,9747 & 0,0468 & 9,0002   \\ \hline
+		\textbf{Kpi-Executor} & 8,9786 & 9,0175 & 0,0389 & 9,0214 & 8,9747 & 0,0468 & 9,0002 \\ \hline
+	\end{tabular}
+\end{table}
+
+Uma vez validadas as etapas do cálculo do \textit{KPI} \textit{Erro médio aceitável}, foram avaliados os demais índices. A tabela \ref{tab:validacaoKpis} traz os valores obtidos em cada uma das operações, bem como os nomes das malhas analisadas. 
+
+\begin{table}[h]
+	\centering
+	\label{tab:validacaoKpis}
+	\caption{Validação de cálculos manuais}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 		\hline
 		\textbf{Malha}   & \multicolumn{2}{l|}{\textbf{Tempo S/ Saturação}} & \multicolumn{2}{l|}{\textbf{Tempo Normal}} & \multicolumn{2}{l|}{\textbf{Erro Médio Aceitável}} & \multicolumn{2}{l|}{\textbf{Nota Global}} \\ \hline
-		-       & \textit{Excel}               & \textit{Kpi-Executor} & \textit{Excel}                & \textit{Kpi-Executor} & \textit{Excel}                & \textit{Kpi-Executor} & \textit{Excel}       & \textit{Kpi-Executor} \\ \hline
-		Malha 1 & ~                   & ~            & ~                    & ~            & ~                    & ~            & ~           & ~            \\ \hline
-		Malha 2 & ~                   & ~            & ~                    & ~            & ~                    & ~            & ~           & ~            \\ \hline
+		- & \textit{Excel} & \textit{Kpi-Exec} & \textit{Excel} & \textit{Kpi-Exec} & \textit{Excel} & \textit{Kpi-Exec} & \textit{Excel} & \textit{Kpi-Exec} \\ \hline
+		\textbf{PID\_16\_} & 0\% & 0\% & 100,00\% & 100,00\% & 45,57\% & 45,57\% & 48,52\% & 48,52\% \\ \hline
+		\textbf{PID\_9\_} & 100,00\% & 100,00\% & 100,00\% & 100,00\% & 26,67\% & 26,67\% & 75,56\% & 75,56\% \\ \hline
 	\end{tabular}
 \end{table}
 
 \paragraph{Validação em Ambiente de Testes}
-\todo[inline]{adicionar a descrição do processo de testes no ambiente de QA: validação de kpi a kpi exibido no loop. Aqui podemos adicionar prints do loop}
 
 Posteriormente à validação dos cálculos descrita na seção anterior, iniciou-se a etapa de implantação do \textit{Kpi-Executor} em ambiente de testes. Esse ambiente é composto por uma estrutura semelhante à do sistema final, porém não está diretamente ligada à dados de clientes. Dessa forma, é possível realizar testes em escalas e quantidades reais, porém não possibilitando o acesso do cliente final antes que todas as validações sejam realizadas.
 
@@ -324,13 +342,15 @@ Das etapas da validação em ambiente de testes foram realizadas as seguintes:
 	\item \textbf{Implantação no ambiente de teste:} Construção de \textit{Dockerfile} e configuração de orquestrador de containers (Kubernetes);
 	\item \textbf{Validação ciclicidade:} Foi avaliado o funcionamento cíclico do sistema, sendo observadas, através de consultas ao banco de dados no qual são registrados os cálculos dos \textit{KPIs}, novas execuções do \textit{Kpi-Executor} a cada hora;
 	\item \textbf{Testes de Integração:} Como dito, o \textit{Kpi-Executor} foi criado como uma reconstrução de um módulo anteriormente existente, que não atendia mais às especificações necessárias. Sendo assim, foi necessária a avaliação das telas do Loop que consomem dados referentes aos índices de performance, e de consultas de módulos adjacentes que pudessem possuir acoplamento  garantindo assim que a integração entre os módulos ocorreu com sucesso.
+	Os testes deste item foram realizados pelo \textit{Product Owner} do Loop, utilizando o período de 06/03/2020 15:00 a 06/03/2020 16:00, validando o funcionamento dos pontos a seguir.
+	
 	\subitem \textit{Tela de Dashboard:} Tela principal do sistema Loop. Ela apresenta um overview baseado dos estados das malhas do cliente correspondente ao usuário logado, baseado nos índices de performance calculados para o período de acesso. A figura \ref{fig:telaDashboard} traz os detalhes das validações descritas a seguir.
 	\subsubitem 1. O número de malhas \textit{offline} deveria se manter no valor de 2, para o período de tempo exibido na figura \ref{fig:telaDashboard};
 	\subsubitem 2. O número de malhas em automático deveria mostrar coerente ao registrado no banco para aquele período em questão;
 	\subsubitem 3. O número de malhas em modo manual deveria se mostrar coerente ao registrado em banco para aquele período em questão;
 	\subsubitem 4. Os valores de \textit{KPIs} exibidos na tabela indicada deveriam estar coerentes com os registros inseridos pelo \textit{Kpi-Executor} no banco de cálculos. Para essa validação, foram escolhidas malhas arbitrariamente, seus\textit{KPIs} foram calculados de forma manual para o período de tempo em questão, e esses valores foram comparados aos exibidos nesse ponto da tela.
 	
-	Os testes deste item foram realizados pelo \textit{Product Owner} do Loop, validando o funcionamento dos pontos descritos acima.
+	
 	
 	\begin{figure}[!htbp]
 		\centering		
@@ -338,19 +358,37 @@ Das etapas da validação em ambiente de testes foram realizadas as seguintes:
 		\caption{Tela de Dashboard - Loop}
 		\label{fig:telaDashboard}
 	\end{figure}
-	
-	\subitem \textit{Tela de Diagnóstico:} Nessa tela são exibidos os dados de processo e índices de performance da malha selecionada em um determinado período de tempo. Foi escolhida, de forma aleatória, uma malha para o período de tempo de $03/02/2020 15:00$ a $03/02/2020 16:00$ 
+	\newpage
+	\subitem \textit{Tela de Diagnóstico:} Nessa tela são exibidos os dados de processo e índices de performance da malha selecionada em um determinado período de tempo. Foi escolhida, de forma aleatória para avaliação da funcionalidade.
 	
 	\begin{figure}[!htbp]
 		\centering		
-		\includegraphics[width=14cm]{Metodologia/Figuras/telaDiagnostico.png}
+		\includegraphics[width=13cm]{Metodologia/Figuras/telaDiagnostico.png}
 		\caption{Tela de Diagnóstico - Loop}
 		\label{fig:telaDiagnostico}
 	\end{figure}
 	
+	
+	\subitem \textit{Tela de KPIs de Desempenho:} Nessa tela podem ser comparados \textit{KPIs} calculados para diferentes malhas, dado um período de tempo. Foi escolhida mais uma malha para o mesmo período de tempo. Em detalhes os pontos validados nesta tela:
+	\subsubitem 1. Nomes das malhas selecionadas para comparação;
+	\subsubitem 2. Legenda dos \textit{KPIs} selecionados para comparação;
+	\subsubitem 3. Lista dos \textit{KPIs} selecionados.
+
+	\begin{figure}[!htbp]
+	\centering		
+	\includegraphics[width=13cm]{Metodologia/Figuras/telaKpiDesempenho.png}
+	\caption{Tela de Desempenho de KPIs- Loop}
+	\label{fig:telaKpis}
+	\end{figure}	
+	
 \end{itemize}
 \newpage
+
 \paragraph{Disponibilização em Ambiente de Produção}
-\todo[inline]{Descrever as etapas de dispoibilização no ambiente do cliente. Substituição in live do módulo anterior}
+\todo[inline]{Descrever as etapas de disponibilização no ambiente do cliente. Substituição in live do módulo anterior}
+
+
+
+
 
 \clearpage

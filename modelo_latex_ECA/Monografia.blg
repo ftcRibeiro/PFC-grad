@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Monografia.aux
 The style file: abbrvnat.bst
 A level-1 auxiliary file: Capa/capa.aux
+A level-1 auxiliary file: Resumo/Resumo.aux
 A level-1 auxiliary file: TabelaConteudo/TabelaConteudo.aux
 A level-1 auxiliary file: ListaFiguras/ListaFiguras.aux
 A level-1 auxiliary file: Introducao/Introducao.aux
@@ -33,25 +34,23 @@ Warning--entry type for "piPage" isn't style-file defined
 Warning--entry type for "nodejsPage" isn't style-file defined
 --line 107 of file references.bib
 Warning--entry type for "awsHome" isn't style-file defined
---line 119 of file references.bib
+--line 120 of file references.bib
 Warning--entry type for "alchemyPage" isn't style-file defined
---line 124 of file references.bib
+--line 126 of file references.bib
 Warning--entry type for "what-container" isn't style-file defined
---line 129 of file references.bib
+--line 132 of file references.bib
 Warning--entry type for "whatKernel" isn't style-file defined
---line 134 of file references.bib
+--line 138 of file references.bib
 Warning--entry type for "ci_cd" isn't style-file defined
---line 139 of file references.bib
-Warning--entry type for "devops" isn't style-file defined
 --line 144 of file references.bib
+Warning--entry type for "devops" isn't style-file defined
+--line 150 of file references.bib
 Warning--entry type for "sqlServerHome" isn't style-file defined
---line 149 of file references.bib
+--line 156 of file references.bib
 Warning--entry type for "ORM" isn't style-file defined
---line 155 of file references.bib
+--line 163 of file references.bib
 Warning--entry type for "SQLInjection" isn't style-file defined
---line 160 of file references.bib
-Warning--I didn't find a database entry for "refQuartil"
-Warning--I didn't find a database entry for "bel/00"
+--line 169 of file references.bib
 Warning--to sort, need author or key in what-container
 Warning--to sort, need author or key in whatKernel
 Warning--to sort, need author or key in devops
@@ -72,19 +71,6 @@ Warning--to sort, need author or key in awsHome
 Warning--to sort, need author or key in alchemyPage
 Warning--to sort, need author or key in sqlServerHome
 Warning--to sort, need author or key in SQLInjection
-Warning--empty year in ORM
-Warning--empty year in SQLInjection
-Warning--empty year in alchemyPage
-Warning--empty year in angularJSPage
-Warning--empty year in awsHome
-Warning--empty year in ci_cd
-Warning--empty year in devops
-Warning--empty year in nodejsPage
-Warning--empty year in piPage
-Warning--empty year in springBootPage
-Warning--empty year in sqlServerHome
-Warning--empty year in what-container
-Warning--empty year in whatKernel
 Warning--empty publisher in umlBooch
 Warning--empty journal in capela_boxplot
 Warning--empty year in capela_boxplot
@@ -101,4 +87,4 @@ Warning--empty publisher in intrBD
 Warning--empty journal in automation_kpis
 Warning--empty year in automation_kpis
 Warning--empty year in automation_kpis
-(There were 72 warnings)
+(There were 57 warnings)

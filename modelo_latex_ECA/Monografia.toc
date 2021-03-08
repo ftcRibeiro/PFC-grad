@@ -1,5 +1,6 @@
 \babel@toc {brazil}{}
-\contentsline {chapter}{Lista de Figuras}{iii}%
+\contentsline {chapter}{Resumo}{i}%
+\contentsline {chapter}{Lista de Figuras}{v}%
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}%
 \contentsline {section}{\numberline {1.1}Motiva\c c\~ao e Justificativa}{1}%
 \contentsline {section}{\numberline {1.2}Objetivos do Projeto}{2}%
@@ -42,9 +43,9 @@
 \contentsline {subsubsection}{\numberline {3.2.1.4}Testes e Implanta\c c\~ao}{21}%
 \contentsline {paragraph}{\numberline {3.2.1.4.1}Valida\c c\~ao dos C\'alculos}{21}%
 \contentsline {paragraph}{\numberline {3.2.1.4.2}Valida\c c\~ao em Ambiente de Testes}{22}%
-\contentsline {paragraph}{\numberline {3.2.1.4.3}Disponibiliza\c c\~ao em Ambiente de Produ\c c\~ao}{24}%
-\contentsline {chapter}{\numberline {4}Resultados}{25}%
-\contentsline {section}{\numberline {4.1}Documenta\c c\~ao de regras de neg\'ocio}{25}%
-\contentsline {section}{\numberline {4.2}Facilita\c c\~ao da Manuten\c c\~ao}{25}%
-\contentsline {section}{\numberline {4.3}Estabiliza\c c\~ao do Sistema}{26}%
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{27}%
+\contentsline {paragraph}{\numberline {3.2.1.4.3}Disponibiliza\c c\~ao em Ambiente de Produ\c c\~ao}{25}%
+\contentsline {chapter}{\numberline {4}Resultados}{27}%
+\contentsline {section}{\numberline {4.1}Documenta\c c\~ao de regras de neg\'ocio}{27}%
+\contentsline {section}{\numberline {4.2}Condi\c c\~oes de Manuten\c c\~ao do Software}{28}%
+\contentsline {section}{\numberline {4.3}Estabiliza\c c\~ao do Sistema}{29}%
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{30}%
