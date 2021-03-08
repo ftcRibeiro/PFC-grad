@@ -39,31 +39,31 @@ A aplicação construída funcionará como um módulo de um sistema de CPM existente 
 Neste esquema são identificadas as linguagens e tecnologias de cada módulo. São eles:
 
 \begin{itemize}
-	\item \textbf{Dashboard:} Aplicação web acessível ao usuário do sistema CPM LOOP composta por um \textit{backend} em \textit{Spring Boot} \cite{springBootPage} e \textit{frontend} em \textit{AngularJS} \cite{angularJSPage};
-	\item \textbf{Bancos de Dados:} São três instâncias de banco de dados do sistema. A nomeada como \textit{omo-db} carrega as informações de cadastro e configuração das entidades do LOOP. A nomeada \textit{omokpi} armazena os dados calculados pelo Kpi-Executor, enquanto a \textit{logs} registra os logs de funcionamento da aplicação de cálculos. Todas as instâncias são do tipo PostgreSQL \cite{postgresPage};
+	\item \textbf{Dashboard:} Aplicação web acessível ao usuário do sistema LOOP composta por um \textit{backend} em \textit{Spring Boot} \cite{springBootPage} e \textit{frontend} em \textit{AngularJS} \cite{angularJSPage};
+	\item \textbf{Bancos de Dados:} São três instâncias de banco de dados do sistema. A nomeada como \textit{omo-db} carrega as informações de cadastro e configuração das entidades do LOOP. A nomeada \textit{omokpi} armazena os dados calculados pelo \textit{Kpi-Executor}, enquanto a \textit{logs} registra os logs de funcionamento da aplicação de cálculos. Todas as instâncias são do tipo PostgreSQL \cite{postgresPage};
 	\item \textbf{Data-Service:} Módulo do tipo API construído em \textit{Spring Boot} \cite{springBootPage} responsável por prover dados registrados no banco \textit{omokpi} à aplicação web \textit{Dashboard}. Formata pesquisa e retorna dados sob demanda;
 	\item \textbf{PIMS:} Um sistema PIMS da \textit{OsiSoft} chamado \textit{PI System} \cite{piPage}. Nele são armazenados os dados de processo dos clientes que utilizam o sistema LOOP. Estes dados são utilizados na realização dos cálculos (Kpi-Executor);
 	\item \textbf{Pi-Facade:} Módulo do tipo API construído em \textit{Spring Boot} \cite{springBootPage} responsável por prover dados registrados e cadastrar novas informações no PIMS sob demanda da aplicação web \textit{Dashboard};
-	\item \textbf{Pi-Connector:} Módulo do tipo API construído em \textit{NodeJS} \cite{nodejsPage} responsável pelo fornecimento de dados registrados no PIMS à aplicação de cálculos (Kpi-Executor);
-	\item \textbf{Kpi-Executor:} Módulo desenvolvido descrito por esta monografia. Construído em \textit{Python 3.8} \cite{pyPage} e responsável por calcular os índices de performance (KPIs) do sistema LOOP. Opera de forma cíclica, realizando seus cálculos a cada hora.	
+	\item \textbf{Pi-Connector:} Módulo do tipo API construído em \textit{NodeJS} \cite{nodejsPage} responsável pelo fornecimento de dados registrados no PIMS à aplicação de cálculos (\textit{Kpi-Executor});
+	\item \textbf{Kpi-Executor:} Módulo desenvolvido descrito por esta monografia. Construído em \textit{Python 3.8} \cite{pyPage} e responsável por calcular os índices de performance (\textit{KPIs}) do sistema LOOP. Opera de forma cíclica, realizando seus cálculos a cada hora.	
 \end{itemize}
 
 
 \newpage
 \subsection{Hardware}
-Para realização do desenvolvimento do Kpi-Executor, foi necessário um notebook com 16Gb de memória e processador intel i7. Também foi necessário um ambiente de Testes e validação semelhante ao de produção. São máquinas hospedadas na \textit{Amazon Web Services} \cite{awsHome}.
+Para realização do desenvolvimento do Kpi-Executor, foi necessário um notebook com 16Gb de memória e processador intel i7. Também foi necessário um ambiente de Testes e validação semelhante ao de produção. São servidores hospedadas na \textit{Amazon Web Services} \cite{awsHome} estruturadas e acompanhadas pelo time de \textit{DevOps}\cite{devops} de Discovery.
 
 
 
 \section{Metodologia}
 %\markright{\thesection ~~~ Metodologia}
 
-Para a construção dessa aplicação foi utilizado o um processo de desenvolvimento de software composto por características de um cascata e um incremental \cite{engSw}. Como o projeto foi entendido como uma demanda associada ao fluxo de trabalho da equipe de Coder, descrita na seção \ref{sec:ihm}, ele estava submetido a um fluxo de \textit{Kanban}, o que aponta para o quesito de entrega incremental quando associado ao sistema LOOP como um todo. Entretanto, como se tratava de uma tarefa não pequena, foram necessárias etapas que coincidem com o processo cascata.
+Para a construção dessa aplicação foi utilizado o um processo de desenvolvimento de software composto por características de um cascata e um incremental \cite{engSw}. Como o projeto foi entendido como uma demanda associada ao fluxo de trabalho da equipe de Coder, descrita na seção \ref{sec:ihm}, ele estava submetido a um fluxo de \textit{Kanban}, o que aponta para o quesito de entrega incremental quando associado ao sistema LOOP como um todo. Entretanto, como se tratava de uma tarefa grande e complexa, foram necessárias etapas que coincidem com o processo cascata.
 Neste capítulo serão listadas as etapas de projeto, desenvolvimento e testes do Kpi-Executor, bem como as escolhas relacionadas aos cálculos por ele realizados.
 
 \subsection{Processo de Desenvolvimento}
 
-O processo de desenvolvimento da aplicação iniciou-se com um escopo relativamente simples. Ela deveria realizar de forma cíclica um conjunto de cálculos de índices de performance que são utilizados pelo sistema CPM LOOP, registrá-los em um banco de dados existente, com estrutura também definida, e possibilitar um rastreio de falhas no fluxo de cálculos, identificando o qual tipo de erro, e em que momento este acontecera. Tendo essas informações, ainda foi eram necessárias mais definições de casos específicos não mapeados pela descrição inicial. 
+O processo de desenvolvimento da aplicação iniciou-se com um escopo pouco descritivo. Ela deveria realizar de forma cíclica um conjunto de cálculos de índices de performance que são utilizados pelo sistema LOOP, registrá-los em um banco de dados existente, com estrutura também definida, e possibilitar um rastreio de falhas no fluxo de cálculos, identificando o qual tipo de erro, e em que momento este acontecera. Tendo essas informações, ainda eram necessárias mais definições de casos específicos não mapeados pela descrição inicial. 
 
 \subsubsection{Levantamento do Requisitos}
 
@@ -80,7 +80,7 @@ Conceitos importantes para a descrição e detalhamento do módulo construído são o
 
 \paragraph{Fluxo desejado}
 \label{sec:levantRequisitos}
-Considerando a necessidade de um mapeamento detalhado dos casos de cálculo, foi realizado um processo de entrevista com o PO (\textit{Product Owner}) do sistema LOOP, a fim de elucidar o fluxo de cálculo em seu estado ideal, possíveis tratativas em casos não usuais e demais requisitos funcionais e não-funcionais. Deste levantamento, foi elaborado o diagrama de sequência (\ref{sec:modSeq}) tratando o fluxo a ser executado pelo Kpi-Executor, exibido na figura (\ref{fig:fluxoKpi}).
+Considerando a necessidade de um mapeamento detalhado dos casos de cálculo, foi realizado um processo de entrevista com o PO (\textit{Product Owner}) do sistema LOOP, a fim de elucidar o fluxo de cálculo em seu estado ideal, possíveis tratativas em casos não usuais e demais requisitos funcionais e não-funcionais. Deste levantamento, foi elaborado o diagrama de sequência (seção \ref{sec:modSeq}) tratando o fluxo a ser executado pelo \textit{Kpi-Executor}, exibido na figura (\ref{fig:fluxoKpi}).
 
  \begin{figure}[!htbp]
  	\centering		
@@ -114,127 +114,9 @@ Uma vez elaboradas tais classes auxiliares, tem-se a etapa seguinte que contempl
 
 
 
-Conceitos importantes para retomar são os 
-
-\paragraph{Índices de Performance - KPIs}
-\label{sec:indicesPerformance}
-
-Como relatado na seção \ref{sec:automation_kpis}, os índices de performance calculados pelo módulo construído, se baseiam em índices frequentemente utilizados para a medição de qualidade de malhas de controle regulatório. Tais cálculos são realizados periodicamente, utilizando os dados de processo que foram armazenados no PIMS na hora anterior à sua execução. Dessa forma, todos os cálculos aqui descritos são relacionados a um período de uma hora. Nessa seção são descritos cada um deles.
-
-\begin{itemize}
-	\item \textbf{Tempo em modo normal:} Para cada malha cadastrada no sistema LOOP (seção \ref{sec:estruturaExistente} ) é cadastrado um modo como estado normal. Este \textit{KPI} consiste na avaliação da porcentagem do tempo em que tal malha esteve neste estado.
-	
-	\begin{equation}
-	T_{normal} [\%] = \frac{n_{modoNormal}}{n_{totalAmostras}} \times 100
-	\end{equation}
-	
-	É utilizado pelo analista para inferências sobre possíveis problemas relacionados a uma má parametrização de um sistema de controle regulatório. Gera perguntas como "Porque esta malha não tem se mantido no modo de operação que deveria ser o normal?";
-	\item \textbf{Tempo sem saturação:} Consiste na avaliação da porcentagem de tempo em que a MV se manteve dentro dos limites normais de operação previamente cadastrados
-	
-	\begin{equation}
-	T_{semSaturacao} [\%] = \frac{n_{dentroLimite}}{n_{totalAmostras}} \times 100
-	\end{equation}
-	
-	Tem índice também diz sobre um sistema de controle mal parametrizado. Uma malha que possui um tempo sem saturação baixo pode apresentar defeitos em seus atuadores com uma frequência alta.
-	\item \textbf{Erro médio aceitável:} O cálculo deste \textit{KPI} passa por algumas etapas:
-	\subitem \textit{Cálculo de erro:} O erro é dado pela diferença absoluta entre o SP e a PV. Tal cálculo é realizado para cada amostra dos vetores de dados.
-	
-	\begin{equation}
-	erro = |SP - PV|
-	\end{equation}
-	
-	Assim é gerado um vetor com os erros de cada amostra.
-	\subitem \textit{Boxplot:} Também conhecido como \textit{gráfico de caixa} é utilizado para a avaliação da distribuição empírica dos dados \cite{capela_boxplot}. Nele são utilizados primeiro ($Q_1$), segundo ($Q_2$) e terceiro ($Q_3$) quartis para sua construção. Esta etapa é realizada com o vetor de dados gerado o item anterior.
-	
-	\begin{figure}[!htbp]
-		\centering		
-		\includegraphics[width=14cm]{Metodologia/Figuras/boxplot.png}
-		\caption{Formação de Boxplot}
-		\label{fig:boxlot}
-	\end{figure}
-	
-	Para o cálculo de cada um dos quartis é utilizado o conceito de \textit{percentil}. Ele divide o conjunto de dados em 100 partes iguais e indica a porcentagem de dados que estão abaixo daquela parte. Para a avaliação do percentil é necessário que os dados estejam ordenados de forma crescente. As relações matemáticas que o definem são dadas pelas equações \ref{eq:posicaoPercentil} e \ref{eq:percentil}.
-	
-	\begin{equation}
-	\label{eq:posicaoPercentil}
-	L = \frac{k}{100}\times n
-	\end{equation}
-	
-	Sendo $L$ a posição do percentil desejado no conjunto de dados, $k$ o percentil desejado e $n$ o tamanho do vetor de dados analisado. 
-	
-	\begin{equation}
-	\label{eq:percentil}
-	P_k = \begin{cases}
-	\frac{v_L + v_{L+1}}{100}  & \text{caso \textit{L} seja inteiro}\\
-	v_{round(L)} & \text{caso \textit{L} não seja inteiro}
-	
-	\end{cases} 
-	\end{equation}
-	
-
-	Sendo $v$ o vetor de dados a ser analisado, $L$ o valor obtido na equação \ref{eq:posicaoPercentil} e $P_k$ o \textit{k}-ésimo percentil a ser obtido. Existe um ligação direta entre percentis e os quartis utilizados para o \textit{Boxplot}. As equações \ref{eq:q1} a \ref{eq:q3} trazem tais relações.
-	
-	
-	Sendo $n$ o número de amostras, $i$ o percentil desejado
-	\begin{equation}
-	\label{eq:q1}
-	Q_1 = P_{25}
-	\end{equation}
-	
-	\begin{equation}
-	\label{eq:q2}
-	Q_2 = P_{50}
-	\end{equation}
-	
-	\begin{equation}
-	\label{eq:q3}
-	Q_3 = P_{75}
-	\end{equation}
-	
-	\subsubitem \textit{Normalização:} Uma vez obtidos os quartis $Q_1$ a $Q_3$, é obtido o valor de $iqr$, dado pela diferença entre $Q_3$ e $Q_1$.
-	
-	\begin{equation}
-	iqr = Q_3 - Q_1
-	\end{equation}
-	
-	Em seguida são inseridos os conceitos de \textit{meta} e \textit{limiar}. Ambos se apoiam nos quatis calculados até este ponto. Podem ser vistos como os limites inferior e superior, respectivamente, destacados na figura \ref{fig:boxlot}.
-	
-	\begin{equation}
-	meta = Q_1 - Gap \times iqr
-	\end{equation}
-	
-	\begin{equation}
-	limiar = Q_3 + Gap \times iqr
-	\end{equation}
-	
-	Tendo $Gap = 0,1$ como padrão para o sistema. Em seguida é definido o \textit{divisor}, dado pela diferença entre \textit{limiar} e \textit{meta}.
-	
-	\begin{equation}
-	divisor = limiar - meta
-	\end{equation}
-	
-	Também é realizado o cálculo do chamado \textit{Erro Médio Absoluto}, identificado como $EMA$. Consiste, como o nome explicita, na média dos valores absolutos de erro nos dados analisados.
-	
-	\begin{equation}
-	EMA = \frac{\sum_{1}^{n_{amostras}} erro_i}{n_{amostras}}
-	\end{equation}
-	
-	Finalmente, após as etapas descritas é possível obter o \textit{KPI} de \textit{Erro Médio Aceitável}, identificado como $EMA_{norm}$.
-	
-	\begin{equation}
-	EMA_{norm} [\%] = 1 - \frac{EMA - meta}{divisor} 
-	\end{equation}
-	
-	\item \textbf{Nota Global:} É dada pela média dos \textit{KPIs} calculados naquele ciclo. Caso o cálculo de um índice seja aplicável ao ciclo avaliado, ele entra para o cálculo deste.
-	
-	\begin{equation}
-	NotaGlobal = \frac{\sum_{i}^{n} KPI_i}{n_{KPI}}
-	\end{equation}
-\end{itemize}
-
 \paragraph{Divisão de Responsabilidades}
 
-Considerando uma arquitetura de camadas, o Kpi-Executor foi modularizado dividindo as responsabilidades entre estes módulos. Foram separadas entre os componentes as tarefas de se consumir e escrever em diferentes bases de dados, operar o fluxo de cálculos, registrar exceções e falhas de cálculo, etc. A figura \ref{fig:componentsKpi} traz o diagrama de componentes que descreve tal modularização.
+Considerando uma arquitetura de camadas, o \textit{Kpi-Executor} foi modularizado dividindo as responsabilidades entre estes módulos. Foram separadas entre os componentes as tarefas de se consumir e escrever em diferentes bases de dados, operar o fluxo de cálculos, registrar exceções e falhas de cálculo, etc. A figura \ref{fig:componentsKpi} traz o diagrama de componentes que descreve tal modularização.
 
 \begin{figure}[!htbp]
 	\centering		
@@ -295,13 +177,130 @@ Uma vez criados os tipos de exceções, para a possibilidade de consumo futuro des
 	\item \textbf{timestamp:} \textit{Timestamp} com informação de quando ocorreu o problema;
 \end{itemize}
 
-\subsubsection{Testes e Implantação}
 
-Para implantar um sistema que será utilizado por um cliente, é necessário garantir seu pleno funcionamento. Dessa forma, a etapa de testes, automatizados ou não, de um software é indispensável \cite{engSw}. Nessa seção são relatadas as etapas de testes, bem como o processo de implantação do módulo junto à estrutura existente do sistema Loop.
+\paragraph{Índices de Performance - KPIs}
+\label{sec:indicesPerformance}
 
-\paragraph{Validação dos Cálculos}
+Como relatado na seção \ref{sec:automation_kpis}, os índices de performance calculados pelo módulo construído, se baseiam em índices frequentemente utilizados para a medição de qualidade de malhas de controle regulatório. Tais cálculos são realizados periodicamente, utilizando os dados de processo que foram armazenados no PIMS na hora anterior à sua execução. Dessa forma, todos os cálculos aqui descritos são relacionados a um período de uma hora. Nessa seção são descritos cada um deles.
 
-A primeira etapa de validações consistiu na execução manual de um único ciclo do sistema. Após o término, foram coletados os resultados dos cálculos para as malhas escolhidas. Para apoio e referência, foi utilizada uma planilha de \textit{excel} para realização dos cálculos das mesmas malhas, no período de tempo de 06/03/2020 15:00 a 06/03/2020 16:00. 
+\begin{itemize}
+	\item \textbf{Tempo em modo normal:} Para cada malha cadastrada no sistema LOOP (seção \ref{sec:estruturaExistente} ) é cadastrado um modo como estado normal. Este \textit{KPI} consiste na avaliação da porcentagem do tempo em que tal malha esteve neste estado.
+	
+	\begin{equation}
+	T_{normal} [\%] = \frac{n_{modoNormal}}{n_{totalAmostras}} \times 100
+	\end{equation}
+	
+	É utilizado pelo analista para inferências sobre possíveis problemas relacionados a uma má parametrização de um sistema de controle regulatório. Gera perguntas como "Porque esta malha não tem se mantido no modo de operação que deveria ser o normal?";
+	\item \textbf{Tempo sem saturação:} Consiste na avaliação da porcentagem de tempo em que a MV se manteve dentro dos limites normais de operação previamente cadastrados
+	
+	\begin{equation}
+	T_{semSaturacao} [\%] = \frac{n_{dentroLimite}}{n_{totalAmostras}} \times 100
+	\end{equation}
+	
+	Tem índice também diz sobre um sistema de controle mal parametrizado. Uma malha que possui um tempo sem saturação baixo pode apresentar defeitos em seus atuadores com uma frequência alta.
+	\item \textbf{Erro médio aceitável:} O cálculo deste \textit{KPI} passa por algumas etapas:
+	\subitem \textit{Cálculo de erro:} O erro é dado pela diferença absoluta entre o SP e a PV. Tal cálculo é realizado para cada amostra dos vetores de dados.
+	
+	\begin{equation}
+	erro = |SP - PV|
+	\end{equation}
+	
+	Assim é gerado um vetor com os erros de cada amostra.
+	\subitem \textit{Boxplot:} Também conhecido como \textit{gráfico de caixa} é utilizado para a avaliação da distribuição empírica dos dados \cite{capela_boxplot}. Nele são utilizados primeiro ($Q_1$), segundo ($Q_2$) e terceiro ($Q_3$) quartis para sua construção. Esta etapa é realizada com o vetor de dados gerado o item anterior.
+	
+	\begin{figure}[!htbp]
+		\centering		
+		\includegraphics[width=14cm]{Metodologia/Figuras/boxplot.png}
+		\caption{Formação de Boxplot (Adaptação de \cite{figBoxPlot})}
+		\label{fig:boxlot}
+	\end{figure}
+	
+	Para o cálculo de cada um dos quartis é utilizado o conceito de \textit{percentil}. Ele divide o conjunto de dados em 100 partes iguais e indica a porcentagem de dados que estão abaixo daquela parte. Para a avaliação do percentil é necessário que os dados estejam ordenados de forma crescente. As relações matemáticas que o definem são dadas pelas equações \ref{eq:posicaoPercentil} e \ref{eq:percentil}.
+	
+	\begin{equation}
+	\label{eq:posicaoPercentil}
+	L = \frac{k}{100}\times n
+	\end{equation}
+	
+	Sendo $L$ a posição do percentil desejado no conjunto de dados, $k$ o percentil desejado e $n$ o tamanho do vetor de dados analisado. 
+	
+	\begin{equation}
+	\label{eq:percentil}
+	P_k = \begin{cases}
+	\frac{v_L + v_{L+1}}{100}  & \text{caso \textit{L} seja inteiro}\\
+	v_{round(L)} & \text{caso \textit{L} não seja inteiro}
+	
+	\end{cases} 
+	\end{equation}
+	
+	
+	Sendo $v$ o vetor de dados a ser analisado, $L$ o valor obtido na equação \ref{eq:posicaoPercentil} e $P_k$ o \textit{k}-ésimo percentil a ser obtido. Existe um ligação direta entre percentis e os quartis utilizados para o \textit{Boxplot}. As equações \ref{eq:q1} a \ref{eq:q3} trazem tais relações.
+	
+	
+	Sendo $n$ o número de amostras, $i$ o percentil desejado
+	\begin{equation}
+	\label{eq:q1}
+	Q_1 = P_{25}
+	\end{equation}
+	
+	\begin{equation}
+	\label{eq:q2}
+	Q_2 = P_{50}
+	\end{equation}
+	
+	\begin{equation}
+	\label{eq:q3}
+	Q_3 = P_{75}
+	\end{equation}
+	
+	\subsubitem \textit{Normalização:} Uma vez obtidos os quartis $Q_1$ a $Q_3$, é obtido o valor de $iqr$, dado pela diferença entre $Q_3$ e $Q_1$.
+	
+	\begin{equation}
+	iqr = Q_3 - Q_1
+	\end{equation}
+	
+	Em seguida são inseridos os conceitos de \textit{meta} e \textit{limiar}. Ambos se apoiam nos quatis calculados até este ponto. Podem ser vistos como os limites inferior e superior, respectivamente, destacados na figura \ref{fig:boxlot}.
+	
+	\begin{equation}
+	meta = Q_1 - Gap \times iqr
+	\end{equation}
+	
+	\begin{equation}
+	limiar = Q_3 + Gap \times iqr
+	\end{equation}
+	
+	Tendo $Gap = 0,1$ como padrão para o sistema. Em seguida é definido o \textit{divisor}, dado pela diferença entre \textit{limiar} e \textit{meta}.
+	
+	\begin{equation}
+	divisor = limiar - meta
+	\end{equation}
+	
+	Também é realizado o cálculo do chamado \textit{Erro Médio Absoluto}, identificado como $EMA$. Consiste, como o nome explicita, na média dos valores absolutos de erro nos dados analisados.
+	
+	\begin{equation}
+	EMA = \frac{\sum_{1}^{n_{amostras}} erro_i}{n_{amostras}}
+	\end{equation}
+	
+	Finalmente, após as etapas descritas é possível obter o \textit{KPI} de \textit{Erro Médio Aceitável}, identificado como $EMA_{norm}$. Vale ressaltar que esse \textit{KPI} é, além de normalizado, complementar a cálculo $EMA$. Isso ocorre pois dessa forma a uma condição vista como "boa" no processo apresentaria um valor mais próximo de $100\%$.   
+	
+	\begin{equation}
+	EMA_{norm} [\%] = 1 - \frac{EMA - meta}{divisor} 
+	\end{equation}
+	
+	\item \textbf{Nota Global:} É dada pela média dos \textit{KPIs} calculados naquele ciclo. Caso o cálculo de um índice seja aplicável ao ciclo avaliado, ele entra para o cálculo deste.
+	
+	\begin{equation}
+	NotaGlobal = \frac{\sum_{i}^{n} KPI_i}{n_{KPI}}
+	\end{equation}
+\end{itemize}
+
+\subsection{Testes e Implantação}
+
+Para implantar um sistema que será utilizado por um cliente, é necessário garantir seu pleno funcionamento. Dessa forma, a etapa de testes, automatizados ou não, de um software é indispensável \cite{engSw}. Nessa seção são relatadas as etapas de testes, bem como o processo de implantação do módulo junto à estrutura existente do sistema LOOP.
+
+\subsubsection{Validação dos Cálculos}
+
+A primeira etapa de validações consistiu na execução manual de um único ciclo do sistema. Após o término, foram coletados os resultados dos cálculos para as malhas escolhidas. Para apoio e referência, foi utilizada uma planilha de \textit{excel} para realização dos cálculos das mesmas malhas, no período de tempo de 06/04/2020 15:00 a 06/04/2020 16:00. 
 
 Inicialmente foram avaliados os valores obtidos para os cálculos intermediários que são realizados para o \textit{KPI} de \textit{Erro médio aceitável}. Assim foram avaliadas as etapas desse \textit{KPI}, ponto a ponto. A tabela \ref{tab:validacaoEMA} traz o comparativo dos valores obtidos pelo \textit{Kpi-Executor}  e pela planilha auxiliar. Para essa etapa foi escolhida a malha indicada na mesma tabela.
 
@@ -332,23 +331,38 @@ Uma vez validadas as etapas do cálculo do \textit{KPI} \textit{Erro médio aceitá
 		\textbf{PID\_9\_} & 100,00\% & 100,00\% & 100,00\% & 100,00\% & 26,67\% & 26,67\% & 75,56\% & 75,56\% \\ \hline
 	\end{tabular}
 \end{table}
+Analisando as tabelas \ref{tab:validacaoEMA} e \ref{tab:validacaoKpis}, observa-se o atendimento dos requisitos relacionados aos cálculos. Os valores obtidos pelo \textit{Kpi-Executor} se adequaram à referência (cálculos manuais realizados em Excel) de forma satisfatória e precisa, sem erros para quatro casas decimais, na tabela \ref{tab:validacaoEMA} e com duas casas para a tabela \ref{tab:validacaoKpis}. Vale ressaltar a utilização de duas e quatro casas respectivamente para os cálculos: No primeiro caso a escolha foi feita para uma obtenção melhor precisão nos cálculos sequentes, enquanto no segundo caso os dados são apresentados conforme a precisão exibida nas telas do sistema LOOP, que serão mostradas nas sub-seções que se seguem.
 
-\paragraph{Validação em Ambiente de Testes}
+
+\subsubsection{Validação em Ambiente de Testes}
+\label{sec:validacaoQA}
 
 Posteriormente à validação dos cálculos descrita na seção anterior, iniciou-se a etapa de implantação do \textit{Kpi-Executor} em ambiente de testes. Esse ambiente é composto por uma estrutura semelhante à do sistema final, porém não está diretamente ligada à dados de clientes. Dessa forma, é possível realizar testes em escalas e quantidades reais, porém não possibilitando o acesso do cliente final antes que todas as validações sejam realizadas.
 
 Das etapas da validação em ambiente de testes foram realizadas as seguintes: 
 \begin{itemize}
-	\item \textbf{Implantação no ambiente de teste:} Construção de \textit{Dockerfile} e configuração de orquestrador de containers (Kubernetes);
-	\item \textbf{Validação ciclicidade:} Foi avaliado o funcionamento cíclico do sistema, sendo observadas, através de consultas ao banco de dados no qual são registrados os cálculos dos \textit{KPIs}, novas execuções do \textit{Kpi-Executor} a cada hora;
-	\item \textbf{Testes de Integração:} Como dito, o \textit{Kpi-Executor} foi criado como uma reconstrução de um módulo anteriormente existente, que não atendia mais às especificações necessárias. Sendo assim, foi necessária a avaliação das telas do Loop que consomem dados referentes aos índices de performance, e de consultas de módulos adjacentes que pudessem possuir acoplamento  garantindo assim que a integração entre os módulos ocorreu com sucesso.
-	Os testes deste item foram realizados pelo \textit{Product Owner} do Loop, utilizando o período de 06/03/2020 15:00 a 06/03/2020 16:00, validando o funcionamento dos pontos a seguir.
+	\item \textbf{Implantação no ambiente de teste:} Construção de \textit{Dockerfile} e configuração de orquestrador de containers (Kubernetes). Essa etapa foi realizada pelo time de \textit{DevOps} \cite{devops} de \textit{Discovery};
+	\item \textbf{Validação ciclicidade:} Foi avaliado o funcionamento cíclico do sistema, sendo observadas, através de consultas ao banco de dados no qual são registrados os cálculos dos \textit{KPIs}, novas execuções do \textit{Kpi-Executor} a cada hora. A figura \ref{fig:ciclosKpiExecutor} traz os registros em banco de dados de cada uma das execuções. Em destaque os registros de fim de ciclo de cálculo de cada execução das horas seguintes, comprovando a execução cíclica do \textit{Kpi-Executor};
 	
-	\subitem \textit{Tela de Dashboard:} Tela principal do sistema Loop. Ela apresenta um overview baseado dos estados das malhas do cliente correspondente ao usuário logado, baseado nos índices de performance calculados para o período de acesso. A figura \ref{fig:telaDashboard} traz os detalhes das validações descritas a seguir.
-	\subsubitem 1. O número de malhas \textit{offline} deveria se manter no valor de 2, para o período de tempo exibido na figura \ref{fig:telaDashboard};
-	\subsubitem 2. O número de malhas em automático deveria mostrar coerente ao registrado no banco para aquele período em questão;
-	\subsubitem 3. O número de malhas em modo manual deveria se mostrar coerente ao registrado em banco para aquele período em questão;
-	\subsubitem 4. Os valores de \textit{KPIs} exibidos na tabela indicada deveriam estar coerentes com os registros inseridos pelo \textit{Kpi-Executor} no banco de cálculos. Para essa validação, foram escolhidas malhas arbitrariamente, seus\textit{KPIs} foram calculados de forma manual para o período de tempo em questão, e esses valores foram comparados aos exibidos nesse ponto da tela.
+	\begin{figure}[!htbp]
+		\centering		
+		\includegraphics[width=14cm]{Metodologia/Figuras/dadosCiclos.png}
+		\caption{Ciclos de execução - \textit{Kpi-Executor}}
+		\label{fig:ciclosKpiExecutor}
+	\end{figure}	
+	\newpage
+	\item \textbf{Testes de Integração:} Como dito, o \textit{Kpi-Executor} foi criado como uma reconstrução de um módulo anteriormente existente, que não atendia mais às especificações necessárias. Sendo assim, foi necessária a avaliação das telas do Loop que consomem dados referentes aos índices de performance, e de consultas de módulos adjacentes que pudessem possuir acoplamento  garantindo assim que a integração entre os módulos ocorreu com sucesso.
+	Os testes deste item foram realizados pelo \textit{Product Owner} do Loop, utilizando o período de 06/04/2020 15:00 a 06/04/2020 16:00, validando o funcionamento dos pontos a seguir.
+	
+	\subitem \textit{Tela de Dashboard:} Tela principal do sistema LOOP. Ela apresenta um overview baseado dos estados das malhas do cliente correspondente ao usuário logado, baseado nos índices de performance calculados para o período de acesso. A figura \ref{fig:telaDashboard} traz os detalhes das validações descritas a seguir.
+	
+	\begin{enumerate}
+		\item O número de malhas \textit{offline} deveria se mostrar coerente ao registrado no banco para aquele período em questão;
+		\item O número de malhas em automático deveria se mostrar coerente ao registrado no banco para aquele período em questão;
+		\item O número de malhas em modo manual deveria se mostrar coerente ao registrado em banco para aquele período em questão;
+		\item Os valores de \textit{KPIs} exibidos na tabela indicada deveriam estar coerentes com os registros inseridos pelo \textit{Kpi-Executor} no banco de cálculos. Para essa validação, foram escolhidas malhas arbitrariamente, seus \textit{KPIs} foram calculados de forma manual para o período de tempo em questão, e esses valores foram comparados aos exibidos nesse ponto da tela.
+	\end{enumerate}
+	
 	
 	
 	
@@ -368,11 +382,13 @@ Das etapas da validação em ambiente de testes foram realizadas as seguintes:
 		\label{fig:telaDiagnostico}
 	\end{figure}
 	
-	
+	\newpage
 	\subitem \textit{Tela de KPIs de Desempenho:} Nessa tela podem ser comparados \textit{KPIs} calculados para diferentes malhas, dado um período de tempo. Foi escolhida mais uma malha para o mesmo período de tempo. Em detalhes os pontos validados nesta tela:
-	\subsubitem 1. Nomes das malhas selecionadas para comparação;
-	\subsubitem 2. Legenda dos \textit{KPIs} selecionados para comparação;
-	\subsubitem 3. Lista dos \textit{KPIs} selecionados.
+	\begin{enumerate}
+		\item Nomes das malhas selecionadas para comparação;
+		\item Legenda dos \textit{KPIs} selecionados para comparação;
+		\item Lista dos \textit{KPIs} selecionados.
+	\end{enumerate}
 
 	\begin{figure}[!htbp]
 	\centering		
@@ -382,13 +398,3 @@ Das etapas da validação em ambiente de testes foram realizadas as seguintes:
 	\end{figure}	
 	
 \end{itemize}
-\newpage
-
-\paragraph{Disponibilização em Ambiente de Produção}
-\todo[inline]{Descrever as etapas de disponibilização no ambiente do cliente. Substituição in live do módulo anterior}
-
-
-
-
-
-\clearpage

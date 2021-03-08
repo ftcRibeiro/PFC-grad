@@ -8,6 +8,7 @@ A level-1 auxiliary file: Introducao/Introducao.aux
 A level-1 auxiliary file: RevisaoBibliografica/RevisaoBibliografica.aux
 A level-1 auxiliary file: Metodologia/Metodologia.aux
 A level-1 auxiliary file: Resultados/Resultados.aux
+A level-1 auxiliary file: Conclusao/Conclusao.aux
 Database file #1: references.bib
 Warning--entry type for "pyPage" isn't style-file defined
 --line 27 of file references.bib
@@ -51,6 +52,9 @@ Warning--entry type for "ORM" isn't style-file defined
 --line 163 of file references.bib
 Warning--entry type for "SQLInjection" isn't style-file defined
 --line 169 of file references.bib
+Warning--entry type for "figBoxPlot" isn't style-file defined
+--line 263 of file references.bib
+Warning--to sort, need author or key in figBoxPlot
 Warning--to sort, need author or key in what-container
 Warning--to sort, need author or key in whatKernel
 Warning--to sort, need author or key in devops
@@ -87,4 +91,4 @@ Warning--empty publisher in intrBD
 Warning--empty journal in automation_kpis
 Warning--empty year in automation_kpis
 Warning--empty year in automation_kpis
-(There were 57 warnings)
+(There were 59 warnings)

@@ -11,7 +11,7 @@ Tendo em vista o impacto dos pontos citados, além de um sistema funcionando plen
 
 \section{Documentação de regras de negócio}
 
-A documentação das regras de negócio de um sistema é de grande importância para sua manutenção e evolução. No início do projeto, ainda na etapa de levantamento de requisitos (\ref{sec:levantRequisitos}), foram elaborados os diagramas correspondentes à estrutura existente  \ref{fig:arqLoop} e ao fluxo de cálculos \ref{fig:fluxoKpi}. Tais documentos são tradicionalmente utilizados para embasamento do desenvolvimento de um software. Entretanto, apesar de serem um ferramental para a elaboração de um software, no contexto do sistema existente, a elaboração deste documento foi considerada um resultado entregue. O documento elaborado contempla as seguintes informações:
+A documentação das regras de negócio de um sistema é de grande importância para sua manutenção e evolução. No início do projeto, ainda na etapa de levantamento de requisitos (\ref{sec:levantRequisitos}), foram elaborados os diagramas correspondentes à estrutura existente , figura \ref{fig:arqLoop} e ao fluxo de cálculos, figura \ref{fig:fluxoKpi}. Tais documentos são tradicionalmente utilizados para embasamento do desenvolvimento de um software. Entretanto, apesar de serem um ferramental para a elaboração de um software, no contexto do sistema existente, a elaboração deste documento foi considerada um resultado entregue. O documento elaborado contempla as seguintes informações:
 \begin{itemize}
 	\item \textbf{\textit{Overview} do sistema:} Descrição do \textit{Kpi-Executor}, seu fluxo de funcionamento, conforme descrito pela figura \ref{fig:fluxoKpi}, e os \textit{links} para os demais repositórios que compõem o sistema LOOP;
 	\item \textbf{Arquitetura:} Possui uma breve descrição e diagrama que relaciona o \textit{Kpi-Executor} com os demais módulos, conforme figura \ref{fig:arqLoop}. Também possui informações sobre as bases de dados utilizadas pelo sistema LOOP, e suas relações com cada módulo;
@@ -31,40 +31,58 @@ Tais registros de falhas possibilitam ao desenvolvedor, através de baixo esforço
 
 \begin{figure}[!htbp]
 	\centering		
-	\includegraphics[width=14cm]{Metodologia/Figuras/registroFalhas.png}
+	\includegraphics[width=16cm]{Metodologia/Figuras/registroFalhas.png}
 	\caption{Registro de Falhas - Logs}
 	\label{fig:registroFalhas}
 \end{figure}
 
 Em destaque:
-\begin{itemize}
-	\item 1. Identificação do nome da malha que apresentou falhas no cálculo de seus índices de performance;
-	\item 2. Identificação de cliente a quem a malha pertence;
-	\item 3. Detalhamento do problema quando este não é uma exceção prevista no conjunto de \textit{Exceções de Fluxo} ou \textit{Exceções de Cálculo}  (seção \ref{sec:regFalhasCalculo});
-	\item 4. Identificação de tipo de exceção. Nessa coluna são registradas as previstas no fluxo do sistema, mas também as geradas por outros motivos.
-	\item 5. Registro de quando a falha ocorreu.
-\end{itemize}
+\begin{enumerate}
+	\item Identificação do nome da malha que apresentou falhas no cálculo de seus índices de performance;
+	\item Identificação de cliente a quem a malha pertence;
+	\item Detalhamento do problema quando este não é uma exceção prevista no conjunto de \textit{Exceções de Fluxo} ou \textit{Exceções de Cálculo}  (seção \ref{sec:regFalhasCalculo});
+	\item Identificação de tipo de exceção. Nessa coluna são registradas as previstas no fluxo do sistema, mas também as geradas por outros motivos.
+	\item Registro de quando a falha ocorreu.
+\end{enumerate}
 
 Com esses registros em banco de dados, a investigação de possíveis problemas relacionados ao \textit{Kpi-executor} pode ser feita de forma orientada à falha, sendo possível a busca pelo nome da malha (presente na coluna \textit{message}), tipo de falha (coluna \textit{exception}) ou até mesmo por ciclo de execução (coluna \textit{timestamp}).
 
 
 \section{Estabilização do Sistema}
-\todo[inline]{Aqui a ideia é apresentar os dados relacionados aos jobs de execução do kpi-executor. Extrair os dados de status de execução do kubernetes. Nota: Ele só armazena das últimas 48h}
+\label{sec:estabilizacaoSistema}
+Considerando a estrutura existente, descrita na seção \ref{sec:estruturaExistente}, a avaliação de estabilidade do sistema só pôde ser realizada após a garantia de uma boa integração aos demais módulos, em conjunto ao correto funcionamento cíclico, bem como a obtenção dos \textit{KPIs} de forma correta, como demonstrado pela seção \ref{sec:validacaoQA}. A entrega de um módulo (\textit{Kpi-Executor}) com caráter estável foi dos resultados mais importantes para o sistema LOOP como um todo, gerando mais confiança tanto aos usuários do sistema, quanto ao time responsável pela manutenção e evolução do sistema LOOP.
 
-A entrega de um módulo (\textit{Kpi-Executor}) com caráter estável foi dos resultados mais importantes para o sistema LOOP como um todo. 
+Para a avaliação da estabilidade do sistema foi utilizado o orquestrador de \textit{containers} \textit{Kubernetes} \cite{kubePage}. Tal estrutura configurada pelo time de \textit{DevOps} do setor \textit{Discovery} da \textit{IHM Stefanini}, além de garantir a disponibilidade dos módulos do sistema LOOP e integrar fluxos de CI/CD, permite também a observação do funcionamento individual de cada módulo.
+
+O \textit{Kpi-Executor} foi estruturado com sua execução como \textit{Job} no orquestrador de \textit{containers}. Esse tipo de execução consiste em disparos cíclicos de uma instância do código escolhido. Na ferramenta também é possível avaliar o estado de \textit{sucesso} ou \textit{insucesso} de cada instância gerada.
+
+Em detalhe:
+\begin{enumerate}
+	\item Lista de nomes dos \textit{jobs} executados junto ao estado da execução;
+	\item Tempo desde a execução daquela instância de \textit{Kpi-Executor}
+\end{enumerate}
 
 \begin{figure}[!htbp]
 	\centering		
-	\includegraphics[width=14cm]{Metodologia/Figuras/telaStatusKpis.png}
-	\caption{Tela de Desempenho - Loop}
-	\label{fig:telaStatusKpis}
-\end{figure}	
+	\includegraphics[width=14cm]{Resultados/Figuras/kubeExecCiclico.png}
+	\caption{Status Execuções - Kubernetes}
+	\label{fig:jobs}
+\end{figure}
+\newpage
+
+Estão sempre disponíveis junto ao orquestrador de \textit{containers} os dados das últimas vinte e quatro execuções dos \textit{jobs} do \textit{Kpi-Executor}, bem como outras informações pertinentes à estabilidade do sistema LOOP. A figura \ref{fig:jobsPie} traz tais dados.
 
 \begin{figure}[!htbp]
 	\centering		
-	\includegraphics[width=14cm]{Metodologia/Figuras/grafana.png}
-	\caption{Métricas LOOP - Grafana}
-	\label{fig:grafana}
-\end{figure}	
+	\includegraphics[width=14cm]{Resultados/Figuras/jobsPie.png}
+	\caption{Histórico Execuções - Kubernetes}
+	\label{fig:jobsPie}
+\end{figure}
+Tendo em detalhes:
+\begin{enumerate}
+	\item Uso de CPU e Memória da máquina que hospeda o sistema;
+	\item As últimas vinte e quatro execuções dos \textit{jobs} de \textit{Kpi-Executor}, tendo todas em estado de sucesso;
+\end{enumerate}
 
-\clearpage
+Com os dados exibidos tem-se uma avaliação positiva da estabilidade do \textit{Kpi-Executor}, este se mantendo com execuções consistentes, respeitando seu agendamento e não apresentando grandes problemas de indisponibilidade ou falhas de execução.
+	

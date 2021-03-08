@@ -2,9 +2,41 @@
 
 \section{Considerações Finais}
 
-Aqui vai o texto da conclusão.
+Os objetivo do trabalho de implementação de uma aplicação para cálculos de \textit{KPIs} foi alcançado com sucesso. Durante as etapas de validação de cálculos, seção \ref{sec:validacaoQA}, foram obtidos dados precisos, quando comparados aos cálculos manuais realizados via \textit{Excel}, assim atendendo as especificações de cada um dos \textit{KPIs}. Juntamente a essas validações, a execução cíclica proposta foi atendida, tendo tal afirmação validada pela seção \ref{sec:validacaoQA} e reafirmada pelo monitoramento de estabilidade do sistema, na seção \ref{sec:estabilizacaoSistema}.
+
+Quanto à integração do \textit{Kpi-Executor} com a estrutura existente, também pode ser destacada a seção \ref{sec:validacaoQA} que apontou o sucesso obtido nos testes realizados pelo \textit{Product Owner} do sistema, atendendo assim, de forma satisfatória, o requisito de integração ao sistema existente. O \textit{Kpi-Executor} segue em execução sem situações não esperadas nesse quesito.
+
+Outro ponto de destaque, não menos importante, está o registro de falhas dos cálculos. Este registro se expandiu para uma classificação das falhas sendo essas divididas em \textit{Exceções de Fluxo} e \textit{Exceções de Cálculos} (seção \ref{sec:regFalhasCalculo}), com a adição do detalhamento de cada falha prevista no levantamento de requisitos, além do registro de outras falhas não previstas. Esse registro se tornou ferramenta indispensável para o time de manutenção e evolução de \textit{Discovery}, facilitando a etapa investigação de possíveis \textit{bugs} no sistema.
+
+Também associada à melhoria das condições de manutenção e evolução do software está a documentação elaborada para o \textit{Kpi-Executor}. Ela apresenta a arquitetura geral do sistema LOOP e fluxo de operação da aplicação, pontos importantes para o entendimento do funcionamento do sistema, sendo também um auxiliar importante na manutenção do módulo. Além destes pontos, a documentação também possui passo-a-passo de instalação de dependências e execução do módulo, sendo ferramenta para facilitação do futuro ingresso de novos membros ao time.
+
+Com o projeto foi possível avaliar a complexidade envolvida no processo de desenvolvimento de um software, desde sua concepção arquitetural até sua disponibilização em ambiente de produção. Também foi um desafio notável a construção de um módulo que deveria se encaixar como uma peça de quebra-cabeça em uma estrutura existente complexa e em operação. O time de \textit{DevOps} teve papel muito importante para que a entrega final do módulo acontecesse com sucesso. Também vale ressaltar a dificuldade na construção da monografia. A busca por referências aconteceu de forma bastante dispersa, já que o projeto envolveu conceitos, de um lado diretamente ligados à Engenharia de Controle e Processos Industriais, e de outro ligados a Engenharia e Desenvolvimento de Software. Ao final, tem-se um trabalho que aborda amplamente áreas de grande relevância para um Engenheiro (a) de Controle e Automação, integrando conhecimentos de processos, controle regulatório e sua qualidade, em conjunto com arquitetura e desenvolvimento de softwares.
 
 \section{Propostas de Continuidade}
 
+\subsection{Cálculo de Baseline Parametrizável}
+
+Os parâmetros de \textit{limiar} e \textit{meta} que são utilizados para o cálculo do \textit{KPI} de \textit{Erro médio aceitável}, descrito na seção \ref{sec:indicesPerformance}, foram posteriormente ao desenvolvimento do processo denominados como \textit{parâmetros de baseline}. Tais informações são calculadas de forma automática, sem interação com o usuário do sistema. Entretanto, foi previsto como evolução para o \textit{Kpi-Executor} a inserção manual desses parâmetros, através da interface do sistema LOOP.
+
+\subsection{Monitoramento de métricas}
+
+O módulo principal do sistema LOOP denominado \textit{Dashboard} (\ref{sec:estruturaExistente}) possui um painel de monitoramento de métricas utilizando o software \textit{Grafana}, que consiste em uma poderosa plataforma aberta para observação de informações de funcionamento de aplicações em geral. Nesse painel (\ref{fig:grafana}) são exibidas métricas importantes para o acompanhamento de um software. Em detalhe:
+
+\begin{enumerate}
+	\item \textit{\textbf{Uptime:}} Porcentagem de tempo em que o sistema esteve disponível;
+	\item \textbf{MTBF - \textit{Mean Time Between Failures}:} Tempo entre falhas ocorridas no sistema;
+	\item \textbf{MTTR - \textit{Mean Time To Recovery}:} Tempo de resposta para a retomada de funcionamento do sistema;
+	\item \textbf{\textit{Events}:} Eventos ligados à queda do sistema;
+	\item \textbf{\textit{Availability}:} Estado de disponível ou indisponível do sistema;
+\end{enumerate}
+
+	\begin{figure}[!htbp]
+		\centering		
+		\includegraphics[width=13cm]{Conclusao/Figuras/grafana.png}
+		\caption{Métricas LOOP - Grafana}
+		\label{fig:grafana}
+	\end{figure}
+\newpage
+Tal monitoramento é de muita valia para softwares e posteriormente será implementado junto ao \textit{Kpi-Executor}.
 
 \clearpage

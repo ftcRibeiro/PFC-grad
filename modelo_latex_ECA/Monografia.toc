@@ -1,6 +1,7 @@
 \babel@toc {brazil}{}
 \contentsline {chapter}{Resumo}{i}%
 \contentsline {chapter}{Lista de Figuras}{v}%
+\contentsline {chapter}{Lista de Tabelas}{vii}%
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}%
 \contentsline {section}{\numberline {1.1}Motiva\c c\~ao e Justificativa}{1}%
 \contentsline {section}{\numberline {1.2}Objetivos do Projeto}{2}%
@@ -37,15 +38,19 @@
 \contentsline {subsubsection}{\numberline {3.2.1.2}Projeto da Aplica\c c\~ao}{15}%
 \contentsline {subsubsection}{\numberline {3.2.1.3}Desenvolvimento da Aplica\c c\~ao}{15}%
 \contentsline {paragraph}{\numberline {3.2.1.3.1}Classes auxiliares}{15}%
-\contentsline {paragraph}{\numberline {3.2.1.3.2}\'Indices de Performance - KPIs}{16}%
-\contentsline {paragraph}{\numberline {3.2.1.3.3}Divis\~ao de Responsabilidades}{19}%
-\contentsline {paragraph}{\numberline {3.2.1.3.4}Registro de Falhas de C\'alculo}{20}%
-\contentsline {subsubsection}{\numberline {3.2.1.4}Testes e Implanta\c c\~ao}{21}%
-\contentsline {paragraph}{\numberline {3.2.1.4.1}Valida\c c\~ao dos C\'alculos}{21}%
-\contentsline {paragraph}{\numberline {3.2.1.4.2}Valida\c c\~ao em Ambiente de Testes}{22}%
-\contentsline {paragraph}{\numberline {3.2.1.4.3}Disponibiliza\c c\~ao em Ambiente de Produ\c c\~ao}{25}%
+\contentsline {paragraph}{\numberline {3.2.1.3.2}Divis\~ao de Responsabilidades}{16}%
+\contentsline {paragraph}{\numberline {3.2.1.3.3}Registro de Falhas de C\'alculo}{17}%
+\contentsline {paragraph}{\numberline {3.2.1.3.4}\'Indices de Performance - KPIs}{19}%
+\contentsline {subsection}{\numberline {3.2.2}Testes e Implanta\c c\~ao}{21}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Valida\c c\~ao dos C\'alculos}{22}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}Valida\c c\~ao em Ambiente de Testes}{22}%
 \contentsline {chapter}{\numberline {4}Resultados}{27}%
 \contentsline {section}{\numberline {4.1}Documenta\c c\~ao de regras de neg\'ocio}{27}%
 \contentsline {section}{\numberline {4.2}Condi\c c\~oes de Manuten\c c\~ao do Software}{28}%
 \contentsline {section}{\numberline {4.3}Estabiliza\c c\~ao do Sistema}{29}%
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{30}%
+\contentsline {chapter}{\numberline {5}Conclus\~oes}{31}%
+\contentsline {section}{\numberline {5.1}Considera\c c\~oes Finais}{31}%
+\contentsline {section}{\numberline {5.2}Propostas de Continuidade}{32}%
+\contentsline {subsection}{\numberline {5.2.1}C\'alculo de Baseline Parametriz\'avel}{32}%
+\contentsline {subsection}{\numberline {5.2.2}Monitoramento de m\'etricas}{32}%
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{34}%

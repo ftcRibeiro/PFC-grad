@@ -7,12 +7,15 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Arquitetura Loop}}{12}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de Sequ\^encia - Kpi-Executor}}{15}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Forma\c c\~ao de Boxplot}}{17}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de Componentes - Kpi-Executor}}{19}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Tela de Dashboard - Loop}}{23}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Tela de Diagn\'ostico - Loop}}{24}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Tela de Desempenho de KPIs- Loop}}{24}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de Componentes - Kpi-Executor}}{16}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Forma\c c\~ao de Boxplot (Adapta\c c\~ao de \cite {figBoxPlot})}}{20}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ciclos de execu\c c\~ao - \textit {Kpi-Executor}}}{23}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Tela de Dashboard - Loop}}{24}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Tela de Diagn\'ostico - Loop}}{25}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Tela de Desempenho de KPIs- Loop}}{26}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Registro de Falhas - Logs}}{28}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Tela de Desempenho - Loop}}{29}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces M\'etricas LOOP - Grafana}}{29}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Status Execu\c c\~oes - Kubernetes}}{29}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Hist\'orico Execu\c c\~oes - Kubernetes}}{30}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces M\'etricas LOOP - Grafana}}{33}%

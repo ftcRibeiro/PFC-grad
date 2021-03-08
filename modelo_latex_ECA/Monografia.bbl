@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{33}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -42,6 +42,11 @@ O que \'{e} devops?, 2020.
 \bibitem[doc(2020)]{dockerPage}
 P\'{a}gina {O}ficial {D}ocker, 2020.
 \newblock URL \url{https://www.docker.com/}.
+
+\bibitem[fig(2020)]{figBoxPlot}
+{P}ortal {A}ction - {B}oxplot, 2020.
+\newblock URL
+  \url{http://www.portalaction.com.br/estatistica-basica/31-boxplot}.
 
 \bibitem[kub(2020)]{kubePage}
 P\'{a}gina {O}ficial {K}ubernetes, 2020.
