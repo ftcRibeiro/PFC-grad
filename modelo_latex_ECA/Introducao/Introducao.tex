@@ -10,12 +10,12 @@
 
 É incontestável a incessante busca do setor industrial pelo aumento do desempenho de suas unidades operacionais. Para que as empresas envolvidas nesse ramo possam se manter de forma significativa no mercado, é necessária a constante reavaliação de seus processos, bem como de seus custos com energia, perdas e reprocessamento de material. Independentemente do setor de atuação da indústria a ser avaliada, tais fatores possuem extrema importância, devendo ser monitoradas, controladas e projetadas.
 
-Para elucidar, tomemos como exemplo um processo de beneficiamento minério de ferro. Pode-se dividi-lo em: Britagem, peneiramento, moagem, classificação, concentração, espessamento e filtragem. Cada uma dessas etapas é composta por variáveis a serem controladas de forma individual, como níveis de tanque, temperatura e densidade de misturas, velocidades de motores, posições de válvulas, etc. Para estabelecer o comportamento desejado para tais processos, se faz necessária a aplicação de estratégias de controle regulatório, avançado ou de outras naturezas. O conjunto composto por variável a ser controlada e estratégia de controle utilizada é chamado de \textit{malha de controle}.
+Para elucidar, tomemos como exemplo um processo de beneficiamento de minério de ferro. Pode-se dividi-lo em: Britagem, peneiramento, moagem, classificação, concentração, espessamento e filtragem. Cada uma dessas etapas é composta por variáveis a serem controladas de forma individual, como níveis de tanque, temperatura e densidade de misturas, velocidades de motores, posições de válvulas, etc. Para estabelecer o comportamento desejado para tais processos, se faz necessária a aplicação de estratégias de controle regulatório, avançado ou de outras naturezas. O conjunto composto por variável a ser controlada e estratégia de controle utilizada é chamado de \textit{malha de controle}.
 
 Implementado um sistema de controle, obtém-se então um processo minimamente adequado aos parâmetros configurados para o contexto operacional escolhido. Entretanto, não menos importante que essa adequação técnica individual estabelecida por esse sistema, são os resultados e efeitos colaterais gerados naquela linha do processo,  bem como a avaliação do conjunto em situações não previstas nas estratégias de controle. Dessa forma, o acompanhamento e metrificação do comportamento de sistemas de controle industriais ganha notabilidade dentro do setor industrial.
 
 
-Para este monitoramento são utilizados softwares baseadis em CPM (\textit{Controller Performance Monitoring}). Eles possuem ferramental para análise temporal das malhas envolvidas,  avaliação de parâmetros de controladores, modelagem de processos e medição de KPIs (\textit{Key Performance Indicators}). Buscando este espaço de mercado, a empresa IHM Stefanini desenvolveu o software LOOP, que se enquadra no tipo citado.
+Para este monitoramento são utilizados softwares baseados em CPM (\textit{Controller Performance Monitoring}). Eles possuem ferramental para análise temporal das malhas envolvidas,  avaliação de parâmetros de controladores, modelagem de processos e medição de KPIs (\textit{Key Performance Indicators}). Buscando este espaço de mercado, a empresa IHM Stefanini desenvolveu o software LOOP, que se enquadra no tipo citado.
 
 Nos últimos meses o time de desenvolvimento da empresa iniciou, juntamente ao time de analistas de controle que utilizam o sistema, um processo de identificação de pontos de melhoria do software LOOP, envolvendo quesitos de interface, regras de negócio, distribuição de responsabilidades entre os módulos do sistema, arquitetura, integração de código e documentação. Dentre os pontos não satisfatórios listados pela equipe, o módulo responsável pelo cálculo de KPIs foi apontado como crítico, sendo o primeiro a passar por mudanças significativa. O projeto descrito por esta monografia aborda o processo de reconstrução desse módulo.
 
@@ -28,7 +28,7 @@ O objetivo do projeto é a construção de um módulo para cálculo de índices de per
 \begin{itemize}
 	\item \textbf{Execução cíclica:} O cálculo dos índices de performance é baseado em janelas de dados de uma hora. Dessa forma, ele deve possuir execução cíclica com um intervalos semelhantes;
 	\item \textbf{Adequação à estrutura do sistema:} O módulo será utilizado para compor um sistema da empresa parceira, Ihm Stefanini, que já possui outros módulos existentes. Assim é necessário que sejam respeitadas limitações e conceitos do sistema como um todo;
-	\item \textbf{Registro de falhas:} É necessário que o módulo apresente registros de falhas de cada uma das execuções, não somente listando, mas também identificando quais tipos;
+	\item \textbf{Registro de falhas:} É necessário que o módulo apresente registros de suas falhas de cada uma das execuções, não somente listando, mas também identificando quais tipos;
 \end{itemize}
 
 
@@ -42,7 +42,7 @@ O projeto de fim de curso foi desenvolvido em parceria com a empresa IHM Stefani
 
 A empresa realiza projetos e desenvolvimentos de Automação, Elétrica, Montagem, bem como serviços de otimização de malhas, projetos de controle avançado e gestão. Atua em diversas áreas da indústria, como Mineração, Siderurgia \& Metais, Papel \& Celulose, e Óleo \& Gás. 
 
-A IHM Stefanini foi criada em 1994 inicialmente com o nome de IHM como uma integradora de sistemas, instrumentação, elétrica e TI Industrial. Com sua expansão, passa a fazer parte do grupo Stefanini em 2015. A partir daí funda o departamento de inovação e começa a atuar na busca por tecnologias disruptivas e elaboração de produtos digitais.
+A IHM Stefanini foi criada em 1994 inicialmente com o nome de IHM como uma integradora de sistemas, instrumentação, elétrica, e TI Industrial. Com sua expansão, passa a fazer parte do grupo Stefanini em 2015. A partir daí funda o departamento de inovação e começa a atuar na busca por tecnologias disruptivas e elaboração de produtos digitais.
 
 Atualmente a IHM Stefanini é dividida nos seguintes setores técnicos:
 \begin{itemize}
@@ -53,11 +53,11 @@ Atualmente a IHM Stefanini é dividida nos seguintes setores técnicos:
 	\item Departamento de Elétrica;
 \end{itemize}
 
-Este projeto foi desenvolvido no departamento de Discovery que tem como propósito a descoberta sistemática e estruturação de ofertas de alto valor agregado para a empresa. Subdividido em:
+Este projeto foi desenvolvido no departamento de Discovery que tem como propósito a descoberta sistemática e estruturação de ofertas de alto valor agregado para a IHM Stefanini. Subdividido em:
 \begin{itemize}
 	
-	\item Produtos: Formação de produtos que resolvam problemas reais de clientes finais;
-	\item Coder: Time responsável pelos softwares do setor. Estrutura, desenvolve e mantém códigos-fonte e infraestruturas das demandas do setor.
+	\item \textit{Produtos}: Formação de produtos que resolvam problemas reais de clientes finais;
+	\item \textit{Coder}: Time responsável pelos \textit{softwares} do setor. Estrutura, desenvolve e mantém códigos-fonte e infraestruturas das demandas do setor.
 	
 \end{itemize}
 
@@ -67,4 +67,4 @@ Este projeto foi desenvolvido no departamento de Discovery que tem como propósit
 %\markright{\thesection ~~~ Organização do Trabalho}
 \label{estruturaMono}
 
-O trabalho está estruturado em quatro capítulos, sendo o Capítulo 1 o conjunto contextualização, relevância e principais objetivos do projeto como um todo. O Capítulo 2 contempla apresentação e revisão de conceitos básicos importantes para melhor entendimento do projeto. Já o Capítulo 3 traz informações sobre os recursos necessários, metodologia de desenvolvimento e implementação do projeto. No Capítulo 4, a apresentação e discussão de dados, bem como sugestões e dificuldades a serem encontradas no projeto. Por fim, no Capítulo 5, são apresentadas as conclusões obtidas no após a elaboração do projeto, e considerações sobre possíveis continuidades.
+O trabalho está estruturado em cinco capítulos, sendo o Capítulo 1 o conjunto contextualização, relevância e principais objetivos do projeto como um todo. O Capítulo 2 contempla apresentação e revisão de conceitos básicos importantes para melhor entendimento do projeto. Já o Capítulo 3 traz informações sobre os recursos necessários, metodologia de desenvolvimento e implementação do projeto. No Capítulo 4, a apresentação e discussão de dados, bem como sugestões e dificuldades a serem encontradas no projeto. Por fim, no Capítulo 5, são apresentadas as conclusões obtidas no após a elaboração do projeto, e considerações sobre possíveis continuidades.

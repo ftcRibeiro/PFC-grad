@@ -101,7 +101,7 @@ Para persistência dos dados em banco, foi escolhida a tecnologia SQLAlchemy \cit
 
 \paragraph {Classes auxiliares}
 \label{sec:objDb}
-Considerando a estrutura do sistema da empresa parceira (Loop) no momento do desenvolvimento do módulo tratado por essa monografia, era tido como de suma importância a possibilidade de utilização de diferentes bancos de dados relacionais, como Microfost SQL Server \cite{sqlServerHome} e PostgresSQL \cite{postgresPage}. Assim, foi necessária a utilização da uma \textit{ORM} (Object Relacional Mapper) \cite{ORM} \textit{SQLAlchemy} \cite{alchemyPage}, possibilitando que o módulo em questão apresentasse características agnósticas a banco de dados. Além da facilitação no processo de substituição de bancos de dados, devido à objetificação das \textit{queries} adiciona segurança ao conjunto do sistema, impedindo tentativas de invasão do tipo \textit{SQL Injection} \cite{SQLInjection}.
+Considerando a estrutura do sistema da empresa parceira (Loop) no momento do desenvolvimento do módulo tratado por essa monografia, era tido como de suma importância a possibilidade de utilização de diferentes bancos de dados relacionais, como Microsoft SQL Server \cite{sqlServerHome} e PostgresSQL \cite{postgresPage}. Assim, foi necessária a utilização de uma \textit{ORM} (Object Relacional Mapper) \cite{ORM} \textit{SQLAlchemy} \cite{alchemyPage}, possibilitando que o módulo em questão apresentasse características agnósticas a banco de dados. Além da facilitação no processo de substituição de bancos de dados, devido à objetificação das \textit{queries}, adiciona segurança ao conjunto do sistema, impedindo tentativas de invasão do tipo \textit{SQL Injection} \cite{SQLInjection}.
 
 Uma vez levantados os pontos citados, foram utilizados os conceitos de orientação a objetos para o desenvolvimento (\ref{sec:seqOO}) para a elaboração de duas classes que juntas tornariam o processo de construção das consultas e inserções a banco de dados mais práticas e robustas:
 
@@ -130,7 +130,7 @@ Cada componente descrito no diagrama é composto por um arquivo independente em P
 \begin{itemize}
 	\item \textbf{app:} Arquivo principal. Ele é o módulo invocado pelo orquestrador Kubernetes \cite{kubePage}. Responsável pela configuração de logs de manutenção e carregamento de variáveis de ambiente do sistema, configurando a aplicação para sua forma de execução local, em ambiente de validação ou produção;
 	\item \textbf{execute:} Responsável por instanciar os objetos de banco de dados utilizados pelos próximos componentes. Também invoca DashboardService para montar o objeto com os dados de cadastro para as etapas de cálculos de KPIs;
-	\item \textbf{makeCalc:} Opera o fluxo principal ta aplicação. Percorre o objeto de dados de cadastro fornecido pelo componente \textit{execute} e solicitando, a cada iteração, ao \textit{PiServerService} dados de processo cadastrados no PIMS, malha a malha;
+	\item \textbf{makeCalc:} Opera o fluxo operacional da aplicação. Percorre o objeto de dados de cadastro fornecido pelo componente \textit{execute} e solicitando, a cada iteração, ao \textit{PiServerService} dados de processo cadastrados no PIMS, malha a malha;
 	\item \textbf{DashboardService:} Possui regras de negócio relacionadas ao banco \textit{omo-db}. Formata os dados lidos e para inserção neste banco. Também possui os métodos para instanciar os objetos de banco de dados e para solicitar escrita no banco de dados;
 	\item \textbf{DashboardRepository:} Possui os métodos correspondentes às queries de inserção e consulta de dados em banco. Tem relação de herança \cite{engSw} com a classe \textit{Repository} (seção \ref{sec:objDb});
 	\item \textbf{PiServerService:} Contempla regras de negócio relacionadas à consulta de dados no PIMS. Formata e realiza requisições \textit{Http} para o módulo externo \textit{Pi-Connector} (figura \ref{fig:arqLoop}). Também possui rotinas para tratamento das respostas com os dados do PIMS;
@@ -197,7 +197,7 @@ Como relatado na seção \ref{sec:automation_kpis}, os índices de performance calc
 	T_{semSaturacao} [\%] = \frac{n_{dentroLimite}}{n_{totalAmostras}} \times 100
 	\end{equation}
 	
-	Tem índice também diz sobre um sistema de controle mal parametrizado. Uma malha que possui um tempo sem saturação baixo pode apresentar defeitos em seus atuadores com uma frequência alta.
+	Esse índice também diz sobre um sistema de controle mal parametrizado. Uma malha que possui um tempo sem saturação baixo pode apresentar defeitos em seus atuadores com uma frequência alta.
 	\item \textbf{Erro médio aceitável:} O cálculo deste \textit{KPI} passa por algumas etapas:
 	\subitem \textit{Cálculo de erro:} O erro é dado pela diferença absoluta entre o SP e a PV. Tal cálculo é realizado para cada amostra dos vetores de dados.
 	
@@ -206,7 +206,7 @@ Como relatado na seção \ref{sec:automation_kpis}, os índices de performance calc
 	\end{equation}
 	
 	Assim é gerado um vetor com os erros de cada amostra.
-	\subitem \textit{Boxplot:} Também conhecido como \textit{gráfico de caixa} é utilizado para a avaliação da distribuição empírica dos dados \cite{capela_boxplot}. Nele são utilizados primeiro ($Q_1$), segundo ($Q_2$) e terceiro ($Q_3$) quartis para sua construção. Esta etapa é realizada com o vetor de dados gerado o item anterior.
+	\subitem \textit{Boxplot:} Do inglês \textit{gráfico de caixa} é utilizado para a avaliação da distribuição empírica dos dados \cite{capela_boxplot}. Nele são utilizados primeiro ($Q_1$), segundo ($Q_2$) e terceiro ($Q_3$) quartis para sua construção. Esta etapa é realizada com o vetor de dados gerado no item anterior.
 	
 	\begin{figure}[!htbp]
 		\centering		
@@ -227,14 +227,14 @@ Como relatado na seção \ref{sec:automation_kpis}, os índices de performance calc
 	\begin{equation}
 	\label{eq:percentil}
 	P_k = \begin{cases}
-	\frac{v_L + v_{L+1}}{100}  & \text{caso \textit{L} seja inteiro}\\
+	\frac{v_L + v_{L+1}}{2}  & \text{caso \textit{L} seja inteiro}\\
 	v_{round(L)} & \text{caso \textit{L} não seja inteiro}
 	
 	\end{cases} 
 	\end{equation}
 	
 	
-	Sendo $v$ o vetor de dados a ser analisado, $L$ o valor obtido na equação \ref{eq:posicaoPercentil} e $P_k$ o \textit{k}-ésimo percentil a ser obtido. Existe um ligação direta entre percentis e os quartis utilizados para o \textit{Boxplot}. As equações \ref{eq:q1} a \ref{eq:q3} trazem tais relações.
+	Sendo $v$ o vetor de dados a ser analisado, $L$ o valor obtido na equação \ref{eq:posicaoPercentil} e $P_k$ o \textit{k}-ésimo percentil a ser obtido. Existe uma ligação direta entre percentis e os quartis utilizados para o \textit{Boxplot}. As equações \ref{eq:q1} a \ref{eq:q3} trazem tais relações.
 	
 	
 	Sendo $n$ o número de amostras, $i$ o percentil desejado
@@ -281,7 +281,7 @@ Como relatado na seção \ref{sec:automation_kpis}, os índices de performance calc
 	EMA = \frac{\sum_{1}^{n_{amostras}} erro_i}{n_{amostras}}
 	\end{equation}
 	
-	Finalmente, após as etapas descritas é possível obter o \textit{KPI} de \textit{Erro Médio Aceitável}, identificado como $EMA_{norm}$. Vale ressaltar que esse \textit{KPI} é, além de normalizado, complementar a cálculo $EMA$. Isso ocorre pois dessa forma a uma condição vista como "boa" no processo apresentaria um valor mais próximo de $100\%$.   
+	Finalmente, após as etapas descritas é possível obter o \textit{KPI} de \textit{Erro Médio Aceitável}, identificado como $EMA_{norm}$. Vale ressaltar que esse \textit{KPI} é, além de normalizado, complementar ao cálculo $EMA$. Isso ocorre pois dessa forma há uma condição vista como "boa" no processo apresentaria um valor mais próximo de $100\%$.   
 	
 	\begin{equation}
 	EMA_{norm} [\%] = 1 - \frac{EMA - meta}{divisor} 
@@ -331,7 +331,7 @@ Uma vez validadas as etapas do cálculo do \textit{KPI} \textit{Erro médio aceitá
 		\textbf{PID\_9\_} & 100,00\% & 100,00\% & 100,00\% & 100,00\% & 26,67\% & 26,67\% & 75,56\% & 75,56\% \\ \hline
 	\end{tabular}
 \end{table}
-Analisando as tabelas \ref{tab:validacaoEMA} e \ref{tab:validacaoKpis}, observa-se o atendimento dos requisitos relacionados aos cálculos. Os valores obtidos pelo \textit{Kpi-Executor} se adequaram à referência (cálculos manuais realizados em Excel) de forma satisfatória e precisa, sem erros para quatro casas decimais, na tabela \ref{tab:validacaoEMA} e com duas casas para a tabela \ref{tab:validacaoKpis}. Vale ressaltar a utilização de duas e quatro casas respectivamente para os cálculos: No primeiro caso a escolha foi feita para uma obtenção melhor precisão nos cálculos sequentes, enquanto no segundo caso os dados são apresentados conforme a precisão exibida nas telas do sistema LOOP, que serão mostradas nas sub-seções que se seguem.
+Analisando as tabelas \ref{tab:validacaoEMA} e \ref{tab:validacaoKpis}, observa-se o atendimento dos requisitos relacionados aos cálculos. Os valores obtidos pelo \textit{Kpi-Executor} se adequaram à referência (cálculos manuais realizados em Excel) de forma satisfatória e precisa, sem erros para quatro casas decimais, na tabela \ref{tab:validacaoEMA} e com duas casas para a tabela \ref{tab:validacaoKpis}. Vale ressaltar a utilização de quatro e duas casas respectivamente para os cálculos: No primeiro caso a escolha foi feita para uma obtenção melhor precisão nos cálculos sequentes, enquanto no segundo caso os dados são apresentados conforme a precisão exibida nas telas do sistema LOOP, que serão mostradas nas sub-seções que se seguem.
 
 
 \subsubsection{Validação em Ambiente de Testes}
@@ -354,7 +354,7 @@ Das etapas da validação em ambiente de testes foram realizadas as seguintes:
 	\item \textbf{Testes de Integração:} Como dito, o \textit{Kpi-Executor} foi criado como uma reconstrução de um módulo anteriormente existente, que não atendia mais às especificações necessárias. Sendo assim, foi necessária a avaliação das telas do Loop que consomem dados referentes aos índices de performance, e de consultas de módulos adjacentes que pudessem possuir acoplamento  garantindo assim que a integração entre os módulos ocorreu com sucesso.
 	Os testes deste item foram realizados pelo \textit{Product Owner} do Loop, utilizando o período de 06/04/2020 15:00 a 06/04/2020 16:00, validando o funcionamento dos pontos a seguir.
 	
-	\subitem \textit{Tela de Dashboard:} Tela principal do sistema LOOP. Ela apresenta um overview baseado dos estados das malhas do cliente correspondente ao usuário logado, baseado nos índices de performance calculados para o período de acesso. A figura \ref{fig:telaDashboard} traz os detalhes das validações descritas a seguir.
+	\subitem \textit{Tela de Dashboard:} Tela principal do sistema LOOP. Ela apresenta um overview baseado nos estados das malhas do cliente correspondente ao usuário logado, baseado nos índices de performance calculados para o período de acesso. A figura \ref{fig:telaDashboard} traz os detalhes das validações descritas a seguir.
 	
 	\begin{enumerate}
 		\item O número de malhas \textit{offline} deveria se mostrar coerente ao registrado no banco para aquele período em questão;

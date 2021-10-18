@@ -1,7 +1,8 @@
 \babel@toc {brazil}{}
 \contentsline {chapter}{Resumo}{i}%
-\contentsline {chapter}{Lista de Figuras}{v}%
-\contentsline {chapter}{Lista de Tabelas}{vii}%
+\contentsline {chapter}{Agradecimentos}{iii}%
+\contentsline {chapter}{Lista de Figuras}{vii}%
+\contentsline {chapter}{Lista de Tabelas}{ix}%
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}%
 \contentsline {section}{\numberline {1.1}Motiva\c c\~ao e Justificativa}{1}%
 \contentsline {section}{\numberline {1.2}Objetivos do Projeto}{2}%
